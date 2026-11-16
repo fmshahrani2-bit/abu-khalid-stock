@@ -48,16 +48,80 @@ for it in items:
     except Exception as e:
         summary["errors"].append(f"{s}: {e}")
 
-# لقطة الفلترة الكاملة لتاسي من TradingView (بلا تسجيل دخول)
+# فلترة الكورس (نقل حرفي لـ claude/build/screen_course.js في المشروع؛ Screening_Method المراحل 1-2)
+SCAN = "https://scanner.tradingview.com/ksa/scan"
+def post(body):
+    r = requests.post(SCAN, json=body, timeout=30); r.raise_for_status(); return r.json()
 try:
-    cols = ["name", "description", "close", "change", "volume", "average_volume_30d_calc", "SMA50", "SMA200", "Perf.1M", "Perf.3M", "Perf.Y", "price_52_week_high", "market_cap_basic"]
-    r = requests.post("https://scanner.tradingview.com/ksa/scan", json={"columns": cols, "range": [0, 400], "markets": ["ksa"]}, timeout=30)
-    r.raise_for_status()
-    rows = [dict(zip(cols, x["d"])) for x in r.json().get("data", [])]
-    json.dump(rows, open(os.path.join(OUT, "tasi_scan.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    summary["scan_rows"] = len(rows)
+    cols = ['name','description','sector','close','Perf.W','Perf.1M','Perf.3M','Perf.Y','SMA20','SMA50','SMA200',
+            'SMA10|1W','SMA30|1W','price_52_week_high','Value.Traded','average_volume_30d_calc',
+            'total_revenue_yoy_growth_fq','earnings_per_share_diluted_yoy_growth_fq','gross_margin_ttm']
+    keys = ['sym','name','sector','close','PerfW','Perf1M','Perf3M','PerfY','SMA20','SMA50','SMA200','SMA10W','SMA30W','hi52','valTraded','avgVol','salesG','epsQoQ','grossM']
+    allr = post({"filter":[{"left":"type","operation":"equal","right":"stock"},{"left":"exchange","operation":"equal","right":"TADAWUL"}],
+                 "options":{"lang":"en"},"markets":["ksa"],"columns":cols,"range":[0,500]})
+    tcols = ['close','Perf.W','Perf.1M','Perf.3M','Perf.Y','SMA20','SMA50','SMA200','SMA10|1W','SMA30|1W']
+    t = post({"symbols":{"tickers":["TADAWUL:TASI"]},"columns":tcols})["data"][0]["d"]
+    T = dict(zip(['close','PerfW','Perf1M','Perf3M','PerfY','SMA20','SMA50','SMA200','SMA10W','SMA30W'], t))
+    import re, statistics
+    rows = [dict(zip(keys, x["d"])) for x in allr["data"]]
+    rows = [r for r in rows if re.fullmatch(r"[1-8]\d{3}", str(r["sym"])) and r["close"] is not None]
+    json.dump({"tasi": T, "rows": rows}, open(os.path.join(OUT, "tasi_scan.json"), "w", encoding="utf-8"), ensure_ascii=False)
+    bySec = {}
+    for r in rows: bySec.setdefault(r["sector"], []).append(r["PerfW"] or 0)
+    med = lambda a: sorted(a)[len(a)//2]
+    secRank = sorted(((s, med(a)) for s, a in bySec.items()), key=lambda x: -x[1])
+    secScore = {s: {"rank": i+1, "medW": v} for i, (s, v) in enumerate(secRank)}
+    gt = lambda a, b: a is not None and b is not None and a > b
+    steps = {"main": len(rows)}
+    L = [r for r in rows if gt(r["PerfY"], 20)]; steps["F2_yr20"] = len(L)
+    L = [r for r in L if gt(r["close"], r["SMA30W"])]; steps["F3_w30"] = len(L)
+    L = [r for r in L if gt(r["close"], r["SMA50"])]; steps["F4_sma50"] = len(L)
+    below20 = [r for r in L if not gt(r["close"], r["SMA20"])]
+    L = [r for r in L if gt(r["close"], r["SMA20"])]; steps["F5_sma20"] = len(L)
+    rs = lambda r: gt(r["Perf1M"], T["Perf1M"]) and gt(r["Perf3M"], T["Perf3M"])
+    watch = [r for r in L if rs(r)]; steps["F6_rs"] = len(watch)
+    fin = lambda r: {"salesOK": None if r["salesG"] is None else r["salesG"] >= 25, "epsOK": None if r["epsQoQ"] is None else r["epsQoQ"] >= 25,
+                     "gmOK": None if r["grossM"] is None else r["grossM"] > 0}
+    def fmt(r):
+        return {"sym": r["sym"], "name": (r["name"] or "")[:26], "sector": r["sector"], "sectorRank": secScore.get(r["sector"], {}).get("rank"),
+                "close": r["close"], "yr": round(r["PerfY"], 1), "m1_vs_tasi": round(r["Perf1M"]-T["Perf1M"], 1), "m3_vs_tasi": round(r["Perf3M"]-T["Perf3M"], 1),
+                "above200": gt(r["close"], r["SMA200"]), "from52H": round((r["close"]/r["hi52"]-1)*100, 1) if r["hi52"] else None,
+                "ext10W": round((r["close"]/r["SMA10W"]-1)*100, 1) if r["SMA10W"] else None, **fin(r)}
+    order = lambda r: (secScore.get(r["sector"], {}).get("rank", 99), -((r["Perf3M"] or 0)-T["Perf3M"]))
+    screen = {"when": summary["run_utc"], "tasi": T, "steps": steps, "topSectors": secRank[:5],
+              "watchlist": [fmt(r) for r in sorted(watch, key=order)],
+              "pullbacks_above50_below20": [fmt(r) for r in sorted([r for r in below20 if rs(r)], key=order)],
+              "breadth_above50": sum(gt(r["close"], r["SMA50"]) for r in rows), "breadth_above200": sum(gt(r["close"], r["SMA200"]) for r in rows),
+              "universe": len(rows)}
+    json.dump(screen, open(os.path.join(OUT, "screen.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    summary["screen_steps"] = steps; summary["screen_watchlist"] = [w["sym"] for w in screen["watchlist"]]
+    # تاريخ أسعار مرشحي الفلترة الجدد أيضاً حتى تقرأ مهمة Claude شارتاتهم
+    have = {i["sym"].replace(".SR", "") for i in WL["stocks"]}
+    for w in screen["watchlist"] + screen["pullbacks_above50_below20"]:
+        if str(w["sym"]) in have: continue
+        try:
+            d = yf.Ticker(f"{w['sym']}.SR").history(period="2y", interval="1d", auto_adjust=False)
+            d.index = d.index.tz_localize(None); d = enrich(d[["Open","High","Low","Close","Volume"]].copy())
+            d.round(4).to_csv(os.path.join(OUT, f"{w['sym']}_daily.csv"))
+            chart(d, f"{w['sym']} daily", os.path.join(OUT, "charts", f"{w['sym']}_daily.png"))
+        except Exception as e:
+            summary["errors"].append(f"{w['sym']}: {e}")
 except Exception as e:
-    summary["errors"].append(f"scanner: {e}")
+    summary["errors"].append(f"screen: {e}")
+
+# تاريخ مؤشر تاسي: تجربة رموز بديلة (Yahoo أعاد يوماً واحداً لـ ^TASI.SR)
+best = None
+for cand in ["^TASI.SR", "^TASI", "TASI.SR", "^TASISR"]:
+    try:
+        d = yf.Ticker(cand).history(period="max", interval="1d", auto_adjust=False)
+        n = len(d); summary.setdefault("tasi_candidates", {})[cand] = n
+        if n > (len(best[1]) if best else 0): best = (cand, d)
+    except Exception as e:
+        summary.setdefault("tasi_candidates", {})[cand] = str(e)[:80]
+if best and len(best[1]) > 300:
+    d = best[1]; d.index = d.index.tz_localize(None); d = enrich(d[["Open","High","Low","Close","Volume"]].copy())
+    d.round(2).to_csv(os.path.join(OUT, "TASI_daily.csv")); summary["tasi_source"] = best[0]
+    chart(d, "TASI daily", os.path.join(OUT, "charts", "TASI_daily.png"))
 
 json.dump(summary, open(os.path.join(OUT, "summary.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(json.dumps(summary, ensure_ascii=False, indent=1))
