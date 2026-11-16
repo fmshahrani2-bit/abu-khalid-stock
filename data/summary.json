@@ -1,5 +1,5 @@
 {
- "run_utc": "2026-11-16T19:57:00",
+ "run_utc": "2026-11-16T19:58:03",
  "items": [
   {
    "sym": "TASI",
@@ -177,6 +177,9 @@
   "^TASI.SR": 1,
   "^TASI": 0,
   "TASI.SR": 0,
-  "^TASISR": 0
- }
+  "^TASISR": 0,
+  "stooq": "HTTP Error 404: Not Found",
+  "tvdatafeed": 3000
+ },
+ "tasi_source": "tvdatafeed"
 }
