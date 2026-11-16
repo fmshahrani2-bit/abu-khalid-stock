@@ -1,0 +1,8 @@
+{
+  "note": "بيانات تجريبية لاختبار قراءة المستودع الخاص. مصدرها البطاقة اليومية للمشروع، إغلاق 2026-11-16. ليست توصية.",
+  "market": {"sym": "TASI", "close": 10264.36, "sma50": 10346.61, "sma200": 10855.69, "lastLow": 9368, "prevLow": 10875, "lastHigh": 10342, "lecturer_level": 10630},
+  "stock": {"sym": "7211", "name": "عزم", "close": 34.5, "chg_pct": 2.8, "dayHigh": 35.04, "prevHigh": 34.22, "sma50": 29.54,
+            "ext_over_10w_ma_pct": 13.9, "breakout_level": 32.50, "breakout_date": "2026-11-12", "all_time_high": 35.85,
+            "low_2026_11_15": 33.04, "volume_vs_avg": 1.3, "rs_1m_vs_tasi": 17.5, "sales_growth_pct": 49.3, "eps_growth_pct": 23.0,
+            "next_results": "يناير 2027 تقديراً"}
+}
