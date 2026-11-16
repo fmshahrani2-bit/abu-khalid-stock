@@ -118,6 +118,19 @@ for cand in ["^TASI.SR", "^TASI", "TASI.SR", "^TASISR"]:
         if n > (len(best[1]) if best else 0): best = (cand, d)
     except Exception as e:
         summary.setdefault("tasi_candidates", {})[cand] = str(e)[:80]
+if not best or len(best[1]) <= 300:
+    # بديل: بيانات TradingView التاريخية عبر tvDatafeed (بلا تسجيل دخول)
+    for src, fn in (("stooq", lambda: pd.read_csv("https://stooq.com/q/d/l/?s=^tasi&i=d", index_col=0, parse_dates=True)),
+                    ("tvdatafeed", lambda: __import__("tvDatafeed").TvDatafeed().get_hist("TASI", "TADAWUL", __import__("tvDatafeed").Interval.in_daily, n_bars=3000))):
+        try:
+            d = fn(); d = d.rename(columns=str.capitalize)
+            summary.setdefault("tasi_candidates", {})[src] = len(d)
+            if len(d) > 300:
+                d.index = pd.to_datetime(d.index).normalize()
+                if getattr(d.index, "tz", None) is not None: d.index = d.index.tz_localize(None)
+                best = (src, d); break
+        except Exception as e:
+            summary.setdefault("tasi_candidates", {})[src] = str(e)[:120]
 if best and len(best[1]) > 300:
     d = best[1]; d.index = d.index.tz_localize(None); d = enrich(d[["Open","High","Low","Close","Volume"]].copy())
     d.round(2).to_csv(os.path.join(OUT, "TASI_daily.csv")); summary["tasi_source"] = best[0]
