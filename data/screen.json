@@ -1,20 +1,20 @@
 {
- "when": "2026-11-16T19:58:03",
+ "when": "2026-11-17T12:58:19",
  "tasi": {
-  "close": 10264.36,
-  "PerfW": 2.27948503328152,
-  "Perf1M": 1.4181643205152212,
-  "Perf3M": -5.885179177734507,
-  "PerfY": -8.030722252487303,
-  "SMA20": 9994.3485,
-  "SMA50": 10346.6052,
-  "SMA200": 10855.69285,
-  "SMA10W": 10255.622,
-  "SMA30W": 10720.395333333332
+  "close": 10253.2,
+  "PerfW": 1.3505565621549698,
+  "Perf1M": 1.2921836718564876,
+  "Perf3M": -6.042642410935604,
+  "PerfY": -7.0820359086081295,
+  "SMA20": 10009.4055,
+  "SMA50": 10331.1746,
+  "SMA200": 10850.61645,
+  "SMA10W": 10254.506,
+  "SMA30W": 10720.023333333334
  },
  "steps": {
   "main": 271,
-  "F2_yr20": 12,
+  "F2_yr20": 13,
   "F3_w30": 10,
   "F4_sma50": 8,
   "F5_sma20": 7,
@@ -22,55 +22,39 @@
  },
  "topSectors": [
   [
-   "Producer Manufacturing",
-   5.492537313432846
-  ],
-  [
-   "Transportation",
-   3.9337474120082714
-  ],
-  [
-   "Consumer Non-Durables",
-   3.8839494618624157
+   "Health Technology",
+   5.6737588652482325
   ],
   [
    "Technology Services",
-   3.865546218487395
+   4.289318755256518
   ],
   [
-   "Health Technology",
-   3.2627865961199194
+   "Consumer Durables",
+   3.5398230088495493
+  ],
+  [
+   "Consumer Services",
+   2.145411203814061
+  ],
+  [
+   "Consumer Non-Durables",
+   1.8487394957983097
   ]
  ],
  "watchlist": [
   {
-   "sym": "2110",
-   "name": "Saudi Cable Co.",
-   "sector": "Producer Manufacturing",
-   "sectorRank": 1,
-   "close": 186.1,
-   "yr": 35.8,
-   "m1_vs_tasi": 3.7,
-   "m3_vs_tasi": 12.1,
-   "above200": true,
-   "from52H": -2.4,
-   "ext10W": 5.9,
-   "salesOK": false,
-   "epsOK": null,
-   "gmOK": false
-  },
-  {
    "sym": "7211",
    "name": "Saudi Azm for Communicatio",
    "sector": "Technology Services",
-   "sectorRank": 4,
-   "close": 34.5,
-   "yr": 46.2,
-   "m1_vs_tasi": 17.5,
-   "m3_vs_tasi": 60.3,
+   "sectorRank": 2,
+   "close": 33.98,
+   "yr": 40.6,
+   "m1_vs_tasi": 18.5,
+   "m3_vs_tasi": 57.1,
    "above200": true,
-   "from52H": -1.5,
-   "ext10W": 13.9,
+   "from52H": -3.0,
+   "ext10W": 12.4,
    "salesOK": true,
    "epsOK": false,
    "gmOK": true
@@ -79,11 +63,11 @@
    "sym": "8313",
    "name": "Rasan Information Technolo",
    "sector": "Technology Services",
-   "sectorRank": 4,
+   "sectorRank": 2,
    "close": 144,
-   "yr": 29.8,
-   "m1_vs_tasi": 2.0,
-   "m3_vs_tasi": 11.1,
+   "yr": 34.6,
+   "m1_vs_tasi": 5.0,
+   "m3_vs_tasi": 9.9,
    "above200": true,
    "from52H": -9.8,
    "ext10W": 4.4,
@@ -95,46 +79,62 @@
    "sym": "6015",
    "name": "Americana Restaurants Inte",
    "sector": "Consumer Services",
-   "sectorRank": 7,
-   "close": 2.65,
-   "yr": 38.7,
-   "m1_vs_tasi": 8.5,
-   "m3_vs_tasi": 14.5,
+   "sectorRank": 4,
+   "close": 2.68,
+   "yr": 41.1,
+   "m1_vs_tasi": 9.0,
+   "m3_vs_tasi": 15.0,
    "above200": true,
    "from52H": -0.4,
-   "ext10W": 6.8,
+   "ext10W": 7.9,
    "salesOK": false,
    "epsOK": true,
-   "gmOK": true
-  },
-  {
-   "sym": "4190",
-   "name": "Jarir Marketing Co.",
-   "sector": "Retail Trade",
-   "sectorRank": 11,
-   "close": 17.9,
-   "yr": 29.6,
-   "m1_vs_tasi": 3.5,
-   "m3_vs_tasi": 11.7,
-   "above200": true,
-   "from52H": -2.6,
-   "ext10W": 7.0,
-   "salesOK": false,
-   "epsOK": false,
    "gmOK": true
   },
   {
    "sym": "4144",
    "name": "Raoom trading Company",
    "sector": "Process Industries",
-   "sectorRank": 15,
-   "close": 85.8,
+   "sectorRank": 12,
+   "close": 85.5,
    "yr": 43.2,
-   "m1_vs_tasi": 4.5,
-   "m3_vs_tasi": 22.4,
+   "m1_vs_tasi": 6.9,
+   "m3_vs_tasi": 21.7,
    "above200": true,
-   "from52H": -3.0,
-   "ext10W": 13.0,
+   "from52H": -3.3,
+   "ext10W": 12.6,
+   "salesOK": false,
+   "epsOK": false,
+   "gmOK": true
+  },
+  {
+   "sym": "2110",
+   "name": "Saudi Cable Co.",
+   "sector": "Producer Manufacturing",
+   "sectorRank": 15,
+   "close": 190,
+   "yr": 41.1,
+   "m1_vs_tasi": 4.8,
+   "m3_vs_tasi": 13.6,
+   "above200": true,
+   "from52H": -0.5,
+   "ext10W": 7.9,
+   "salesOK": false,
+   "epsOK": null,
+   "gmOK": false
+  },
+  {
+   "sym": "4190",
+   "name": "Jarir Marketing Co.",
+   "sector": "Retail Trade",
+   "sectorRank": 17,
+   "close": 17.72,
+   "yr": 32.1,
+   "m1_vs_tasi": 4.2,
+   "m3_vs_tasi": 12.8,
+   "above200": true,
+   "from52H": -3.6,
+   "ext10W": 6.0,
    "salesOK": false,
    "epsOK": false,
    "gmOK": true
@@ -142,6 +142,6 @@
  ],
  "pullbacks_above50_below20": [],
  "breadth_above50": 68,
- "breadth_above200": 38,
+ "breadth_above200": 39,
  "universe": 271
 }
