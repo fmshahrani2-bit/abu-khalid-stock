@@ -10,9 +10,13 @@ SECTIONS = [
     ("new",   "➕ دخل الفلترة اليوم — للمراقبة"),
 ]
 
+MARKET = {"m": "us"}   # الكورس: حجم الاختراق 1.5× المتوسط، وفي تاسي "أحياناً" 1.25× (S18-11)
+
 def vol_word(rv):
     if rv is None: return ""
-    return "حجم قوي" if rv >= 1.5 else ("حجم عادي" if rv >= 1 else "حجم ضعيف")
+    if rv >= 1.5: return "حجم قوي"
+    if MARKET["m"] == "sa" and rv >= 1.25: return "حجم مقبول في تاسي"
+    return "حجم عادي" if rv >= 1 else "حجم ضعيف"
 
 def line(name, price, trigger=None, stop=None, rv=None, extra=""):
     parts = [f"{name}: {price:g}"]

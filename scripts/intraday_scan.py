@@ -54,7 +54,8 @@ except Exception: prev_watch = set()
 names = {str(k): v.get("name", k) for k, v in card.items()}
 
 import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from alert_format import line, build
+from alert_format import line, build, MARKET
+MARKET["m"] = "sa"
 try: LECT = {m["sym"] for m in json.load(open(os.path.join(ROOT, "lecturer", "latest.json"), encoding="utf-8")).get("saudi_mentions", [])}
 except Exception: LECT = set()
 msgs = []          # (القسم، السطر)
