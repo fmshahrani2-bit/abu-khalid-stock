@@ -38,8 +38,17 @@ def rvol(r):
     return r["volume"] / r["average_volume_10d_calc"] if r.get("average_volume_10d_calc") else None
 
 # مستويات بطاقة آخر يوم (دخول/وقف المرشحين) من المستودع
+# المصدر الأول: بطاقة اللابتوب الأصلية (sa/card.json تدفعها المهمة اليومية)، والبديل: بطاقة النسخة السحابية (cards/)
+SA = os.path.join(ROOT, "sa", "card.json")
 cards = sorted(glob.glob(os.path.join(ROOT, "cards", "*.json")))
-card = {str(c["sym"]): c for c in (json.load(open(cards[-1], encoding="utf-8")) if cards else [])}
+sa_rows = json.load(open(SA, encoding="utf-8")) if os.path.exists(SA) else None
+cloud_date = os.path.basename(cards[-1])[:10] if cards else ""
+if sa_rows and sa_rows.get("date", "") >= cloud_date:
+    rows_src, card_src = sa_rows["rows"], f"بطاقة اللابتوب {sa_rows.get('date')}"
+else:
+    rows_src, card_src = (json.load(open(cards[-1], encoding="utf-8")) if cards else []), f"البطاقة السحابية {cloud_date}"
+card = {str(c["sym"]): c for c in rows_src}
+print("مستويات من:", card_src)
 try: prev_watch = {str(w["sym"]) for w in json.load(open(os.path.join(ROOT, "data", "screen.json"), encoding="utf-8"))["watchlist"]}
 except Exception: prev_watch = set()
 names = {str(k): v.get("name", k) for k, v in card.items()}
