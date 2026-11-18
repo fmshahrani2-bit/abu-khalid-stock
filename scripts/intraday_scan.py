@@ -62,6 +62,10 @@ def alert(sym, kind, sec, text):
     state["sent"][k] = now.strftime("%H:%M"); msgs.append((sec, text))
 
 serve = gt(T["close"], T["SMA50"])
+from vcp import shapes_for
+card_trig = {k for k, v in card.items() if v.get("group") == "مرشح" and v.get("trigger")}
+pool = [(str(r["name"]), "TADAWUL") for r in rows if base(r)] + [(k, "TADAWUL") for k in card]
+shapes = shapes_for(list(dict.fromkeys(pool)), os.path.join(ROOT, "data", "shapes", f"sa_{day}.json"))
 if serve: alert("TASI", "above50", "market", line("تاسي", round(T["close"]), extra=f"تجاوز متوسط 50 ({T['SMA50']:.0f})، يُحكم بالإغلاق"))
 
 for r in rows:
@@ -79,14 +83,17 @@ for r in rows:
             alert(s, "trigger", "chase" if c > t * 1.03 else "ready", line(nm, c, t, st, rv))
         if st and c < st <= pc:
             alert(s, "stop", "stop", line(nm, c, stop=st))
-    # 3) يجتاز الفلترة الأساسية عند قمة 52 أسبوعاً بحجم مرتفع (مؤشر آلي)
-    hi = r["price_52_week_high"]
-    if base(r) and hi and c >= hi * 0.995 and (r["change"] or 0) > 0 and rv and rv >= 1.5:
-        er = r.get("earnings_release_next_date"); ert = ""
-        if er:
-            d = dt.datetime.utcfromtimestamp(er)
-            if 0 <= (d - now).days <= 14: ert = f"⚠️ النتائج {d:%m-%d}"
-        alert(s, "high52", "high", line(nm, c, rv=rv, extra=ert))
+    # 3) VCP / شيك أوت (كشف آلي يومي من الدرس 12): عبور قمة آخر انكماش اليوم
+    sh = shapes.get(s)
+    if sh and sh.get("pivot") and s not in card_trig:
+        pv, st = sh["pivot"], sh["stop"]
+        if c > pv >= pc:
+            er = r.get("earnings_release_next_date"); ert = ""
+            if er:
+                d = dt.datetime.utcfromtimestamp(er)
+                if 0 <= (d - now).days <= 14: ert = f"⚠️ النتائج {d:%m-%d}"
+            sec = "chase" if c > pv * 1.03 else "vcp"
+            alert(s, "vcp", sec, line(nm, c, round(pv, 2), round(st, 2), rv, " — ".join(x for x in (f"{sh['shape']}: {sh['note']}", ert) if x)))
     # 4) مرشح جديد دخل الفلترة الكاملة
     if cand(r) and s not in prev_watch and s not in card:
         alert(s, "newcand", "new", line(nm, c, rv=rv))

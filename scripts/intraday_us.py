@@ -44,6 +44,10 @@ gt = lambda a, b: a is not None and b is not None and a > b
 base = lambda r: gt(r["close"], r["SMA30|1W"]) and gt(r["close"], r["SMA200"]) and (r["total_revenue_yoy_growth_fq"] or 0) >= 25 and gt(r["Perf.Y"], 20)
 cand = lambda r: base(r) and gt(r["close"], r["SMA20"]) and gt(r["Perf.1M"], spx["Perf.1M"]) and gt(r["Perf.3M"], spx["Perf.3M"])
 serve = gt(spx["close"], spx["SMA50"])
+from vcp import shapes_for
+_ex = {r["name"]: r.get("exchange") or "NASDAQ" for r in rows}
+pool = [(r["name"], _ex[r["name"]]) for r in rows if cand(r)] + [(k, _ex.get(k, "NASDAQ")) for k, v in card.items() if v.get("group") in ("ذكره المحاضر", "مرشح")]
+shapes = shapes_for(list(dict.fromkeys(pool)), os.path.join(ROOT, "data", "shapes", f"us_{day}.json"))
 _mkt = "السوق يخدم (S&P 500 فوق متوسط 50)" if serve else "السوق لا يخدم (S&P 500 تحت متوسط 50): لا دخول جديد في الديمو"
 
 import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -71,17 +75,21 @@ for r in rows:
     if cr and cr.get("group") in ("ذكره المحاضر", "مرشح") and cr.get("trigger"):
         nm = f"{s} ⭐" if cr["group"] == "ذكره المحاضر" else s
         t, st = cr["trigger"], cr.get("stop")
-        shape = cr.get("shape")                         # VCP / شيك أوت / لا شكل (تحدده مهمة الأمريكي اليومية)
+        shape = cr.get("shape") or shapes.get(s, {}).get("shape")   # من مهمة الأمريكي اليومية، وإلا الكشف السحابي
         has_shape = shape in ("VCP", "شيك أوت")
-        if c > t >= pc and (has_shape or shape is None):   # عبر الدخول اليوم فقط، وفي سهم له شكل من الكورس
-            tag = shape if has_shape else "الشكل لم يُفحص بعد"
+        if c > t >= pc and has_shape:                  # عبر الدخول اليوم فقط، وفي سهم له شكل من الكورس
+            tag = shape
             alert(s, "trigger", "chase" if c > t * 1.03 else "ready", line(nm, round(c, 2), t, st, rv, " — ".join(x for x in (tag, earn(r)) if x)))
         if st and c < st <= pc and cr.get("status") != "أُبطلت الفرضية":
             alert(s, "stop", "stop", line(nm, round(c, 2), stop=st))
-    hi = r["price_52_week_high"]
-    if cand(r) and hi and c >= hi * 0.995 and (r["change"] or 0) > 0 and rv and rv >= 1.5 and s not in card:
-        hits.append((rv, s, line(s, round(c, 2), rv=rv, extra=earn(r))))
-for rv, s, t in sorted(hits, reverse=True)[:12]: alert(s, "high52", "high", t)
+    sh = shapes.get(s)
+    if sh and sh.get("pivot") and not (cr and cr.get("trigger") and cr.get("shape")):
+        pv, st = sh["pivot"], sh["stop"]
+        if c > pv >= pc:
+            hits.append((rv or 0, s, "chase" if c > pv * 1.03 else "vcp",
+                         line(f"{s} ⭐" if cr and cr.get("group") == "ذكره المحاضر" else s, round(c, 2), round(pv, 2), round(st, 2), rv,
+                              " — ".join(x for x in (f"{sh['shape']}: {sh['note']}", earn(r)) if x))))
+for rv, s, sec, t in sorted(hits, reverse=True)[:12]: alert(s, "vcp", sec, t)
 if TEST: msgs.append(("plan", "✅ رسالة تجربة: فحص السوق الأمريكي يعمل"))
 
 state["runs"].append(ry.strftime("%H:%M"))
