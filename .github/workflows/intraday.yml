@@ -1,0 +1,31 @@
+name: intraday-scan
+on:
+  schedule:
+    - cron: "*/15 7-11 * * 0-4"   # كل 15 دقيقة من 10:00 إلى 14:45 الرياض، الأحد–الخميس
+    - cron: "0,12 12 * * 0-4"     # 15:00 و15:12 الرياض (بعد مزاد الإغلاق)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests
+      - run: python scripts/intraday_scan.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: save state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/intraday
+          git diff --cached --quiet && exit 0
+          git commit -m "intraday: $(date -u +%F\ %H:%M)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
