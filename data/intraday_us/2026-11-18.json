@@ -16,10 +16,12 @@
   "ASND|trigger": "20:25",
   "MANE|stop": "20:25",
   "SKHY|stop": "20:25",
-  "CRVL|trigger": "20:25"
+  "CRVL|trigger": "20:25",
+  "PLGO|stop": "20:51"
  },
  "runs": [
-  "20:25"
+  "20:25",
+  "20:51"
  ],
  "issue": 2
 }
