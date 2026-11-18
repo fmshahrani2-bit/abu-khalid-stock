@@ -61,11 +61,12 @@ for r in rows:
         if c <= 2.46: alert(s, "stop", f"⚠️ أمريكانا {c} عند الوقف 2.46 أو تحته: الخطة الخروج، والوقف لا يُنزل")
         elif c > 2.80: alert(s, "raise", f"🔔 أمريكانا {c} فوق 2.80: إن أغلقت فوقها يُرفع الوقف إلى 2.60")
     # 2) مستويات المرشحين في البطاقة
+    pc = c / (1 + (r["change"] or 0) / 100)          # إغلاق أمس
     cr = card.get(s)
     if cr and cr.get("group") == "مرشح" and s != "6015":
-        if cr.get("trigger") and c > cr["trigger"]:
+        if cr.get("trigger") and c > cr["trigger"] >= pc:
             alert(s, "trigger", f"🔔 {nm} ({s}) {c} تجاوز الدخول {cr['trigger']}{rvt}. ليس أمر دخول: الشرط إغلاق فوق الدخول وفوق قمة أمس، بحجم قوي، وانظر الشارت. الوقف {cr.get('stop')}. {mkt}")
-        if cr.get("stop") and c < cr["stop"]:
+        if cr.get("stop") and c < cr["stop"] <= pc:
             alert(s, "stop", f"⚠️ {nm} ({s}) {c} تحت الوقف {cr['stop']}: إن كنت داخلاً فالكورس يقول اخرج ولا تُنزل الوقف")
     # 3) سهم يجتاز فلترة الكورس عند قمة 52 أسبوعاً بحجم مرتفع
     hi = r["price_52_week_high"]

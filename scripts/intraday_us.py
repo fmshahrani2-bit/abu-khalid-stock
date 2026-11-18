@@ -63,13 +63,14 @@ for r in rows:
     s = r["name"]; c = r["close"]
     if c is None: continue
     rv = r.get("relative_volume_intraday|5"); rvt = f"، حجم نسبي {rv:.1f}×" if rv else ""
+    pc = c / (1 + (r["change"] or 0) / 100)          # إغلاق أمس
     cr = card.get(s)
     if cr and cr.get("group") in ("ذكره المحاضر", "مرشح") and cr.get("trigger"):
         tag = "ذكره المحاضر للمتابعة" if cr["group"] == "ذكره المحاضر" else "مرشح الفلترة"
-        if c > cr["trigger"]:
+        if c > cr["trigger"] >= pc:                    # عبر الدخول اليوم فقط
             chase = " — أعلى من الدخول بأكثر من 3%: لا مطاردة" if c > cr["trigger"] * 1.03 else ""
             alert(s, "trigger", f"🔔 {s} ({tag}) {c} تجاوز الدخول {cr['trigger']}{rvt}{chase}{earn(r)}. ليس أمر دخول: الشرط إغلاق فوق الدخول وفوق قمة أمس بحجم ≥1.5×، والوقف {cr['stop']}. {mkt}")
-        if cr.get("stop") and c < cr["stop"] and cr.get("status") != "أُبطلت الفرضية":
+        if cr.get("stop") and c < cr["stop"] <= pc and cr.get("status") != "أُبطلت الفرضية":
             alert(s, "stop", f"⚠️ {s} ({tag}) {c} تحت الوقف {cr['stop']}: إن كنت داخلاً فالكورس يقول اخرج ولا تُنزل الوقف")
     hi = r["price_52_week_high"]
     if cand(r) and hi and c >= hi * 0.995 and (r["change"] or 0) > 0 and rv and rv >= 1.5 and s not in card:
