@@ -1,45 +1,45 @@
 {
- "when": "2026-11-17T21:19:02",
+ "when": "2026-11-18T12:14:58",
  "tasi": {
-  "close": 10253.2,
-  "PerfW": 1.3505565621549698,
-  "Perf1M": 1.2921836718564876,
-  "Perf3M": -6.042642410935604,
-  "PerfY": -7.0820359086081295,
-  "SMA20": 10009.4055,
-  "SMA50": 10331.1746,
-  "SMA200": 10850.61645,
-  "SMA10W": 10254.506,
-  "SMA30W": 10720.023333333334
+  "close": 10182.73,
+  "PerfW": 0.036349239564073474,
+  "Perf1M": -0.08703245810275914,
+  "Perf3M": -6.704225403730461,
+  "PerfY": -7.508009130454134,
+  "SMA20": 10022.211,
+  "SMA50": 10314.1042,
+  "SMA200": 10845.177,
+  "SMA10W": 10247.458999999999,
+  "SMA30W": 10717.674333333332
  },
  "steps": {
   "main": 271,
-  "F2_yr20": 13,
-  "F3_w30": 10,
-  "F4_sma50": 8,
-  "F5_sma20": 7,
-  "F6_rs": 6
+  "F2_yr20": 12,
+  "F3_w30": 9,
+  "F4_sma50": 7,
+  "F5_sma20": 6,
+  "F6_rs": 4
  },
  "topSectors": [
   [
    "Health Technology",
-   5.6737588652482325
+   4.656862745098041
   ],
   [
-   "Technology Services",
-   4.289318755256518
+   "Energy Minerals",
+   2.966432474629188
   ],
   [
    "Consumer Durables",
-   3.5398230088495493
+   2.712933753943227
   ],
   [
-   "Consumer Services",
-   2.145411203814061
+   "Miscellaneous",
+   0.6688963210702198
   ],
   [
-   "Consumer Non-Durables",
-   1.8487394957983097
+   "Industrial Services",
+   0.238095238095233
   ]
  ],
  "watchlist": [
@@ -47,101 +47,69 @@
    "sym": "7211",
    "name": "Saudi Azm for Communicatio",
    "sector": "Technology Services",
-   "sectorRank": 2,
-   "close": 33.98,
-   "yr": 40.6,
-   "m1_vs_tasi": 18.5,
-   "m3_vs_tasi": 57.1,
+   "sectorRank": 10,
+   "close": 34.56,
+   "yr": 43.1,
+   "m1_vs_tasi": 20.2,
+   "m3_vs_tasi": 58.7,
    "above200": true,
-   "from52H": -3.0,
-   "ext10W": 12.4,
+   "from52H": -1.4,
+   "ext10W": 14.1,
    "salesOK": true,
    "epsOK": false,
    "gmOK": true
   },
   {
-   "sym": "8313",
-   "name": "Rasan Information Technolo",
-   "sector": "Technology Services",
-   "sectorRank": 2,
-   "close": 144,
-   "yr": 34.6,
-   "m1_vs_tasi": 5.0,
-   "m3_vs_tasi": 9.9,
+   "sym": "4190",
+   "name": "Jarir Marketing Co.",
+   "sector": "Retail Trade",
+   "sectorRank": 13,
+   "close": 17.54,
+   "yr": 31.9,
+   "m1_vs_tasi": 3.7,
+   "m3_vs_tasi": 11.4,
    "above200": true,
-   "from52H": -9.8,
-   "ext10W": 4.4,
-   "salesOK": true,
-   "epsOK": true,
+   "from52H": -4.6,
+   "ext10W": 5.1,
+   "salesOK": false,
+   "epsOK": false,
    "gmOK": true
   },
   {
    "sym": "6015",
    "name": "Americana Restaurants Inte",
    "sector": "Consumer Services",
-   "sectorRank": 4,
+   "sectorRank": 16,
    "close": 2.68,
-   "yr": 41.1,
-   "m1_vs_tasi": 9.0,
-   "m3_vs_tasi": 15.0,
+   "yr": 41.8,
+   "m1_vs_tasi": 10.4,
+   "m3_vs_tasi": 15.6,
    "above200": true,
-   "from52H": -0.4,
+   "from52H": -1.5,
    "ext10W": 7.9,
    "salesOK": false,
    "epsOK": true,
    "gmOK": true
   },
   {
-   "sym": "4144",
-   "name": "Raoom trading Company",
-   "sector": "Process Industries",
-   "sectorRank": 12,
-   "close": 85.5,
-   "yr": 43.2,
-   "m1_vs_tasi": 6.9,
-   "m3_vs_tasi": 21.7,
-   "above200": true,
-   "from52H": -3.3,
-   "ext10W": 12.6,
-   "salesOK": false,
-   "epsOK": false,
-   "gmOK": true
-  },
-  {
    "sym": "2110",
    "name": "Saudi Cable Co.",
    "sector": "Producer Manufacturing",
-   "sectorRank": 15,
-   "close": 190,
-   "yr": 41.1,
-   "m1_vs_tasi": 4.8,
-   "m3_vs_tasi": 13.6,
+   "sectorRank": 18,
+   "close": 198.1,
+   "yr": 50.0,
+   "m1_vs_tasi": 10.7,
+   "m3_vs_tasi": 19.0,
    "above200": true,
-   "from52H": -0.5,
-   "ext10W": 7.9,
+   "from52H": -0.9,
+   "ext10W": 12.0,
    "salesOK": false,
    "epsOK": null,
    "gmOK": false
-  },
-  {
-   "sym": "4190",
-   "name": "Jarir Marketing Co.",
-   "sector": "Retail Trade",
-   "sectorRank": 17,
-   "close": 17.72,
-   "yr": 32.1,
-   "m1_vs_tasi": 4.2,
-   "m3_vs_tasi": 12.8,
-   "above200": true,
-   "from52H": -3.6,
-   "ext10W": 6.0,
-   "salesOK": false,
-   "epsOK": false,
-   "gmOK": true
   }
  ],
  "pullbacks_above50_below20": [],
- "breadth_above50": 68,
- "breadth_above200": 39,
+ "breadth_above50": 59,
+ "breadth_above200": 35,
  "universe": 271
 }
