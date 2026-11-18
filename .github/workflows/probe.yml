@@ -5,9 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for u in "https://t.me/s/alphamarketsignalpulse" "https://x.com/AlphaXPulse" "https://www.tiktok.com/@alphaxpulse" "https://nitter.net/AlphaXPulse"; do
-            code=$(curl -s -o /tmp/p.html -w "%{http_code}" -A "Mozilla/5.0" -L "$u"); echo "$u -> $code size $(wc -c </tmp/p.html)"
-          done
-          curl -s -A "Mozilla/5.0" "https://t.me/s/alphamarketsignalpulse" | grep -o 'data-post="[^"]*"' | tail -5
-          curl -s -A "Mozilla/5.0" "https://t.me/s/alphamarketsignalpulse" | grep -o 'tgme_widget_message_voice\|tgme_widget_message_photo_wrap\|tgme_widget_message_text' | sort | uniq -c
-          curl -s -A "Mozilla/5.0" "https://t.me/s/alphamarketsignalpulse" | grep -o 'tgme_widget_message_author[^<]*<[^<]*<[^>]*>[^<]*' | tail -5
+          curl -s -A "Mozilla/5.0" "https://t.me/s/alphamarketsignalpulse" | sed 's/<[^>]*>/ /g' | tr -s ' \n' | head -c 600; echo
+          curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36" "https://www.tiktok.com/@alphaxpulse" > /tmp/t.html; grep -o '/video/[0-9]\{19\}\|/photo/[0-9]\{19\}' /tmp/t.html | sort -u | head; grep -o '"desc":"[^"]\{0,80\}' /tmp/t.html | head -5; grep -c 'itemList\|ItemModule' /tmp/t.html
+          curl -s -A "Mozilla/5.0" "https://nitter.net/AlphaXPulse" | sed 's/<[^>]*>/ /g' | tr -s ' \n' | head -c 300; echo
