@@ -46,6 +46,7 @@ for m, c in MK.items():
             if fh < -12: continue
         except (TypeError, ZeroDivisionError):
             continue
+        if m == "sa" and x["sym"].split(":")[1].startswith("9"): continue   # نمو (السوق الموازية): أبو خالد يختار من السوق الرئيسية
         k20 = x["low"] <= x["SMA20"] * 1.02 and x["close"] > x["SMA20"]
         k50 = x["low"] <= x["SMA50"] * 1.02 and x["close"] > x["SMA50"]
         why = []
@@ -68,7 +69,7 @@ for m, c in MK.items():
 # محفزات: إعلانات الشركات الكبرى خلال 7 أيام (مثال أبو خالد: "SOXL تابع مع إعلان إنفيديا")
 now = dt.datetime.utcnow().timestamp()
 big = scan(MK["us"]["url"], {"filter": [{"left": "market_cap_basic", "operation": "greater", "right": 3e11},
-                                        {"left": "earnings_release_next_date", "operation": "in_range", "right": [now, now + 7 * 86400]}],
+                                        {"left": "earnings_release_next_date", "operation": "in_range", "right": [now - 86400, now + 7 * 86400]}],
                              "columns": COLS, "range": [0, 50]})
 ETF = {"Electronic Technology": "SOXX/SOXL (أشباه الموصلات)", "Technology Services": "QQQ / XLK", "Retail Trade": "XRT",
        "Finance": "XLF", "Health Technology": "XLV / IBB", "Energy Minerals": "XLE"}
