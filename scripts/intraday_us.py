@@ -44,6 +44,8 @@ gt = lambda a, b: a is not None and b is not None and a > b
 base = lambda r: gt(r["close"], r["SMA30|1W"]) and gt(r["close"], r["SMA200"]) and (r["total_revenue_yoy_growth_fq"] or 0) >= 25 and gt(r["Perf.Y"], 20)
 cand = lambda r: base(r) and gt(r["close"], r["SMA20"]) and gt(r["Perf.1M"], spx["Perf.1M"]) and gt(r["Perf.3M"], spx["Perf.3M"])
 serve = gt(spx["close"], spx["SMA50"])
+try: LECT = {m["sym"] for m in json.load(open(os.path.join(ROOT, "lecturer", "latest.json"), encoding="utf-8")).get("us_mentions", [])}
+except Exception: LECT = set()
 from vcp import shapes_for
 _ex = {r["name"]: r.get("exchange") or "NASDAQ" for r in rows}
 pool = [(r["name"], _ex[r["name"]]) for r in rows if cand(r)] + [(k, _ex.get(k, "NASDAQ")) for k, v in card.items() if v.get("group") in ("ذكره المحاضر", "مرشح")] + [(k, _ex.get(k, "NASDAQ")) for k in LECT]
@@ -52,8 +54,6 @@ _mkt = "السوق يخدم (S&P 500 فوق متوسط 50)" if serve else "ال�
 
 import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from alert_format import line, build
-try: LECT = {m["sym"] for m in json.load(open(os.path.join(ROOT, "lecturer", "latest.json"), encoding="utf-8")).get("us_mentions", [])}
-except Exception: LECT = set()
 msgs = []          # (القسم، السطر)
 def alert(sym, kind, sec, text):
     k = f"{sym}|{kind}"
