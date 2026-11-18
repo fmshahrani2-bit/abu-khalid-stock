@@ -15,6 +15,26 @@ def enrich(df):
     df["vol_avg50"] = df["Volume"].rolling(50).mean()
     return df
 
+_TV = None
+def load_daily(key, ysym, period="max"):
+    """المصدر الأول: TradingView عبر tvDatafeed (يحوي كل جلسات تداول بما فيها الأحد، ومعدّل للتجزئة).
+    البديل: Yahoo. يعيد (DataFrame, اسم المصدر)."""
+    global _TV
+    try:
+        import tvDatafeed as tvd
+        if _TV is None: _TV = tvd.TvDatafeed()
+        d = _TV.get_hist(key, "TADAWUL", tvd.Interval.in_daily, n_bars=5000)
+        if d is not None and len(d) > 30:
+            d = d.rename(columns=str.capitalize); d.index = pd.to_datetime(d.index).normalize()
+            if getattr(d.index, "tz", None) is not None: d.index = d.index.tz_localize(None)
+            return d[["Open", "High", "Low", "Close", "Volume"]].copy(), "tradingview"
+    except Exception as e:
+        summary.setdefault("tv_errors", {})[key] = str(e)[:120]
+    d = yf.Ticker(ysym).history(period=period, interval="1d", auto_adjust=False)
+    if d.empty: raise RuntimeError("no daily data")
+    d.index = d.index.tz_localize(None)
+    return d[["Open", "High", "Low", "Close", "Volume"]].copy(), "yahoo"
+
 def chart(df, title, path, levels=(), weekly=False):
     d = df.tail(260 if not weekly else 400)
     fig, ax = plt.subplots(2, 1, figsize=(12, 7), sharex=True, gridspec_kw={"height_ratios": [3, 1]})
@@ -30,9 +50,8 @@ items = [dict(WL["index"], is_index=True)] + WL["stocks"]
 for it in items:
     s = it["sym"]; key = s.replace("^", "").replace(".SR", "")
     try:
-        d = yf.Ticker(s).history(period="max", interval="1d", auto_adjust=False)
-        if d.empty: raise RuntimeError("no daily data")
-        d.index = d.index.tz_localize(None); d = enrich(d[["Open", "High", "Low", "Close", "Volume"]].copy())
+        d, src = load_daily("TASI" if it.get("is_index") else key, s)
+        summary.setdefault("sources", {})[key] = src; d = enrich(d)
         d.round(4).to_csv(os.path.join(OUT, f"{key}_daily.csv"))
         w = d[["Open", "High", "Low", "Close", "Volume"]].resample("W-THU").agg({"Open": "first", "High": "max", "Low": "min", "Close": "last", "Volume": "sum"}).dropna()
         w.round(4).to_csv(os.path.join(OUT, f"{key}_weekly.csv"))
@@ -100,8 +119,8 @@ try:
     for w in screen["watchlist"] + screen["pullbacks_above50_below20"]:
         if str(w["sym"]) in have: continue
         try:
-            d = yf.Ticker(f"{w['sym']}.SR").history(period="2y", interval="1d", auto_adjust=False)
-            d.index = d.index.tz_localize(None); d = enrich(d[["Open","High","Low","Close","Volume"]].copy())
+            d, src = load_daily(str(w["sym"]), f"{w['sym']}.SR", "2y")
+            summary.setdefault("sources", {})[str(w["sym"])] = src; d = enrich(d)
             d.round(4).to_csv(os.path.join(OUT, f"{w['sym']}_daily.csv"))
             chart(d, f"{w['sym']} daily", os.path.join(OUT, "charts", f"{w['sym']}_daily.png"))
         except Exception as e:
