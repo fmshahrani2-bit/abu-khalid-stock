@@ -105,6 +105,11 @@ if msgs and gh_tok and repo:
 
 # قناة 2: تلقرام (عند إضافة السرّين)
 tok, chat = os.environ.get("TELEGRAM_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
+if tok:
+    tok = re.sub(r"\s+", "", tok)
+    if tok.lower().startswith("bot"): tok = tok[3:]
+    print("token shape:", "ok" if re.fullmatch(r"\d{6,}:[A-Za-z0-9_-]{30,}", tok) else f"غير صالح (طوله {len(tok)}، فيه نقطتان: {':' in tok})")
+if chat: chat = chat.strip()
 if msgs and tok and chat:
     text = f"فحص السوق {now:%H:%M} (إشارات أولية، ليست توصية)\n\n" + "\n\n".join(msgs)
     for i in range(0, len(text), 3800):
