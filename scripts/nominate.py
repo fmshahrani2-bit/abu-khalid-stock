@@ -123,7 +123,12 @@ try:
                     if "score" in e: p["eye"] = e; break
                 except Exception: pass
             p.setdefault("eye", {"note": "تعذر جلب الشارت"})
-        result["markets"][m]["top"].sort(key=lambda p: (-(p["eye"].get("score") or 0), not p["kiss"], -(p["rs3m"] or 0)))
+        # قرار حسب الكورس (S31 12:01–12:45، 26:20: "كلما زادت المسافة بين المتوسطات… خطير، فرصة الدخول ضئيلة… لا، تنتظر"؛
+        # والقناة 1719: "أسهم ابتعدت كثيراً… يجب أن تبحث عن محطة دخول جديدة"): الممتد لا يُحذف من المتابعة، يُؤخَّر ويُوسم.
+        for p in result["markets"][m]["top"]:
+            ch = p["eye"].get("checks", {})
+            p["state"] = "قريب من متوسطاته" if ch.get("متوسطات متقاربة (9 عن 50 < 8%)") and ch.get("غير ممتد عن متوسط 9 (< 4%)") else "قوي لكن ممتد — ينتظر قاعدة جديدة"
+        result["markets"][m]["top"].sort(key=lambda p: (p["state"] != "قريب من متوسطاته", -(p["eye"].get("score") or 0), not p["kiss"], -(p["rs3m"] or 0)))
 except Exception as ex:
     print("eye err", ex)
 
