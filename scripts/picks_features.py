@@ -76,5 +76,27 @@ for m in M:
         "sessions_after": int(len(c) - 1 - pos), "computed": dt.date.today().isoformat()}
     print(key, out[key].get("shape"), out[key].get("ret20"))
 
+# التحليل المالي حسب الكورس (S27-13): نمو المبيعات (الأهم)، نمو ربحية السهم، الهامش الإجمالي — قيم آخر ربع معلن الآن، مع تاريخ آخر نتائج
+import requests
+FC = ["total_revenue_yoy_growth_fq", "total_revenue_yoy_growth_ttm", "earnings_per_share_diluted_yoy_growth_fq",
+      "earnings_per_share_diluted_yoy_growth_ttm", "gross_margin_ttm", "net_margin_ttm", "earnings_release_date", "earnings_release_next_date", "sector", "industry"]
+for mk, url, pre in (("sa", "https://scanner.tradingview.com/ksa/scan", ["TADAWUL:"]), ("us", "https://scanner.tradingview.com/america/scan", ["NASDAQ:", "NYSE:", "AMEX:", "CBOE:"])):
+    syms = sorted({v["sym"] for v in out.values() if v.get("market") == mk})
+    if not syms: continue
+    try:
+        r = requests.post(url, json={"symbols": {"tickers": [p_ + s_ for s_ in syms for p_ in pre]}, "columns": FC}, timeout=40).json()
+        got = {x["s"].split(":")[1]: dict(zip(FC, x["d"])) for x in r.get("data", [])}
+    except Exception as e:
+        print("fund err", e); got = {}
+    for k, v in out.items():
+        g = got.get(v["sym"])
+        if v.get("market") != mk or not g: continue
+        ts = lambda t: dt.datetime.utcfromtimestamp(t).strftime("%Y-%m-%d") if t else None
+        v["fund"] = {"salesG_q": r2(g["total_revenue_yoy_growth_fq"]), "salesG_ttm": r2(g["total_revenue_yoy_growth_ttm"]),
+                     "epsG_q": r2(g["earnings_per_share_diluted_yoy_growth_fq"]), "epsG_ttm": r2(g["earnings_per_share_diluted_yoy_growth_ttm"]),
+                     "gm": r2(g["gross_margin_ttm"]), "net_margin": r2(g["net_margin_ttm"]), "last_results": ts(g["earnings_release_date"]),
+                     "next_results": ts(g["earnings_release_next_date"]), "sector": g["sector"], "industry": g["industry"],
+                     "as_of": dt.date.today().isoformat(), "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"}
+
 json.dump(out, open(OUTF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("saved", len(out))
