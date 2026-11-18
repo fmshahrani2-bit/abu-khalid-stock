@@ -1,16 +1,16 @@
 {
- "when": "2026-11-18T12:14:58",
+ "when": "2026-11-18T15:56:51",
  "tasi": {
-  "close": 10182.73,
-  "PerfW": 0.036349239564073474,
-  "Perf1M": -0.08703245810275914,
-  "Perf3M": -6.704225403730461,
-  "PerfY": -7.508009130454134,
-  "SMA20": 10022.211,
-  "SMA50": 10314.1042,
-  "SMA200": 10845.177,
-  "SMA10W": 10247.458999999999,
-  "SMA30W": 10717.674333333332
+  "close": 10200.16,
+  "PerfW": 0.20758363026731622,
+  "Perf1M": 0.0839907374700684,
+  "Perf3M": -6.54452900097668,
+  "PerfY": -7.3496885817548945,
+  "SMA20": 10023.0825,
+  "SMA50": 10314.452800000001,
+  "SMA200": 10845.26415,
+  "SMA10W": 10249.202000000001,
+  "SMA30W": 10718.255333333333
  },
  "steps": {
   "main": 271,
@@ -27,19 +27,19 @@
   ],
   [
    "Energy Minerals",
-   2.966432474629188
+   3.200624512099923
   ],
   [
    "Consumer Durables",
-   2.712933753943227
+   2.3974763406940114
   ],
   [
    "Miscellaneous",
    0.6688963210702198
   ],
   [
-   "Industrial Services",
-   0.238095238095233
+   "Utilities",
+   0.32414910858994445
   ]
  ],
  "watchlist": [
@@ -47,14 +47,14 @@
    "sym": "7211",
    "name": "Saudi Azm for Communicatio",
    "sector": "Technology Services",
-   "sectorRank": 10,
-   "close": 34.56,
-   "yr": 43.1,
-   "m1_vs_tasi": 20.2,
-   "m3_vs_tasi": 58.7,
+   "sectorRank": 9,
+   "close": 34.7,
+   "yr": 43.7,
+   "m1_vs_tasi": 20.5,
+   "m3_vs_tasi": 59.2,
    "above200": true,
-   "from52H": -1.4,
-   "ext10W": 14.1,
+   "from52H": -1.0,
+   "ext10W": 14.5,
    "salesOK": true,
    "epsOK": false,
    "gmOK": true
@@ -64,52 +64,52 @@
    "name": "Jarir Marketing Co.",
    "sector": "Retail Trade",
    "sectorRank": 13,
-   "close": 17.54,
-   "yr": 31.9,
-   "m1_vs_tasi": 3.7,
-   "m3_vs_tasi": 11.4,
+   "close": 17.42,
+   "yr": 31.0,
+   "m1_vs_tasi": 2.8,
+   "m3_vs_tasi": 10.5,
    "above200": true,
-   "from52H": -4.6,
-   "ext10W": 5.1,
+   "from52H": -5.2,
+   "ext10W": 4.4,
    "salesOK": false,
    "epsOK": false,
-   "gmOK": true
-  },
-  {
-   "sym": "6015",
-   "name": "Americana Restaurants Inte",
-   "sector": "Consumer Services",
-   "sectorRank": 16,
-   "close": 2.68,
-   "yr": 41.8,
-   "m1_vs_tasi": 10.4,
-   "m3_vs_tasi": 15.6,
-   "above200": true,
-   "from52H": -1.5,
-   "ext10W": 7.9,
-   "salesOK": false,
-   "epsOK": true,
    "gmOK": true
   },
   {
    "sym": "2110",
    "name": "Saudi Cable Co.",
    "sector": "Producer Manufacturing",
-   "sectorRank": 18,
-   "close": 198.1,
-   "yr": 50.0,
-   "m1_vs_tasi": 10.7,
-   "m3_vs_tasi": 19.0,
+   "sectorRank": 17,
+   "close": 199.3,
+   "yr": 50.9,
+   "m1_vs_tasi": 11.2,
+   "m3_vs_tasi": 19.5,
    "above200": true,
-   "from52H": -0.9,
-   "ext10W": 12.0,
+   "from52H": -0.3,
+   "ext10W": 12.6,
    "salesOK": false,
    "epsOK": null,
    "gmOK": false
+  },
+  {
+   "sym": "6015",
+   "name": "Americana Restaurants Inte",
+   "sector": "Consumer Services",
+   "sectorRank": 18,
+   "close": 2.67,
+   "yr": 41.3,
+   "m1_vs_tasi": 9.8,
+   "m3_vs_tasi": 15.1,
+   "above200": true,
+   "from52H": -1.8,
+   "ext10W": 7.5,
+   "salesOK": false,
+   "epsOK": true,
+   "gmOK": true
   }
  ],
  "pullbacks_above50_below20": [],
- "breadth_above50": 59,
+ "breadth_above50": 64,
  "breadth_above200": 35,
  "universe": 271
 }
