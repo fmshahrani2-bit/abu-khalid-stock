@@ -79,6 +79,8 @@ def eye(sym_full, idx_df):
     import tvDatafeed as tvd
     ex, s = sym_full.split(":")
     d = _TV.get_hist(s, ex, tvd.Interval.in_daily, n_bars=260)
+    if d is None:
+        import time; time.sleep(2); d = _TV.get_hist(s, ex, tvd.Interval.in_daily, n_bars=260)
     if d is None or len(d) < 210: return {"note": "بيانات غير كافية"}
     c, h, l, v = d["close"], d["high"], d["low"], d["volume"]
     ma = {k: c.rolling(k).mean() for k in (9, 21, 50, 200)}
@@ -103,6 +105,7 @@ def eye(sym_full, idx_df):
               "متوسطات متقاربة (9 عن 50 < 8%)": gap < 8, "غير ممتد عن متوسط 9 (< 4%)": abs(ext) < 4,
               "قيعان صاعدة والمؤشر يهبط": rs_eye, "قاعه قبل قاع المؤشر": low_first,
               "حجم الصعود > حجم النزول": take_me, "هدوء التذبذب": calm}
+    checks = {k: bool(b) for k, b in checks.items()}
     return {"score": sum(checks.values()), "of": len(checks), "checks": checks,
             "gap_9_50": r1(gap), "ext_9": r1(ext), "note": "تقريب آلي لنظرات العين (S80)؛ الحكم النهائي بالنظر"}
 
