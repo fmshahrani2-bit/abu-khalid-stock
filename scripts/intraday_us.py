@@ -16,6 +16,7 @@ day = ny.strftime("%Y-%m-%d")
 SD = os.path.join(ROOT, "data", "intraday_us"); os.makedirs(SD, exist_ok=True)
 SF = os.path.join(SD, f"{day}.json")
 state = json.load(open(SF, encoding="utf-8")) if os.path.exists(SF) else {"sent": {}, "runs": []}
+if TEST: state = {"sent": {}, "runs": [], "issue": state.get("issue")}; SF = os.devnull   # تجربة: تعرض كل التنبيهات الحالية ولا تحفظ
 
 SCAN = "https://scanner.tradingview.com/america/scan"
 def post(body):
@@ -43,46 +44,49 @@ gt = lambda a, b: a is not None and b is not None and a > b
 base = lambda r: gt(r["close"], r["SMA30|1W"]) and gt(r["close"], r["SMA200"]) and (r["total_revenue_yoy_growth_fq"] or 0) >= 25 and gt(r["Perf.Y"], 20)
 cand = lambda r: base(r) and gt(r["close"], r["SMA20"]) and gt(r["Perf.1M"], spx["Perf.1M"]) and gt(r["Perf.3M"], spx["Perf.3M"])
 serve = gt(spx["close"], spx["SMA50"])
-mkt = "السوق يخدم (S&P 500 فوق متوسط 50)" if serve else "السوق لا يخدم (S&P 500 تحت متوسط 50): لا دخول جديد في الديمو"
+_mkt = "السوق يخدم (S&P 500 فوق متوسط 50)" if serve else "السوق لا يخدم (S&P 500 تحت متوسط 50): لا دخول جديد في الديمو"
 
-msgs = []
-def alert(sym, kind, text):
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from alert_format import line, build
+msgs = []          # (القسم، السطر)
+def alert(sym, kind, sec, text):
     k = f"{sym}|{kind}"
     if k in state["sent"]: return
-    state["sent"][k] = ry.strftime("%H:%M"); msgs.append(text)
+    state["sent"][k] = ry.strftime("%H:%M"); msgs.append((sec, text))
 def earn(r):
     er = r.get("earnings_release_next_date")
     if not er: return ""
     d = dt.datetime.fromtimestamp(er, ZoneInfo("America/New_York"))
-    return f"، ⚠️ النتائج {d:%Y-%m-%d} (لا دخول قبلها)" if 0 <= (d.date() - ny.date()).days <= 14 else ""
+    return f"⚠️ النتائج {d:%m-%d}، لا دخول قبلها" if 0 <= (d.date() - ny.date()).days <= 14 else ""
 
-if serve: alert("SPX", "above50", f"📈 S&P 500 عند {spx['close']:.0f} فوق متوسط 50 يوماً ({spx['SMA50']:.0f}) أثناء الجلسة؛ يُحكم بالإغلاق، ومعه تبدأ مراكز استكشافية فقط")
+if serve: alert("SPX", "above50", "market", line("S&P 500", round(spx["close"]), extra=f"تجاوز متوسط 50 ({spx['SMA50']:.0f})، يُحكم بالإغلاق"))
 
 hits = []
 for r in rows:
     s = r["name"]; c = r["close"]
     if c is None: continue
-    rv = r.get("relative_volume_intraday|5"); rvt = f"، حجم نسبي {rv:.1f}×" if rv else ""
+    rv = r.get("relative_volume_intraday|5")
     pc = c / (1 + (r["change"] or 0) / 100)          # إغلاق أمس
     cr = card.get(s)
     if cr and cr.get("group") in ("ذكره المحاضر", "مرشح") and cr.get("trigger"):
-        tag = "ذكره المحاضر للمتابعة" if cr["group"] == "ذكره المحاضر" else "مرشح الفلترة"
-        if c > cr["trigger"] >= pc:                    # عبر الدخول اليوم فقط
-            chase = " — أعلى من الدخول بأكثر من 3%: لا مطاردة" if c > cr["trigger"] * 1.03 else ""
-            alert(s, "trigger", f"🔔 {s} ({tag}) {c} تجاوز الدخول {cr['trigger']}{rvt}{chase}{earn(r)}. ليس أمر دخول: الشرط إغلاق فوق الدخول وفوق قمة أمس بحجم ≥1.5×، والوقف {cr['stop']}. {mkt}")
-        if cr.get("stop") and c < cr["stop"] <= pc and cr.get("status") != "أُبطلت الفرضية":
-            alert(s, "stop", f"⚠️ {s} ({tag}) {c} تحت الوقف {cr['stop']}: إن كنت داخلاً فالكورس يقول اخرج ولا تُنزل الوقف")
+        nm = f"{s} ⭐" if cr["group"] == "ذكره المحاضر" else s
+        t, st = cr["trigger"], cr.get("stop")
+        if c > t >= pc:                                # عبر الدخول اليوم فقط
+            alert(s, "trigger", "chase" if c > t * 1.03 else "ready", line(nm, round(c, 2), t, st, rv, earn(r)))
+        if st and c < st <= pc and cr.get("status") != "أُبطلت الفرضية":
+            alert(s, "stop", "stop", line(nm, round(c, 2), stop=st))
     hi = r["price_52_week_high"]
     if cand(r) and hi and c >= hi * 0.995 and (r["change"] or 0) > 0 and rv and rv >= 1.5 and s not in card:
-        hits.append((rv, s, f"🚀 {s} {c} عند قمة 52 أسبوعاً{rvt}، ويجتاز فلترة الكورس (مبيعات {r['total_revenue_yoy_growth_fq']:.0f}%، يتفوق على S&P 500){earn(r)}. [قمة 52 أسبوعاً مؤشر آلي ليس من الكورس؛ نقطة الدخول عند أبو خالد قمة القاعدة] افحص القاعدة والمقاومة والوقف (≤8%). {mkt}"))
-for rv, s, t in sorted(hits, reverse=True)[:12]: alert(s, "high52", t)
-if TEST: msgs.append("✅ رسالة تجربة: فحص السوق الأمريكي يعمل")
+        hits.append((rv, s, line(s, round(c, 2), rv=rv, extra=earn(r))))
+for rv, s, t in sorted(hits, reverse=True)[:12]: alert(s, "high52", "high", t)
+if TEST: msgs.append(("plan", "✅ رسالة تجربة: فحص السوق الأمريكي يعمل"))
 
 state["runs"].append(ry.strftime("%H:%M"))
 json.dump(state, open(SF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{ry:%H:%M} الرياض ({ny:%H:%M} نيويورك) | {len(rows)} سهماً | SPX {spx['close']} | تنبيهات جديدة: {len(msgs)}")
-for m in msgs: print(" -", m)
 if not msgs: raise SystemExit(0)
+text = build(f"🇺🇸 تنبيهات السوق الأمريكي — {ry:%H:%M} الرياض", msgs, serve, "S&P 500") + "\n\u200f⭐ = سهم ذكره أبو خالد للمتابعة."
+print(text)
 
 gh_tok, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
 if gh_tok and repo:
@@ -94,12 +98,11 @@ if gh_tok and repo:
         num = ex[0]["number"] if ex else requests.post(f"{api}/issues", headers=H, json={"title": title, "labels": ["alerts-us"], "assignees": [repo.split("/")[0]],
               "body": "تنبيهات آلية من فحص السوق الأمريكي أثناء الجلسة. إشارات أولية، ليست توصية ولا حكم العين."}, timeout=30).json()["number"]
         state["issue"] = num; json.dump(state, open(SF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("github comment:", requests.post(f"{api}/issues/{num}/comments", headers=H, json={"body": f"**{ry:%H:%M} الرياض**\n\n" + "\n\n".join(msgs)}, timeout=30).status_code)
+    print("github comment:", requests.post(f"{api}/issues/{num}/comments", headers=H, json={"body": text}, timeout=30).status_code)
 
 tok, chat = os.environ.get("TELEGRAM_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
 if tok and chat:
     tok = re.sub(r"\s+", "", tok); tok = tok[3:] if tok.lower().startswith("bot") else tok
-    text = f"🇺🇸 فحص السوق الأمريكي {ry:%H:%M} الرياض (إشارات أولية، ليست توصية)\n\n" + "\n\n".join(msgs)
     for i in range(0, len(text), 3800):
         tr = requests.post(f"https://api.telegram.org/bot{tok}/sendMessage", json={"chat_id": chat.strip(), "text": text[i:i+3800]}, timeout=30)
         print("telegram:", tr.status_code, tr.json().get("description", "ok"))

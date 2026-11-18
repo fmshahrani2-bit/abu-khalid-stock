@@ -53,48 +53,50 @@ try: prev_watch = {str(w["sym"]) for w in json.load(open(os.path.join(ROOT, "dat
 except Exception: prev_watch = set()
 names = {str(k): v.get("name", k) for k, v in card.items()}
 
-msgs = []
-def alert(sym, kind, text):
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from alert_format import line, build
+msgs = []          # (القسم، السطر)
+def alert(sym, kind, sec, text):
     k = f"{sym}|{kind}"
     if k in state["sent"]: return
-    state["sent"][k] = now.strftime("%H:%M"); msgs.append(text)
+    state["sent"][k] = now.strftime("%H:%M"); msgs.append((sec, text))
 
-mkt = "السوق يخدم (تاسي فوق متوسط 50)" if gt(T["close"], T["SMA50"]) else "السوق لا يخدم (تاسي تحت متوسط 50): أي مركز استكشافي فقط"
-if gt(T["close"], T["SMA50"]): alert("TASI", "above50", f"📈 تاسي {T['close']:.0f} تجاوز متوسط 50 يوماً ({T['SMA50']:.0f}) أثناء الجلسة؛ يُحكم بالإغلاق")
+serve = gt(T["close"], T["SMA50"])
+if serve: alert("TASI", "above50", "market", line("تاسي", round(T["close"]), extra=f"تجاوز متوسط 50 ({T['SMA50']:.0f})، يُحكم بالإغلاق"))
 
 for r in rows:
-    s = str(r["name"]); nm = names.get(s) or (r["description"] or s)[:22]; c = r["close"]; rv = rvol(r)
-    rvt = f"، حجم نسبي {rv:.1f}×" if rv else ""
+    s = str(r["name"]); nm = f"{names.get(s) or (r['description'] or s)[:20]} ({s})"; c = r["close"]; rv = rvol(r)
     # 1) خطة مركز أمريكانا
     if s == "6015":
-        if c <= 2.46: alert(s, "stop", f"⚠️ أمريكانا {c} عند الوقف 2.46 أو تحته: الخطة الخروج، والوقف لا يُنزل")
-        elif c > 2.80: alert(s, "raise", f"🔔 أمريكانا {c} فوق 2.80: إن أغلقت فوقها يُرفع الوقف إلى 2.60")
-    # 2) مستويات المرشحين في البطاقة
+        if c <= 2.46: alert(s, "stop", "plan", line("أمريكانا", c, extra="عند الوقف 2.46 أو تحته: الخطة الخروج، والوقف لا يُنزل"))
+        elif c > 2.80: alert(s, "raise", "plan", line("أمريكانا", c, extra="فوق 2.80: إن أغلقت فوقها ارفع الوقف إلى 2.60"))
+    # 2) مستويات المرشحين في البطاقة (عند العبور اليوم فقط)
     pc = c / (1 + (r["change"] or 0) / 100)          # إغلاق أمس
     cr = card.get(s)
     if cr and cr.get("group") == "مرشح" and s != "6015":
-        if cr.get("trigger") and c > cr["trigger"] >= pc:
-            alert(s, "trigger", f"🔔 {nm} ({s}) {c} تجاوز الدخول {cr['trigger']}{rvt}. ليس أمر دخول: الشرط إغلاق فوق الدخول وفوق قمة أمس، بحجم قوي، وانظر الشارت. الوقف {cr.get('stop')}. {mkt}")
-        if cr.get("stop") and c < cr["stop"] <= pc:
-            alert(s, "stop", f"⚠️ {nm} ({s}) {c} تحت الوقف {cr['stop']}: إن كنت داخلاً فالكورس يقول اخرج ولا تُنزل الوقف")
-    # 3) سهم يجتاز فلترة الكورس عند قمة 52 أسبوعاً بحجم مرتفع
+        t, st = cr.get("trigger"), cr.get("stop")
+        if t and c > t >= pc:
+            alert(s, "trigger", "chase" if c > t * 1.03 else "ready", line(nm, c, t, st, rv))
+        if st and c < st <= pc:
+            alert(s, "stop", "stop", line(nm, c, stop=st))
+    # 3) يجتاز الفلترة الأساسية عند قمة 52 أسبوعاً بحجم مرتفع (مؤشر آلي)
     hi = r["price_52_week_high"]
     if base(r) and hi and c >= hi * 0.995 and (r["change"] or 0) > 0 and rv and rv >= 1.5:
         er = r.get("earnings_release_next_date"); ert = ""
         if er:
             d = dt.datetime.utcfromtimestamp(er)
-            if 0 <= (d - now).days <= 14: ert = f"، ⚠️ النتائج {d:%Y-%m-%d}"
-        alert(s, "high52", f"🚀 {nm} ({s}) {c} عند قمة 52 أسبوعاً{rvt}، ويجتاز فلترة الكورس الأساسية{ert}. [قمة 52 أسبوعاً مؤشر آلي ليس من الكورس؛ نقطة الدخول عند أبو خالد قمة القاعدة] افحص القاعدة والمقاومة والوقف قبل أي قرار. {mkt}")
+            if 0 <= (d - now).days <= 14: ert = f"⚠️ النتائج {d:%m-%d}"
+        alert(s, "high52", "high", line(nm, c, rv=rv, extra=ert))
     # 4) مرشح جديد دخل الفلترة الكاملة
     if cand(r) and s not in prev_watch and s not in card:
-        alert(s, "newcand", f"➕ {nm} ({s}) {c} دخل فلترة الكورس الكاملة اليوم (فوق المتوسطات ويتفوق على تاسي شهراً وثلاثة أشهر){rvt}. للمراقبة")
+        alert(s, "newcand", "new", line(nm, c, rv=rv))
 
 state["runs"].append(now.strftime("%H:%M"))
 json.dump(state, open(SF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{now:%H:%M} الرياض | {len(rows)} سهماً | تاسي {T['close']} | تنبيهات جديدة: {len(msgs)}")
-for m in msgs: print(" -", m)
-
-if os.environ.get("TEST_MSG"): msgs.append("✅ رسالة تجربة: نظام فحص السوق يعمل")
+if os.environ.get("TEST_MSG"): msgs.append(("plan", "✅ رسالة تجربة: نظام فحص السوق يعمل"))
+text = build(f"🇸🇦 تنبيهات السوق السعودي — {now:%H:%M}", msgs, serve, "تاسي") if msgs else ""
+print(text)
 
 # قناة 1: إشعار GitHub (تعليق في قضية يومية، يصل لتطبيق GitHub والبريد بلا أي أسرار إضافية)
 gh_tok, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
@@ -109,7 +111,7 @@ if msgs and gh_tok and repo:
         num = ex[0]["number"] if ex else requests.post(f"{api}/issues", headers=H, json={"title": title, "labels": ["alerts"],
               "body": "تنبيهات آلية من فحص السوق أثناء الجلسة. إشارات أولية للفت النظر، ليست توصية ولا حكم العين.", "assignees": [repo.split("/")[0]]}, timeout=30).json()["number"]
         state["issue"] = num
-    r = requests.post(f"{api}/issues/{num}/comments", headers=H, json={"body": f"**{now:%H:%M}**\n\n" + "\n\n".join(msgs)}, timeout=30)
+    r = requests.post(f"{api}/issues/{num}/comments", headers=H, json={"body": text}, timeout=30)
     print("github comment:", r.status_code)
     json.dump(state, open(SF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
@@ -121,7 +123,6 @@ if tok:
     print("token shape:", "ok" if re.fullmatch(r"\d{6,}:[A-Za-z0-9_-]{30,}", tok) else f"غير صالح (طوله {len(tok)}، فيه نقطتان: {':' in tok})")
 if chat: chat = chat.strip()
 if msgs and tok and chat:
-    text = f"فحص السوق {now:%H:%M} (إشارات أولية، ليست توصية)\n\n" + "\n\n".join(msgs)
     for i in range(0, len(text), 3800):
         tr = requests.post(f"https://api.telegram.org/bot{tok}/sendMessage", json={"chat_id": chat, "text": text[i:i+3800]}, timeout=30)
         print("telegram:", tr.status_code, tr.json().get("description", "ok"))
