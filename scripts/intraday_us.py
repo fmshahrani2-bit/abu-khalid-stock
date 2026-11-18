@@ -46,12 +46,14 @@ cand = lambda r: base(r) and gt(r["close"], r["SMA20"]) and gt(r["Perf.1M"], spx
 serve = gt(spx["close"], spx["SMA50"])
 from vcp import shapes_for
 _ex = {r["name"]: r.get("exchange") or "NASDAQ" for r in rows}
-pool = [(r["name"], _ex[r["name"]]) for r in rows if cand(r)] + [(k, _ex.get(k, "NASDAQ")) for k, v in card.items() if v.get("group") in ("ذكره المحاضر", "مرشح")]
+pool = [(r["name"], _ex[r["name"]]) for r in rows if cand(r)] + [(k, _ex.get(k, "NASDAQ")) for k, v in card.items() if v.get("group") in ("ذكره المحاضر", "مرشح")] + [(k, _ex.get(k, "NASDAQ")) for k in LECT]
 shapes = shapes_for(list(dict.fromkeys(pool)), os.path.join(ROOT, "data", "shapes", f"us_{day}.json"))
 _mkt = "السوق يخدم (S&P 500 فوق متوسط 50)" if serve else "السوق لا يخدم (S&P 500 تحت متوسط 50): لا دخول جديد في الديمو"
 
 import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from alert_format import line, build
+try: LECT = {m["sym"] for m in json.load(open(os.path.join(ROOT, "lecturer", "latest.json"), encoding="utf-8")).get("us_mentions", [])}
+except Exception: LECT = set()
 msgs = []          # (القسم، السطر)
 def alert(sym, kind, sec, text):
     k = f"{sym}|{kind}"
@@ -73,7 +75,7 @@ for r in rows:
     pc = c / (1 + (r["change"] or 0) / 100)          # إغلاق أمس
     cr = card.get(s)
     if cr and cr.get("group") in ("ذكره المحاضر", "مرشح") and cr.get("trigger"):
-        nm = f"{s} ⭐" if cr["group"] == "ذكره المحاضر" else s
+        nm = f"{s} ⭐" if cr["group"] == "ذكره المحاضر" or s in LECT else s
         t, st = cr["trigger"], cr.get("stop")
         shape = cr.get("shape") or shapes.get(s, {}).get("shape")   # من مهمة الأمريكي اليومية، وإلا الكشف السحابي
         has_shape = shape in ("VCP", "شيك أوت")
@@ -87,7 +89,7 @@ for r in rows:
         pv, st = sh["pivot"], sh["stop"]
         if c > pv >= pc:
             hits.append((rv or 0, s, "chase" if c > pv * 1.03 else "vcp",
-                         line(f"{s} ⭐" if cr and cr.get("group") == "ذكره المحاضر" else s, round(c, 2), round(pv, 2), round(st, 2), rv,
+                         line(f"{s} ⭐" if (cr and cr.get("group") == "ذكره المحاضر") or s in LECT else s, round(c, 2), round(pv, 2), round(st, 2), rv,
                               " — ".join(x for x in (f"{sh['shape']}: {sh['note']}", earn(r)) if x))))
 for rv, s, sec, t in sorted(hits, reverse=True)[:12]: alert(s, "vcp", sec, t)
 if TEST: msgs.append(("plan", "✅ رسالة تجربة: فحص السوق الأمريكي يعمل"))

@@ -55,6 +55,8 @@ names = {str(k): v.get("name", k) for k, v in card.items()}
 
 import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from alert_format import line, build
+try: LECT = {m["sym"] for m in json.load(open(os.path.join(ROOT, "lecturer", "latest.json"), encoding="utf-8")).get("saudi_mentions", [])}
+except Exception: LECT = set()
 msgs = []          # (القسم، السطر)
 def alert(sym, kind, sec, text):
     k = f"{sym}|{kind}"
@@ -69,7 +71,7 @@ shapes = shapes_for(list(dict.fromkeys(pool)), os.path.join(ROOT, "data", "shape
 if serve: alert("TASI", "above50", "market", line("تاسي", round(T["close"]), extra=f"تجاوز متوسط 50 ({T['SMA50']:.0f})، يُحكم بالإغلاق"))
 
 for r in rows:
-    s = str(r["name"]); nm = f"{names.get(s) or (r['description'] or s)[:20]} ({s})"; c = r["close"]; rv = rvol(r)
+    s = str(r["name"]); nm = f"{names.get(s) or (r['description'] or s)[:20]} ({s})" + (" ⭐" if str(r["name"]) in LECT else ""); c = r["close"]; rv = rvol(r)
     # 1) خطة مركز أمريكانا
     if s == "6015":
         if c <= 2.46: alert(s, "stop", "plan", line("أمريكانا", c, extra="عند الوقف 2.46 أو تحته: الخطة الخروج، والوقف لا يُنزل"))
@@ -102,7 +104,7 @@ state["runs"].append(now.strftime("%H:%M"))
 json.dump(state, open(SF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{now:%H:%M} الرياض | {len(rows)} سهماً | تاسي {T['close']} | تنبيهات جديدة: {len(msgs)}")
 if os.environ.get("TEST_MSG"): msgs.append(("plan", "✅ رسالة تجربة: نظام فحص السوق يعمل"))
-text = build(f"🇸🇦 تنبيهات السوق السعودي — {now:%H:%M}", msgs, serve, "تاسي") if msgs else ""
+text = (build(f"🇸🇦 تنبيهات السوق السعودي — {now:%H:%M}", msgs, serve, "تاسي") + ("\n\u200f⭐ = سهم ذكره أبو خالد للمتابعة." if any("⭐" in t for _, t in msgs) else "")) if msgs else ""
 print(text)
 
 # قناة 1: إشعار GitHub (تعليق في قضية يومية، يصل لتطبيق GitHub والبريد بلا أي أسرار إضافية)
