@@ -74,7 +74,7 @@ for r in rows:
             alert(s, "stop", f"⚠️ {s} ({tag}) {c} تحت الوقف {cr['stop']}: إن كنت داخلاً فالكورس يقول اخرج ولا تُنزل الوقف")
     hi = r["price_52_week_high"]
     if cand(r) and hi and c >= hi * 0.995 and (r["change"] or 0) > 0 and rv and rv >= 1.5 and s not in card:
-        hits.append((rv, s, f"🚀 {s} {c} عند قمة 52 أسبوعاً{rvt}، ويجتاز فلترة الكورس (مبيعات {r['total_revenue_yoy_growth_fq']:.0f}%، يتفوق على S&P 500){earn(r)}. إشارة أولية: افحص القاعدة والمقاومة والوقف (≤8%). {mkt}"))
+        hits.append((rv, s, f"🚀 {s} {c} عند قمة 52 أسبوعاً{rvt}، ويجتاز فلترة الكورس (مبيعات {r['total_revenue_yoy_growth_fq']:.0f}%، يتفوق على S&P 500){earn(r)}. [قمة 52 أسبوعاً مؤشر آلي ليس من الكورس؛ نقطة الدخول عند أبو خالد قمة القاعدة] افحص القاعدة والمقاومة والوقف (≤8%). {mkt}"))
 for rv, s, t in sorted(hits, reverse=True)[:12]: alert(s, "high52", t)
 if TEST: msgs.append("✅ رسالة تجربة: فحص السوق الأمريكي يعمل")
 
