@@ -17,11 +17,13 @@
   "MANE|stop": "20:25",
   "SKHY|stop": "20:25",
   "CRVL|trigger": "20:25",
-  "PLGO|stop": "20:51"
+  "PLGO|stop": "20:51",
+  "HUM|stop": "21:03"
  },
  "runs": [
   "20:25",
-  "20:51"
+  "20:51",
+  "21:03"
  ],
  "issue": 2
 }
