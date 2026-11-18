@@ -73,6 +73,57 @@ for m, c in MK.items():
     result["markets"][m] = {"index": {"close": idx["close"], "above50": idx["close"] > idx["SMA50"]},
                             "passed": len(picks), "top": picks[:15]}
 
+# --- فحص العين (S80، بطلب المستخدم 2026-11-18 "ابغى انت تتعود"): تقريب رقمي لنظرات الكورس على الشارت اليومي.
+# كل بند مأخوذ من نص في الدروس؛ الحدود الرقمية هنا اختيار آلي للتقريب (الكورس يقول "بالنظر") ومعلنة.
+def eye(sym_full, idx_df):
+    import tvDatafeed as tvd
+    ex, s = sym_full.split(":")
+    d = _TV.get_hist(s, ex, tvd.Interval.in_daily, n_bars=260)
+    if d is None or len(d) < 210: return {"note": "بيانات غير كافية"}
+    c, h, l, v = d["close"], d["high"], d["low"], d["volume"]
+    ma = {k: c.rolling(k).mean() for k in (9, 21, 50, 200)}
+    up = {k: bool(ma[k].iloc[-1] > ma[k].iloc[-6]) for k in ma}                       # زاوية المتوسطات للأعلى (S31 16:48)
+    order = bool(ma[9].iloc[-1] > ma[21].iloc[-1] > ma[50].iloc[-1] > ma[200].iloc[-1])  # الترتيب المثالي (S31 08:47)
+    gap = (ma[9].iloc[-1] / ma[50].iloc[-1] - 1) * 100                                 # الفجوة بين المتوسطات (S31 12:01)
+    ext = (c.iloc[-1] / ma[9].iloc[-1] - 1) * 100                                      # فجوة السعر مع المتوسط الصغير (S31 14:44)
+    def lows(lo, k=3, n=90):
+        lo = lo.iloc[-n:].tolist(); return [lo[i] for i in range(k, len(lo) - k) if lo[i] == min(lo[i - k:i + k + 1])]
+    sl, il = lows(l), lows(idx_df["low"]) if idx_df is not None else []
+    hl_stock = len(sl) >= 2 and sl[-1] > sl[-2]
+    ll_index = len(il) >= 2 and il[-1] < il[-2]
+    rs_eye = hl_stock and ll_index                                                     # قيعان صاعدة والمؤشر يهبط (S26 10:13)
+    st_low = l.iloc[-60:].idxmin(); ix_low = idx_df["low"].iloc[-60:].idxmin() if idx_df is not None else None
+    low_first = bool(ix_low is not None and st_low < ix_low)                           # ضرب القاع قبل السوق (S26 12:20)
+    chg = c.diff().iloc[-20:]; vv = v.iloc[-20:]
+    upv, dnv = vv[chg > 0].mean(), vv[chg < 0].mean()
+    take_me = bool(upv and dnv and upv > dnv * 1.2)                                    # "خذني معك": حجم الصعود أكبر من حجم النزول (S26 21:59)
+    rng = lambda n: ((h - l) / c).iloc[-n:].mean()
+    calm = bool(rng(10) < rng(50) * 0.8)                                               # الهدوء: تذبذب آخر 10 أيام أقل من متوسط 50 (S31 41:47)
+    checks = {"زاوية المتوسطات للأعلى": all(up.values()), "ترتيب 9>21>50>200": order,
+              "متوسطات متقاربة (9 عن 50 < 8%)": gap < 8, "غير ممتد عن متوسط 9 (< 4%)": abs(ext) < 4,
+              "قيعان صاعدة والمؤشر يهبط": rs_eye, "قاعه قبل قاع المؤشر": low_first,
+              "حجم الصعود > حجم النزول": take_me, "هدوء التذبذب": calm}
+    return {"score": sum(checks.values()), "of": len(checks), "checks": checks,
+            "gap_9_50": r1(gap), "ext_9": r1(ext), "note": "تقريب آلي لنظرات العين (S80)؛ الحكم النهائي بالنظر"}
+
+try:
+    import tvDatafeed as tvd
+    _TV = tvd.TvDatafeed()
+    for m, c in MK.items():
+        ie, isy = c["idx"].split(":")
+        try: idf = _TV.get_hist(isy, ie, tvd.Interval.in_daily, n_bars=260)
+        except Exception: idf = None
+        for p in result["markets"][m]["top"]:
+            for f in ([f"TADAWUL:{p['sym']}"] if m == "sa" else [f"NASDAQ:{p['sym']}", f"NYSE:{p['sym']}", f"AMEX:{p['sym']}"]):
+                try:
+                    e = eye(f, idf)
+                    if "score" in e: p["eye"] = e; break
+                except Exception: pass
+            p.setdefault("eye", {"note": "تعذر جلب الشارت"})
+        result["markets"][m]["top"].sort(key=lambda p: (-(p["eye"].get("score") or 0), not p["kiss"], -(p["rs3m"] or 0)))
+except Exception as ex:
+    print("eye err", ex)
+
 # محفزات: إعلانات الشركات الكبرى خلال 7 أيام (مثال أبو خالد: "SOXL تابع مع إعلان إنفيديا")
 now = dt.datetime.utcnow().timestamp()
 big = scan(MK["us"]["url"], {"filter": [{"left": "market_cap_basic", "operation": "greater", "right": 3e11},
@@ -86,5 +137,5 @@ result["catalysts"] = [{"sym": b["sym"].split(":")[1], "name": b["description"],
 json.dump(result, open(os.path.join(OUT, f"{TODAY}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump(result, open(os.path.join(OUT, "latest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 for m, v in result["markets"].items():
-    print(m, "passed", v["passed"]); [print(" ", p["sym"], p["why"], "|", p["fin"]) for p in v["top"]]
+    print(m, "passed", v["passed"]); [print(" ", p["sym"], p.get("eye", {}).get("score"), {k: int(b) for k, b in p.get("eye", {}).get("checks", {}).items()}, "|", p["why"], "|", p["fin"]) for p in v["top"]]
 print("catalysts", [(c["sym"], c["date"]) for c in result["catalysts"]])
