@@ -108,6 +108,7 @@ tok, chat = os.environ.get("TELEGRAM_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
 if msgs and tok and chat:
     text = f"فحص السوق {now:%H:%M} (إشارات أولية، ليست توصية)\n\n" + "\n\n".join(msgs)
     for i in range(0, len(text), 3800):
-        requests.post(f"https://api.telegram.org/bot{tok}/sendMessage", json={"chat_id": chat, "text": text[i:i+3800]}, timeout=30)
+        tr = requests.post(f"https://api.telegram.org/bot{tok}/sendMessage", json={"chat_id": chat, "text": text[i:i+3800]}, timeout=30)
+        print("telegram:", tr.status_code, tr.json().get("description", "ok"))
 elif msgs:
     print("no telegram secrets; messages only in log")
