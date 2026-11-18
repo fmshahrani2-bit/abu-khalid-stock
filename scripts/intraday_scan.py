@@ -84,6 +84,26 @@ json.dump(state, open(SF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{now:%H:%M} الرياض | {len(rows)} سهماً | تاسي {T['close']} | تنبيهات جديدة: {len(msgs)}")
 for m in msgs: print(" -", m)
 
+if os.environ.get("TEST_MSG"): msgs.append("✅ رسالة تجربة: نظام فحص السوق يعمل")
+
+# قناة 1: إشعار GitHub (تعليق في قضية يومية، يصل لتطبيق GitHub والبريد بلا أي أسرار إضافية)
+gh_tok, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
+if msgs and gh_tok and repo:
+    H = {"Authorization": f"Bearer {gh_tok}", "Accept": "application/vnd.github+json"}
+    api = f"https://api.github.com/repos/{repo}"
+    title = f"تنبيهات السوق {day}"
+    num = state.get("issue")
+    if not num:
+        ex = [i for i in requests.get(f"{api}/issues", headers=H, params={"state": "all", "labels": "alerts", "per_page": 20}, timeout=30).json()
+              if isinstance(i, dict) and i.get("title") == title]
+        num = ex[0]["number"] if ex else requests.post(f"{api}/issues", headers=H, json={"title": title, "labels": ["alerts"],
+              "body": "تنبيهات آلية من فحص السوق أثناء الجلسة. إشارات أولية للفت النظر، ليست توصية ولا حكم العين.", "assignees": [repo.split("/")[0]]}, timeout=30).json()["number"]
+        state["issue"] = num
+    r = requests.post(f"{api}/issues/{num}/comments", headers=H, json={"body": f"**{now:%H:%M}**\n\n" + "\n\n".join(msgs)}, timeout=30)
+    print("github comment:", r.status_code)
+    json.dump(state, open(SF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+# قناة 2: تلقرام (عند إضافة السرّين)
 tok, chat = os.environ.get("TELEGRAM_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
 if msgs and tok and chat:
     text = f"فحص السوق {now:%H:%M} (إشارات أولية، ليست توصية)\n\n" + "\n\n".join(msgs)
