@@ -1,0 +1,602 @@
+{
+"date": "2026-11-18",
+"source": "claude/out/us_card_2026-11-18.json",
+"rows": [
+{
+"sym": "IBB",
+"group": "ذكره المحاضر",
+"trigger": 222.3,
+"stop": 208.67,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "VAL",
+"group": "ذكره المحاضر",
+"trigger": 106.81,
+"stop": 77.21,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "BTSG",
+"group": "ذكره المحاضر",
+"trigger": 71.13,
+"stop": 58.02,
+"status": "تحت المراقبة"
+},
+{
+"sym": "KYMR",
+"group": "ذكره المحاضر",
+"trigger": 133.89,
+"stop": 117.3,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ALAB",
+"group": "ذكره المحاضر",
+"trigger": 300.77,
+"stop": 177.6,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ARM",
+"group": "ذكره المحاضر",
+"trigger": 237.89,
+"stop": 163.12,
+"status": "تحت المراقبة"
+},
+{
+"sym": "PAYS",
+"group": "ذكره المحاضر",
+"trigger": 15.89,
+"stop": 9.15,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ESTC",
+"group": "ذكره المحاضر",
+"trigger": 107.49,
+"stop": 83.58,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "FRO",
+"group": "ذكره المحاضر",
+"trigger": 57.31,
+"stop": 43.41,
+"status": "تحت المراقبة"
+},
+{
+"sym": "FROG",
+"group": "ذكره المحاضر",
+"trigger": 108.6,
+"stop": 73.96,
+"status": "تحت المراقبة"
+},
+{
+"sym": "PURR",
+"group": "ذكره المحاضر",
+"trigger": 12.34,
+"stop": 8.46,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "KNSA",
+"group": "ذكره المحاضر",
+"trigger": 99.32,
+"stop": 87.29,
+"status": "تحت المراقبة"
+},
+{
+"sym": "NTRA",
+"group": "ذكره المحاضر",
+"trigger": 436.2,
+"stop": 303.99,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "MANE",
+"group": "ذكره المحاضر",
+"trigger": 152.83,
+"stop": 125.33,
+"status": "تحت المراقبة"
+},
+{
+"sym": "NX",
+"group": "ذكره المحاضر",
+"trigger": 22.34,
+"stop": 19.17,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "XMTR",
+"group": "ذكره المحاضر",
+"trigger": 117.51,
+"stop": 85.83,
+"status": "تحت المراقبة"
+},
+{
+"sym": "NTSK",
+"group": "ذكره المحاضر",
+"trigger": 26.72,
+"stop": 19.94,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SCCO",
+"group": "ذكره المحاضر",
+"trigger": 192.06,
+"stop": 162.18,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "GTLB",
+"group": "ذكره المحاضر",
+"trigger": 58.02,
+"stop": 44.73,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "NE",
+"group": "ذكره المحاضر",
+"trigger": 49.29,
+"stop": 39.47,
+"status": "تحت المراقبة"
+},
+{
+"sym": "RELL",
+"group": "ذكره المحاضر",
+"trigger": 21.29,
+"stop": 16.18,
+"status": "تحت المراقبة"
+},
+{
+"sym": "TENB",
+"group": "ذكره المحاضر",
+"trigger": 48.78,
+"stop": 37.93,
+"status": "تحت المراقبة"
+},
+{
+"sym": "MHK",
+"group": "ذكره المحاضر",
+"trigger": 151.26,
+"stop": 116.67,
+"status": "تحت المراقبة"
+},
+{
+"sym": "PNR",
+"group": "ذكره المحاضر",
+"trigger": 70.88,
+"stop": 52.35,
+"status": "تحت المراقبة"
+},
+{
+"sym": "BAH",
+"group": "ذكره المحاضر",
+"trigger": 91.35,
+"stop": 83.66,
+"status": "تحت المراقبة"
+},
+{
+"sym": "CRVL",
+"group": "ذكره المحاضر",
+"trigger": 85.8,
+"stop": 79.18,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SKHY",
+"group": "ذكره المحاضر",
+"trigger": 166.07,
+"stop": 122.19,
+"status": "تحت المراقبة"
+},
+{
+"sym": "TGTX",
+"group": "ذكره المحاضر",
+"trigger": 63.61,
+"stop": 51.82,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SMCI",
+"group": "ذكره المحاضر",
+"trigger": 36.41,
+"stop": 25.8,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "TSM",
+"group": "ذكره المحاضر",
+"trigger": 440.89,
+"stop": 351.18,
+"status": "تحت المراقبة"
+},
+{
+"sym": "CVLT",
+"group": "ذكره المحاضر",
+"trigger": 171.99,
+"stop": 141.09,
+"status": "تحت المراقبة"
+},
+{
+"sym": "EVR",
+"group": "ذكره المحاضر",
+"trigger": 312.93,
+"stop": 246.74,
+"status": "تحت المراقبة"
+},
+{
+"sym": "HII",
+"group": "ذكره المحاضر",
+"trigger": 327.76,
+"stop": 281.33,
+"status": "تحت المراقبة"
+},
+{
+"sym": "BMNR",
+"group": "ذكره المحاضر",
+"trigger": 22.4,
+"stop": 17.39,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "RRC",
+"group": "ذكره المحاضر",
+"trigger": 56.91,
+"stop": 48.25,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SPCX",
+"group": "ذكره المحاضر",
+"trigger": 148.21,
+"stop": 120.38,
+"status": "تحت المراقبة"
+},
+{
+"sym": "MRNA",
+"group": "ذكره المحاضر",
+"trigger": 254.49,
+"stop": 179.52,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SOFI",
+"group": "ذكره المحاضر",
+"trigger": 17.75,
+"stop": 15.42,
+"status": "أُبطلت الفرضية"
+},
+{
+"sym": "EVER",
+"group": "ذكره المحاضر",
+"trigger": 29.26,
+"stop": 21.11,
+"status": "تحت المراقبة"
+},
+{
+"sym": "DOCN",
+"group": "ذكره المحاضر",
+"trigger": 107.83,
+"stop": 69.77,
+"status": "تحت المراقبة"
+},
+{
+"sym": "XERS",
+"group": "مرشح",
+"trigger": 16.12,
+"stop": 10.14,
+"status": "تحت المراقبة"
+},
+{
+"sym": "APPN",
+"group": "مرشح",
+"trigger": 56.39,
+"stop": 46.62,
+"status": "تحت المراقبة"
+},
+{
+"sym": "TBBB",
+"group": "مرشح",
+"trigger": 63.13,
+"stop": 55.42,
+"status": "تحت المراقبة"
+},
+{
+"sym": "XNCR",
+"group": "مرشح",
+"trigger": 40.09,
+"stop": 28.6,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SEZL",
+"group": "مرشح",
+"trigger": 178.56,
+"stop": 148.77,
+"status": "تحت المراقبة"
+},
+{
+"sym": "GKOS",
+"group": "مرشح",
+"trigger": 248.76,
+"stop": 172.92,
+"status": "تحت المراقبة"
+},
+{
+"sym": "VCEL",
+"group": "مرشح",
+"trigger": 59.73,
+"stop": 39.43,
+"status": "تحت المراقبة"
+},
+{
+"sym": "CKX",
+"group": "مرشح",
+"trigger": 24.75,
+"stop": 10.36,
+"status": "تحت المراقبة"
+},
+{
+"sym": "GCT",
+"group": "مرشح",
+"trigger": 67.19,
+"stop": 58.29,
+"status": "تحت المراقبة"
+},
+{
+"sym": "RXO",
+"group": "مرشح",
+"trigger": 28.74,
+"stop": 27.49,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SGHT",
+"group": "مرشح",
+"trigger": 11.17,
+"stop": 8.98,
+"status": "تحت المراقبة"
+},
+{
+"sym": "PLMR",
+"group": "مرشح",
+"trigger": 145.77,
+"stop": 133.17,
+"status": "تحت المراقبة"
+},
+{
+"sym": "YOU",
+"group": "مرشح",
+"trigger": 66.21,
+"stop": 44.34,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ZETA",
+"group": "مرشح",
+"trigger": 35.36,
+"stop": 29.36,
+"status": "تحت المراقبة"
+},
+{
+"sym": "LION",
+"group": "مرشح",
+"trigger": 14.42,
+"stop": 12.33,
+"status": "تحت المراقبة"
+},
+{
+"sym": "PLGO",
+"group": "مرشح",
+"trigger": 29.71,
+"stop": 27.65,
+"status": "تحت المراقبة"
+},
+{
+"sym": "REGN",
+"group": "مرشح",
+"trigger": 975.5,
+"stop": 796.6,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SENS",
+"group": "مرشح",
+"trigger": 13.99,
+"stop": 7.82,
+"status": "تحت المراقبة"
+},
+{
+"sym": "HIPO",
+"group": "مرشح",
+"trigger": 38.92,
+"stop": 33.63,
+"status": "تحت المراقبة"
+},
+{
+"sym": "MEOH",
+"group": "مرشح",
+"trigger": 72.33,
+"stop": 59.76,
+"status": "تحت المراقبة"
+},
+{
+"sym": "FLYW",
+"group": "مرشح",
+"trigger": 20.25,
+"stop": 18.36,
+"status": "تحت المراقبة"
+},
+{
+"sym": "HUM",
+"group": "مرشح",
+"trigger": 448.45,
+"stop": 404.17,
+"status": "تحت المراقبة"
+},
+{
+"sym": "LLY",
+"group": "مرشح",
+"trigger": 1449.69,
+"stop": 1257.61,
+"status": "تحت المراقبة"
+},
+{
+"sym": "FENC",
+"group": "مرشح",
+"trigger": 13.65,
+"stop": 10.25,
+"status": "تحت المراقبة"
+},
+{
+"sym": "DCTH",
+"group": "مرشح",
+"trigger": 21.85,
+"stop": 14.23,
+"status": "تحت المراقبة"
+},
+{
+"sym": "SWBI",
+"group": "مرشح",
+"trigger": 15.74,
+"stop": 13.11,
+"status": "تحت المراقبة"
+},
+{
+"sym": "LCLN",
+"group": "مرشح",
+"trigger": 28.72,
+"stop": 24.46,
+"status": "تحت المراقبة"
+},
+{
+"sym": "LFST",
+"group": "مرشح",
+"trigger": 13.77,
+"stop": 12.0,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ALGT",
+"group": "مرشح",
+"trigger": 98.71,
+"stop": 69.06,
+"status": "تحت المراقبة"
+},
+{
+"sym": "LNG",
+"group": "مرشح",
+"trigger": 330.74,
+"stop": 273.55,
+"status": "تحت المراقبة"
+},
+{
+"sym": "CMCO",
+"group": "مرشح",
+"trigger": 20.45,
+"stop": 16.13,
+"status": "تحت المراقبة"
+},
+{
+"sym": "AXGN",
+"group": "مرشح",
+"trigger": 51.17,
+"stop": 35.99,
+"status": "تحت المراقبة"
+},
+{
+"sym": "U",
+"group": "مرشح",
+"trigger": 54.27,
+"stop": 48.08,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ASND",
+"group": "مرشح",
+"trigger": 255.62,
+"stop": 235.49,
+"status": "تحت المراقبة"
+},
+{
+"sym": "WELL",
+"group": "مرشح",
+"trigger": 242.62,
+"stop": 217.71,
+"status": "تحت المراقبة"
+},
+{
+"sym": "RGLD",
+"group": "مرشح",
+"trigger": 247.9,
+"stop": 230.27,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ROIV",
+"group": "مرشح",
+"trigger": 41.44,
+"stop": 35.55,
+"status": "تحت المراقبة"
+},
+{
+"sym": "OMC",
+"group": "مرشح",
+"trigger": 89.44,
+"stop": 86.44,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ETON",
+"group": "مرشح",
+"trigger": 68.39,
+"stop": 47.02,
+"status": "تحت المراقبة"
+},
+{
+"sym": "CXW",
+"group": "مرشح",
+"trigger": 33.21,
+"stop": 29.87,
+"status": "تحت المراقبة"
+},
+{
+"sym": "KNTK",
+"group": "مرشح",
+"trigger": 55.97,
+"stop": 47.93,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ALSN",
+"group": "مرشح",
+"trigger": 123.13,
+"stop": 106.66,
+"status": "تحت المراقبة"
+},
+{
+"sym": "MSGE",
+"group": "مرشح",
+"trigger": 81.5,
+"stop": 77.74,
+"status": "تحت المراقبة"
+},
+{
+"sym": "ANET",
+"group": "مرشح",
+"trigger": 212.17,
+"stop": 158.34,
+"status": "تحت المراقبة"
+},
+{
+"sym": "BRZE",
+"group": "مستبعد"
+},
+{
+"sym": "ARX",
+"group": "مستبعد"
+}
+]
+}
