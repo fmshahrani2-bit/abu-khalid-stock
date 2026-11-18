@@ -1,0 +1,13 @@
+name: probe-sources
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in "https://t.me/s/alphamarketsignalpulse" "https://x.com/AlphaXPulse" "https://www.tiktok.com/@alphaxpulse" "https://nitter.net/AlphaXPulse"; do
+            code=$(curl -s -o /tmp/p.html -w "%{http_code}" -A "Mozilla/5.0" -L "$u"); echo "$u -> $code size $(wc -c </tmp/p.html)"
+          done
+          curl -s -A "Mozilla/5.0" "https://t.me/s/alphamarketsignalpulse" | grep -o 'data-post="[^"]*"' | tail -5
+          curl -s -A "Mozilla/5.0" "https://t.me/s/alphamarketsignalpulse" | grep -o 'tgme_widget_message_voice\|tgme_widget_message_photo_wrap\|tgme_widget_message_text' | sort | uniq -c
+          curl -s -A "Mozilla/5.0" "https://t.me/s/alphamarketsignalpulse" | grep -o 'tgme_widget_message_author[^<]*<[^<]*<[^>]*>[^<]*' | tail -5
