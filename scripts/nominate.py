@@ -14,7 +14,10 @@ OUT = os.path.join(ROOT, "nominate")
 os.makedirs(OUT, exist_ok=True)
 COLS = ["name", "description", "close", "low", "Perf.1M", "Perf.3M", "Perf.Y", "SMA20", "SMA50", "SMA200", "SMA30|1W",
         "price_52_week_high", "volume", "average_volume_30d_calc", "total_revenue_yoy_growth_ttm",
-        "earnings_per_share_diluted_yoy_growth_ttm", "gross_margin_ttm", "sector", "earnings_release_next_date", "market_cap_basic"]
+        "earnings_per_share_diluted_yoy_growth_ttm", "gross_margin_ttm", "sector", "earnings_release_next_date", "market_cap_basic",
+        # أعمدة جدول أبو خالد (صور القناة 2905–2906، استُخرجت بالمطابقة، S78): توقعات المحللين
+        "earnings_per_share_forecast_next_fy", "revenue_forecast_next_fy", "net_income_estimate_ntm", "free_cash_flow_estimate_ntm",
+        "price_earnings_fwd", "enterprise_value_ebitda_fwd", "price_sales_fwd", "total_debt_estimate_fy", "total_revenue_ttm"]
 MK = {
     "sa": {"url": "https://scanner.tradingview.com/ksa/scan", "idx": "TADAWUL:TASI", "flt": []},
     "us": {"url": "https://scanner.tradingview.com/america/scan", "idx": "SP:SPX",
@@ -61,6 +64,10 @@ for m, c in MK.items():
                       "rs1m": r1(rs1), "rs3m": r1(rs3), "from52h": r1(fh), "kiss": k20 or k50,
                       "salesG": r1(sg), "epsG": r1(eg), "gm": r1(gm), "fin": fin,
                       "next_results": dt.datetime.utcfromtimestamp(er).strftime("%Y-%m-%d") if er else None,
+                      "fwd": {"mcap": x["market_cap_basic"], "eps_fy_next": r1(x["earnings_per_share_forecast_next_fy"]),
+                              "rev_fy_next": x["revenue_forecast_next_fy"], "rev_fwd_growth": r1((x["revenue_forecast_next_fy"] / x["total_revenue_ttm"] - 1) * 100) if x["revenue_forecast_next_fy"] and x["total_revenue_ttm"] else None,
+                              "ni_ntm": x["net_income_estimate_ntm"], "fcf_ntm": x["free_cash_flow_estimate_ntm"], "pe_fwd": r1(x["price_earnings_fwd"]),
+                              "ev_ebitda_fwd": r1(x["enterprise_value_ebitda_fwd"]), "ps_fwd": r1(x["price_sales_fwd"]), "debt_fy": x["total_debt_estimate_fy"]},
                       "why": "، ".join(why)})
     picks.sort(key=lambda p: (not p["kiss"], -(p["rs3m"] or 0)))
     result["markets"][m] = {"index": {"close": idx["close"], "above50": idx["close"] > idx["SMA50"]},
