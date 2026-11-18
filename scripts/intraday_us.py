@@ -71,8 +71,11 @@ for r in rows:
     if cr and cr.get("group") in ("ذكره المحاضر", "مرشح") and cr.get("trigger"):
         nm = f"{s} ⭐" if cr["group"] == "ذكره المحاضر" else s
         t, st = cr["trigger"], cr.get("stop")
-        if c > t >= pc:                                # عبر الدخول اليوم فقط
-            alert(s, "trigger", "chase" if c > t * 1.03 else "ready", line(nm, round(c, 2), t, st, rv, earn(r)))
+        shape = cr.get("shape")                         # VCP / شيك أوت / لا شكل (تحدده مهمة الأمريكي اليومية)
+        has_shape = shape in ("VCP", "شيك أوت")
+        if c > t >= pc and (has_shape or shape is None):   # عبر الدخول اليوم فقط، وفي سهم له شكل من الكورس
+            tag = shape if has_shape else "الشكل لم يُفحص بعد"
+            alert(s, "trigger", "chase" if c > t * 1.03 else "ready", line(nm, round(c, 2), t, st, rv, " — ".join(x for x in (tag, earn(r)) if x)))
         if st and c < st <= pc and cr.get("status") != "أُبطلت الفرضية":
             alert(s, "stop", "stop", line(nm, round(c, 2), stop=st))
     hi = r["price_52_week_high"]
