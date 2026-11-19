@@ -12,7 +12,7 @@ import json, os, datetime as dt, requests
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "nominate")
 os.makedirs(OUT, exist_ok=True)
-COLS = ["name", "description", "close", "low", "Perf.1M", "Perf.3M", "Perf.Y", "SMA20", "SMA50", "SMA200", "SMA30|1W",
+COLS = ["name", "description", "close", "low", "Perf.W", "Perf.1M", "Perf.3M", "Perf.Y", "SMA20", "SMA50", "SMA200", "SMA30|1W",
         "price_52_week_high", "volume", "average_volume_30d_calc", "total_revenue_yoy_growth_ttm",
         "earnings_per_share_diluted_yoy_growth_ttm", "gross_margin_ttm", "sector", "earnings_release_next_date", "market_cap_basic",
         # أعمدة جدول أبو خالد (صور القناة 2905–2906، استُخرجت بالمطابقة، S78): توقعات المحللين
@@ -69,8 +69,20 @@ for m, c in MK.items():
                               "ni_ntm": x["net_income_estimate_ntm"], "fcf_ntm": x["free_cash_flow_estimate_ntm"], "pe_fwd": r1(x["price_earnings_fwd"]),
                               "ev_ebitda_fwd": r1(x["enterprise_value_ebitda_fwd"]), "ps_fwd": r1(x["price_sales_fwd"]), "debt_fy": x["total_debt_estimate_fy"]},
                       "why": "، ".join(why)})
-    picks.sort(key=lambda p: (not p["kiss"], -(p["rs3m"] or 0)))
+    # القطاعات (S16 41:38–43:50 "الأفضل أداءً خلال الأسبوع"، S36 53:53 "القطاع الأفضل… السهم الأقل تصحيحاً فيه"):
+    # متوسط أداء الأسبوع لكل قطاع من كل أسهم السوق التي اجتازت عائد السنة، وأعلى 3 قطاعات = "قطاع قوي هذا الأسبوع".
+    import statistics
+    secs = {}
+    for x in rows:
+        if x.get("sector") and x.get("Perf.W") is not None: secs.setdefault(x["sector"], []).append(x["Perf.W"])
+    sec_perf = {k: statistics.median(v) for k, v in secs.items() if len(v) >= 5}
+    top_secs = [k for k, _ in sorted(sec_perf.items(), key=lambda kv: -kv[1])[:3]]
+    for p in picks:
+        p["sector_strong"] = p["sector"] in top_secs
+        if p["sector_strong"]: p["why"] += "، قطاع قوي هذا الأسبوع"
+    picks.sort(key=lambda p: (not p["sector_strong"], not p["kiss"], -(p["rs3m"] or 0)))
     result["markets"][m] = {"index": {"close": idx["close"], "above50": idx["close"] > idx["SMA50"]},
+                            "sectors_week": {k: round(v, 2) for k, v in sorted(sec_perf.items(), key=lambda kv: -kv[1])[:6]},
                             "passed": len(picks), "top": picks[:15]}
 
 # --- فحص العين (S80، بطلب المستخدم 2026-11-18 "ابغى انت تتعود"): تقريب رقمي لنظرات الكورس على الشارت اليومي.
@@ -128,7 +140,7 @@ try:
         for p in result["markets"][m]["top"]:
             ch = p["eye"].get("checks", {})
             p["state"] = "قريب من متوسطاته" if ch.get("متوسطات متقاربة (9 عن 50 < 8%)") and ch.get("غير ممتد عن متوسط 9 (< 4%)") else "قوي لكن ممتد — ينتظر قاعدة جديدة"
-        result["markets"][m]["top"].sort(key=lambda p: (p["state"] != "قريب من متوسطاته", -(p["eye"].get("score") or 0), not p["kiss"], -(p["rs3m"] or 0)))
+        result["markets"][m]["top"].sort(key=lambda p: (p["state"] != "قريب من متوسطاته", not p.get("sector_strong"), -(p["eye"].get("score") or 0), not p["kiss"], -(p["rs3m"] or 0)))
 except Exception as ex:
     print("eye err", ex)
 
