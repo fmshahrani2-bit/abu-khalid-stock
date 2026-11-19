@@ -25,11 +25,11 @@
   "kiss20": true,
   "index_above50": true,
   "ret5": 2.27,
-  "ret20": -2.98,
+  "ret20": -2.91,
   "max_up60": 5.08,
   "max_dn60": -3.3,
   "sessions_after": 20,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": null,
    "salesG_ttm": null,
@@ -41,7 +41,7 @@
    "next_results": null,
    "sector": "Miscellaneous",
    "industry": "Investment Trusts/Mutual Funds",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -74,7 +74,7 @@
   "max_up60": 1.76,
   "max_dn60": -8.42,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": -0.35,
    "salesG_ttm": -11.61,
@@ -86,7 +86,7 @@
    "next_results": "2027-02-23",
    "sector": "Industrial Services",
    "industry": "Contract Drilling",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -119,7 +119,7 @@
   "max_up60": 5.34,
   "max_dn60": -7.56,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 26.37,
    "salesG_ttm": 22.86,
@@ -131,7 +131,7 @@
    "next_results": "2027-02-26",
    "sector": "Health Services",
    "industry": "Medical/Nursing Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -164,7 +164,7 @@
   "max_up60": 4.9,
   "max_dn60": -12.46,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": -100.0,
    "salesG_ttm": 133.77,
@@ -176,7 +176,7 @@
    "next_results": "2027-02-25",
    "sector": "Health Technology",
    "industry": "Biotechnology",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -210,7 +210,7 @@
   "max_up60": 10.87,
   "max_dn60": -50.98,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 153.67,
    "salesG_ttm": 115.24,
@@ -222,7 +222,7 @@
    "next_results": "2027-02-16",
    "sector": "Electronic Technology",
    "industry": "Semiconductors",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -256,7 +256,7 @@
   "max_up60": -0.65,
   "max_dn60": -46.08,
   "sessions_after": 31,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 27.14,
    "salesG_ttm": 23.84,
@@ -268,7 +268,7 @@
    "next_results": "2027-02-03",
    "sector": "Electronic Technology",
    "industry": "Semiconductors",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -301,7 +301,7 @@
   "max_up60": 4.96,
   "max_dn60": -39.52,
   "sessions_after": 11,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 42.62,
    "salesG_ttm": 46.7,
@@ -313,7 +313,7 @@
    "next_results": "2027-03-23",
    "sector": "Commercial Services",
    "industry": "Miscellaneous Commercial Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -347,7 +347,7 @@
   "max_up60": 13.24,
   "max_dn60": -15.85,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 15.13,
    "salesG_ttm": 16.18,
@@ -359,7 +359,7 @@
    "next_results": "2026-11-19",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -392,7 +392,7 @@
   "max_up60": 0.02,
   "max_dn60": -12.97,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 96.49,
    "salesG_ttm": 48.84,
@@ -404,7 +404,7 @@
    "next_results": "2026-11-20",
    "sector": "Transportation",
    "industry": "Marine Shipping",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -434,10 +434,10 @@
   "kiss20": true,
   "index_above50": false,
   "ret5": -6.19,
-  "max_up60": 15.78,
+  "max_up60": 17.18,
   "max_dn60": -26.48,
   "sessions_after": 18,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 30.87,
    "salesG_ttm": 27.78,
@@ -449,7 +449,7 @@
    "next_results": "2027-02-11",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -483,7 +483,7 @@
   "max_up60": 0.31,
   "max_dn60": -41.02,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": null,
    "salesG_ttm": null,
@@ -495,7 +495,7 @@
    "next_results": "2027-02-17",
    "sector": "Finance",
    "industry": "Financial Conglomerates",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -528,7 +528,7 @@
   "max_up60": 3.32,
   "max_dn60": -9.18,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 58.12,
    "salesG_ttm": 58.19,
@@ -540,7 +540,7 @@
    "next_results": "2027-03-02",
    "sector": "Health Technology",
    "industry": "Pharmaceuticals: Major",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -570,11 +570,11 @@
   "kiss20": true,
   "index_above50": true,
   "ret5": 2.67,
-  "ret20": -31.31,
+  "ret20": -29.97,
   "max_up60": 5.52,
   "max_dn60": -32.94,
   "sessions_after": 20,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 34.08,
    "salesG_ttm": 37.43,
@@ -586,7 +586,7 @@
    "next_results": "2027-03-04",
    "sector": "Health Technology",
    "industry": "Biotechnology",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -619,7 +619,7 @@
   "max_up60": 20.92,
   "max_dn60": -5.37,
   "sessions_after": 12,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": null,
    "salesG_ttm": null,
@@ -631,7 +631,7 @@
    "next_results": "2027-04-05",
    "sector": "Health Technology",
    "industry": "Pharmaceuticals: Major",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -664,7 +664,7 @@
   "max_up60": 1.15,
   "max_dn60": -19.66,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 1.33,
    "salesG_ttm": 1.26,
@@ -676,7 +676,7 @@
    "next_results": "2026-12-10",
    "sector": "Producer Manufacturing",
    "industry": "Building Products",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -709,7 +709,7 @@
   "max_up60": 14.56,
   "max_dn60": -6.62,
   "sessions_after": 11,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 39.69,
    "salesG_ttm": 36.79,
@@ -721,7 +721,7 @@
    "next_results": "2027-03-02",
    "sector": "Technology Services",
    "industry": "Information Technology Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -754,7 +754,7 @@
   "max_up60": 4.27,
   "max_dn60": -11.5,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 29.15,
    "salesG_ttm": 30.4,
@@ -766,7 +766,7 @@
    "next_results": "2026-12-11",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -800,7 +800,7 @@
   "max_up60": 2.48,
   "max_dn60": -30.39,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 39.06,
    "salesG_ttm": 38.69,
@@ -812,7 +812,7 @@
    "next_results": "2027-02-02",
    "sector": "Non-Energy Minerals",
    "industry": "Other Metals/Minerals",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -845,7 +845,7 @@
   "max_up60": 2.31,
   "max_dn60": -16.15,
   "sessions_after": 11,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 21.31,
    "salesG_ttm": 22.99,
@@ -857,7 +857,7 @@
    "next_results": "2026-12-01",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -888,9 +888,9 @@
   "index_above50": false,
   "ret5": 2.9,
   "max_up60": 6.46,
-  "max_dn60": -4.51,
+  "max_dn60": -4.78,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": -8.68,
    "salesG_ttm": -13.05,
@@ -902,7 +902,7 @@
    "next_results": "2027-02-17",
    "sector": "Industrial Services",
    "industry": "Contract Drilling",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -935,7 +935,7 @@
   "max_up60": 0.44,
   "max_dn60": -21.67,
   "sessions_after": 11,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 18.89,
    "salesG_ttm": 13.87,
@@ -947,7 +947,7 @@
    "next_results": "2027-01-13",
    "sector": "Electronic Technology",
    "industry": "Electronic Production Equipment",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -981,7 +981,7 @@
   "max_up60": 38.2,
   "max_dn60": -5.25,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 9.49,
    "salesG_ttm": 9.53,
@@ -993,7 +993,7 @@
    "next_results": "2027-02-09",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1026,7 +1026,7 @@
   "max_up60": 3.55,
   "max_dn60": -7.41,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 1.02,
    "salesG_ttm": 4.5,
@@ -1038,7 +1038,7 @@
    "next_results": "2027-02-11",
    "sector": "Producer Manufacturing",
    "industry": "Building Products",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1071,7 +1071,7 @@
   "max_up60": 1.17,
   "max_dn60": -8.65,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": -4.46,
    "salesG_ttm": -3.93,
@@ -1083,7 +1083,7 @@
    "next_results": "2027-02-02",
    "sector": "Producer Manufacturing",
    "industry": "Industrial Machinery",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1116,7 +1116,7 @@
   "max_up60": 3.44,
   "max_dn60": -5.24,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": -3.88,
    "salesG_ttm": -6.19,
@@ -1128,7 +1128,7 @@
    "next_results": "2027-01-22",
    "sector": "Commercial Services",
    "industry": "Miscellaneous Commercial Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1158,10 +1158,10 @@
   "kiss20": true,
   "index_above50": false,
   "ret5": -3.73,
-  "max_up60": 3.87,
+  "max_up60": 3.81,
   "max_dn60": -6.35,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 11.47,
    "salesG_ttm": 8.29,
@@ -1173,7 +1173,7 @@
    "next_results": null,
    "sector": "Finance",
    "industry": "Insurance Brokers/Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1207,7 +1207,7 @@
   "max_up60": -1.63,
   "max_dn60": -39.8,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 317.29,
    "salesG_ttm": 209.28,
@@ -1219,7 +1219,7 @@
    "next_results": "2027-01-28",
    "sector": "Electronic Technology",
    "industry": "Semiconductors",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1252,7 +1252,7 @@
   "max_up60": 11.98,
   "max_dn60": -10.12,
   "sessions_after": 11,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 60.74,
    "salesG_ttm": 68.78,
@@ -1264,7 +1264,7 @@
    "next_results": "2027-03-02",
    "sector": "Health Technology",
    "industry": "Pharmaceuticals: Major",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1298,7 +1298,7 @@
   "max_up60": 5.97,
   "max_dn60": -46.08,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 297.5,
    "salesG_ttm": 156.46,
@@ -1310,7 +1310,7 @@
    "next_results": "2027-02-02",
    "sector": "Electronic Technology",
    "industry": "Computer Processing Hardware",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1344,7 +1344,7 @@
   "max_up60": 0.04,
   "max_dn60": -27.71,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 41.11,
    "salesG_ttm": 35.21,
@@ -1356,7 +1356,7 @@
    "next_results": "2027-01-21",
    "sector": "Electronic Technology",
    "industry": "Semiconductors",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1389,7 +1389,7 @@
   "max_up60": 6.83,
   "max_dn60": -16.11,
   "sessions_after": 11,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 13.11,
    "salesG_ttm": 14.25,
@@ -1401,7 +1401,7 @@
    "next_results": "2027-02-02",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1434,7 +1434,7 @@
   "max_up60": 1.28,
   "max_dn60": -8.69,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 12.18,
    "salesG_ttm": 36.68,
@@ -1446,7 +1446,7 @@
    "next_results": "2027-02-03",
    "sector": "Finance",
    "industry": "Investment Banks/Brokers",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1479,7 +1479,7 @@
   "max_up60": 4.22,
   "max_dn60": -7.45,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 10.81,
    "salesG_ttm": 12.64,
@@ -1491,7 +1491,7 @@
    "next_results": "2027-02-11",
    "sector": "Electronic Technology",
    "industry": "Aerospace & Defense",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1525,7 +1525,7 @@
   "max_up60": 1.33,
   "max_dn60": -43.08,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 4801.69,
    "salesG_ttm": 1947.76,
@@ -1537,7 +1537,7 @@
    "next_results": "2027-02-03",
    "sector": "Finance",
    "industry": "Financial Conglomerates",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1570,7 +1570,7 @@
   "max_up60": 1.86,
   "max_dn60": -7.37,
   "sessions_after": 10,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 19.69,
    "salesG_ttm": 17.76,
@@ -1582,7 +1582,7 @@
    "next_results": "2027-03-02",
    "sector": "Energy Minerals",
    "industry": "Oil & Gas Production",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1615,7 +1615,7 @@
   "max_up60": 2.62,
   "max_dn60": -18.37,
   "sessions_after": 18,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 258.02,
    "salesG_ttm": null,
@@ -1627,7 +1627,7 @@
    "next_results": "2027-02-25",
    "sector": "Communications",
    "industry": "Specialty Telecommunications",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1661,7 +1661,7 @@
   "max_up60": 82.29,
   "max_dn60": 3.26,
   "sessions_after": 43,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 29.23,
    "salesG_ttm": 13.13,
@@ -1673,7 +1673,7 @@
    "next_results": "2027-02-25",
    "sector": "Health Technology",
    "industry": "Biotechnology",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1706,7 +1706,7 @@
   "max_up60": 7.18,
   "max_dn60": -6.22,
   "sessions_after": 11,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 25.37,
    "salesG_ttm": 23.99,
@@ -1718,7 +1718,7 @@
    "next_results": "2027-03-01",
    "sector": "Technology Services",
    "industry": "Internet Software/Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1752,7 +1752,7 @@
   "max_up60": 4.45,
   "max_dn60": -49.15,
   "sessions_after": 32,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 39.87,
    "salesG_ttm": 27.63,
@@ -1764,7 +1764,7 @@
    "next_results": "2027-02-25",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1794,9 +1794,9 @@
   "kiss20": true,
   "index_above50": false,
   "max_up60": 1.87,
-  "max_dn60": -5.14,
+  "max_dn60": -5.16,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 8.1,
    "salesG_ttm": 8.6,
@@ -1808,7 +1808,7 @@
    "next_results": "2027-02-09",
    "sector": "Health Technology",
    "industry": "Biotechnology",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1840,7 +1840,7 @@
   "max_up60": 0.89,
   "max_dn60": -7.52,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 9.38,
    "salesG_ttm": 8.59,
@@ -1852,7 +1852,7 @@
    "next_results": "2026-12-03",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1884,7 +1884,7 @@
   "max_up60": 1.4,
   "max_dn60": -4.45,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 6.27,
    "salesG_ttm": -0.78,
@@ -1896,7 +1896,7 @@
    "next_results": "2026-12-03",
    "sector": "Technology Services",
    "industry": "Information Technology Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1928,7 +1928,7 @@
   "max_up60": 2.06,
   "max_dn60": -9.81,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 16.47,
    "salesG_ttm": 16.78,
@@ -1940,7 +1940,7 @@
    "next_results": "2027-03-25",
    "sector": "Communications",
    "industry": "Wireless Telecommunications",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -1972,7 +1972,7 @@
   "max_up60": 2.21,
   "max_dn60": -1.4,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 6.68,
    "salesG_ttm": 6.92,
@@ -1984,7 +1984,7 @@
    "next_results": "2027-02-04",
    "sector": "Health Technology",
    "industry": "Biotechnology",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2016,7 +2016,7 @@
   "max_up60": 1.69,
   "max_dn60": -3.16,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 58.12,
    "salesG_ttm": 58.19,
@@ -2028,7 +2028,7 @@
    "next_results": "2027-03-02",
    "sector": "Health Technology",
    "industry": "Pharmaceuticals: Major",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2060,7 +2060,7 @@
   "max_up60": 0.64,
   "max_dn60": -11.69,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": null,
    "salesG_ttm": null,
@@ -2072,7 +2072,7 @@
    "next_results": "2027-02-02",
    "sector": "Health Technology",
    "industry": "Biotechnology",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2102,9 +2102,9 @@
   "kiss20": false,
   "index_above50": false,
   "max_up60": 3.23,
-  "max_dn60": -3.46,
+  "max_dn60": -3.5,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 11.54,
    "salesG_ttm": 14.82,
@@ -2116,7 +2116,7 @@
    "next_results": "2027-02-18",
    "sector": "Commercial Services",
    "industry": "Miscellaneous Commercial Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2148,7 +2148,7 @@
   "max_up60": 2.12,
   "max_dn60": -10.65,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": null,
    "salesG_ttm": null,
@@ -2160,7 +2160,7 @@
    "next_results": "2027-03-04",
    "sector": "Health Technology",
    "industry": "Pharmaceuticals: Major",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2192,7 +2192,7 @@
   "max_up60": 3.33,
   "max_dn60": -4.67,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 60.74,
    "salesG_ttm": 68.78,
@@ -2204,7 +2204,7 @@
    "next_results": "2027-03-02",
    "sector": "Health Technology",
    "industry": "Pharmaceuticals: Major",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2236,7 +2236,7 @@
   "max_up60": 3.17,
   "max_dn60": -4.76,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 39.69,
    "salesG_ttm": 36.79,
@@ -2248,7 +2248,7 @@
    "next_results": "2027-03-02",
    "sector": "Technology Services",
    "industry": "Information Technology Services",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2280,7 +2280,7 @@
   "max_up60": 0.81,
   "max_dn60": -8.92,
   "sessions_after": 3,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 454.88,
    "salesG_ttm": 33.55,
@@ -2292,7 +2292,7 @@
    "next_results": "2027-02-24",
    "sector": "Health Technology",
    "industry": "Biotechnology",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2321,10 +2321,10 @@
   "kiss50": false,
   "kiss20": false,
   "index_above50": false,
-  "max_up60": 10.85,
+  "max_up60": 12.19,
   "max_dn60": 0.86,
   "sessions_after": 1,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 30.87,
    "salesG_ttm": 27.78,
@@ -2336,7 +2336,7 @@
    "next_results": "2027-02-11",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2368,7 +2368,7 @@
   "max_up60": 2.1,
   "max_dn60": -1.37,
   "sessions_after": 1,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 9.38,
    "salesG_ttm": 8.59,
@@ -2380,7 +2380,7 @@
    "next_results": "2026-12-03",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2412,7 +2412,7 @@
   "max_up60": 5.69,
   "max_dn60": -5.24,
   "sessions_after": 1,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": null,
    "salesG_ttm": null,
@@ -2424,7 +2424,7 @@
    "next_results": null,
    "sector": "Miscellaneous",
    "industry": "Investment Trusts/Mutual Funds",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2456,7 +2456,7 @@
   "max_up60": 1.65,
   "max_dn60": -2.72,
   "sessions_after": 1,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 55.5,
    "salesG_ttm": 37.83,
@@ -2468,7 +2468,7 @@
    "next_results": "2027-02-17",
    "sector": "Technology Services",
    "industry": "Packaged Software",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2498,9 +2498,9 @@
   "kiss20": false,
   "index_above50": false,
   "max_up60": 0.91,
-  "max_dn60": -4.32,
+  "max_dn60": -4.97,
   "sessions_after": 1,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 29.23,
    "salesG_ttm": 13.13,
@@ -2512,7 +2512,7 @@
    "next_results": "2027-02-25",
    "sector": "Health Technology",
    "industry": "Biotechnology",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2545,7 +2545,7 @@
   "max_up60": 4.62,
   "max_dn60": -2.31,
   "sessions_after": 9,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 14.5,
    "salesG_ttm": 13.07,
@@ -2557,7 +2557,7 @@
    "next_results": "2027-02-17",
    "sector": "Consumer Services",
    "industry": "Restaurants",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2591,7 +2591,7 @@
   "max_up60": 0.09,
   "max_dn60": -9.36,
   "sessions_after": 29,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 18.43,
    "salesG_ttm": 16.07,
@@ -2603,7 +2603,7 @@
    "next_results": "2027-02-15",
    "sector": "Health Services",
    "industry": "Hospital/Nursing Management",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2637,7 +2637,7 @@
   "max_up60": 5.79,
   "max_dn60": -19.67,
   "sessions_after": 29,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": 72.91,
    "salesG_ttm": 70.47,
@@ -2649,7 +2649,7 @@
    "next_results": "2027-03-22",
    "sector": "Finance",
    "industry": "Multi-Line Insurance",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  },
@@ -2683,7 +2683,7 @@
   "max_up60": 7.39,
   "max_dn60": -14.31,
   "sessions_after": 29,
-  "computed": "2026-11-18",
+  "computed": "2026-11-19",
   "fund": {
    "salesG_q": -2.96,
    "salesG_ttm": -6.86,
@@ -2695,7 +2695,7 @@
    "next_results": "2027-03-16",
    "sector": "Industrial Services",
    "industry": "Contract Drilling",
-   "as_of": "2026-11-18",
+   "as_of": "2026-11-19",
    "note": "قيم آخر ربع معلن وقت الحساب؛ إن كانت النتائج بعد تاريخ الذكر فهي ليست ما رآه المحاضر"
   }
  }
