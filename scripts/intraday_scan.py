@@ -98,8 +98,11 @@ for r in rows:
             sec = "chase" if c > pv * 1.03 else "vcp"
             alert(s, "vcp", sec, line(nm, c, round(pv, 2), round(st, 2), rv, " — ".join(x for x in (f"{sh['shape']}: {sh['note']}", ert) if x)))
     # 4) مرشح جديد دخل الفلترة الكاملة
-    if cand(r) and s not in prev_watch and s not in card:
-        alert(s, "newcand", "new", line(nm, c, rv=rv))
+    # الكورس: السهم القوي يصعد وأيام صعوده بحجم، والحجم المرتفع في يوم هبوط بيع لا قوة (S26 21:59، الدرس 12).
+    # ويُستبعد السهم الذي تشوّهت بياناته بإجراء على رأس المال (دمج أسهم/تخفيض): السعر بعيد جداً عن متوسطاته.
+    distorted = bool(r.get("SMA50") and (c > r["SMA50"] * 2.5 or c < r["SMA50"] / 2.5))
+    if cand(r) and s not in prev_watch and s not in card and (r["change"] or 0) > 0 and not distorted:
+        alert(s, "newcand", "new", line(nm, c, rv=rv, extra=f"{r['change']:+.1f}% اليوم"))
 
 state["runs"].append(now.strftime("%H:%M"))
 json.dump(state, open(SF, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
