@@ -9,10 +9,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); sys.path.ins
 from vcp import detect
 MKT = os.environ.get("BT_MKT", "sa")
 if MKT == "us":   # السوق الأمريكي: المؤشر S&P 500، حجم الاختراق 1.5× (S18-11)، عمولة تقديرية 0.05% (ليست من الكورس)
-    H = os.path.join(ROOT, "bt", "hist_us"); IDX = "SPX"; VOLX = 1.5
+    H = os.path.join(ROOT, "bt", "hist_us" + os.environ.get("BT_SUFFIX", "")); IDX = "SPX"; VOLX = 1.5
     names = {l.split(",")[0].replace(".", "_"): l.strip().split(",", 2)[2] for l in open(os.path.join(ROOT, "bt", "universe_us.csv"), encoding="utf-8").readlines()[1:]}
 else:
-    H = os.path.join(ROOT, "bt", "hist"); IDX = "TASI"; VOLX = 1.25
+    H = os.path.join(ROOT, "bt", "hist" + os.environ.get("BT_SUFFIX", "")); IDX = "TASI"; VOLX = 1.25
     names = dict(l.strip().split(",", 1) for l in open(os.path.join(ROOT, "bt", "universe.csv"), encoding="utf-8").readlines()[1:])
 T = pd.read_csv(os.path.join(H, f"{IDX}.csv"), index_col=0, parse_dates=True)
 T["sma50"] = T.close.rolling(50).mean()
@@ -24,8 +24,11 @@ for f in glob.glob(os.path.join(H, "*.csv")):
     if len(d) < 260: continue
     d = d.reindex(T.index).dropna()  # جلسات تاسي فقط
     d["sma20"] = d.close.rolling(20).mean(); d["sma200"] = d.close.rolling(200).mean(); d["sma150"] = d.close.rolling(150).mean()
+    t = T.close.reindex(d.index)
+    d["ok"] = ((d.close / d.close.shift(250) - 1 > .20) & (d.close > d.sma150) & (d.close > d.sma200) & (d.close > d.sma20)
+               & (d.close / d.close.shift(21) - t / t.shift(21) > 0) & (d.close / d.close.shift(63) - t / t.shift(63) > 0))
     D[s] = d
-START, END = pd.Timestamp("2026-01-01"), T.index[-1]
+START, END = pd.Timestamp(os.environ.get("BT_START", "2026-01-01")), T.index[-1]
 days = [x for x in T.index if x >= START]
 COM, CAP, RISK, MAXP = (0.0005 if MKT == "us" else 0.00178), 12500, 1000, 8
 METHOD = os.environ.get("BT_METHOD", "both")
@@ -57,16 +60,12 @@ def eye_ok(d, i):
     return sum(e.values()) >= int(EYE)
 
 def screen(s, i):
-    d = D[s]; c = d.close
-    if i < 250 or pd.isna(d.sma200.iloc[i]): return False
-    perfY = c.iloc[i] / c.iloc[i - 250] - 1
-    t = T.close.reindex(d.index)
-    rs1 = c.iloc[i] / c.iloc[i - 21] - t.iloc[i] / t.iloc[i - 21]; rs3 = c.iloc[i] / c.iloc[i - 63] - t.iloc[i] / t.iloc[i - 63]
-    return perfY > .20 and c.iloc[i] > d.sma150.iloc[i] and c.iloc[i] > d.sma200.iloc[i] and c.iloc[i] > d.sma20.iloc[i] and rs1 > 0 and rs3 > 0
+    return bool(D[s]["ok"].iloc[i]) and i >= 250
 
 def run(mode):
     """mode: all = كل الإشارات بمخاطرة 1%؛ serve = فقط وتاسي فوق متوسط 50؛ explore = 1% إن خدم السوق وإلا 20% (مركز استكشافي S58-08)."""
     open_, trades, signals = {}, [], 0
+    LV = [0.2, 0.5, 1.0]; lvl = [0]   # "ابنِ على النجاح" (2955، S8-18): ابدأ استكشافياً 0.2، صفقة ≥ +1R ترفع درجة، أي خسارة تنزل درجة. أرقام آلية حُددت قبل الاختبار
     for k in range(len(days) - 1):
         day, nxt = days[k], days[k + 1]
         # 1) إدارة المراكز المفتوحة على جلسة الغد
@@ -90,6 +89,9 @@ def run(mode):
                                "ret%": round((proceeds / (cost / (1 + COM)) / (1 - COM) - 1) * 100, 1) if False else round((sum(px*q for _,px,q in p["legs"])/(p['entry']*p['q0'])-1)*100, 1),
                                "half": p["half"], "tasi_serves": p["serve"], "shape": p["shape"]})
                 del open_[s]
+                R = trades[-1]["R"]
+                if R >= 1: lvl[0] = min(2, lvl[0] + 1)
+                elif R < 0: lvl[0] = max(0, lvl[0] - 1)
         # 2) إشارات اليوم (بيانات حتى إغلاق اليوم فقط) → أوامر للغد
         serve = T.close.loc[day] > T.sma50.loc[day]
         if mode == "serve" and not serve: continue
@@ -120,8 +122,8 @@ def run(mode):
                         if r.open <= piv * 1.03: entry = r.open
             if entry is None or not eye_ok(d, i): continue
             if entry <= stop: continue
-            risk = RISK * (1 if (mode != "explore" or serve) else 0.2)
-            q = int(min(risk / (entry - stop), (CAP if (mode != "explore" or serve) else CAP * 0.2) / entry))
+            f = (1 if (mode != "explore" or serve) else 0.2) if mode != "succ" else LV[lvl[0]]
+            q = int(min(RISK * f / (entry - stop), CAP * f / entry))
             if q <= 0: continue
             p = {"d": nxt, "entry": entry, "stop": stop, "stop0": stop, "qty": q, "q0": q, "half": False, "legs": [], "risk": max(1, q * (entry - stop)), "serve": bool(serve), "shape": sh["shape"]}
             open_[s] = p
@@ -132,6 +134,7 @@ def run(mode):
                 trades.append({"sym": s, "name": names.get(s, s), "in": str(nxt.date()), "entry": round(entry, 3), "stop": round(stop, 3), "out": str(nxt.date()),
                                "pnl": round(proc - cost), "R": round((proc - cost) / p["risk"], 2), "ret%": round((stop / entry - 1) * 100, 1), "half": False, "tasi_serves": bool(serve), "shape": sh["shape"]})
                 del open_[s]
+                if trades[-1]["R"] < 0: lvl[0] = max(0, lvl[0] - 1)
     # مراكز مفتوحة: تقييم بآخر إغلاق
     for s, p in open_.items():
         last = D[s].close.iloc[-1]; held = sum(px * q for _, px, q in p["legs"]) + last * p["qty"]
@@ -142,15 +145,17 @@ def run(mode):
 
 out = {"period": [str(START.date()), str(END.date())], "tasi": [round(T.close[T.index >= START].iloc[0], 2), round(T.close.iloc[-1], 2)],
        "tasi_serve_days": int(sum(T.close.loc[x] > T.sma50.loc[x] for x in days)), "days": len(days), "universe": len(D)}
-for m in ("all", "serve", "explore"):
+MODES = os.environ.get("BT_MODES", "all,serve,explore,succ").split(",")
+for m in MODES:
     tr, sg = run(m)
     w = [t for t in tr if t["pnl"] > 0]; l = [t for t in tr if t["pnl"] <= 0]
     eq, peak, dd = 0, 0, 0
     for t in sorted(tr, key=lambda x: x["out"]): eq += t["pnl"]; peak = max(peak, eq); dd = max(dd, peak - eq)
     out[m] = {"signals": sg, "trades": len(tr), "wins": len(w), "net": sum(t["pnl"] for t in tr), "avgR": round(sum(t["R"] for t in tr) / len(tr), 2) if tr else 0,
               "avg_win%": round(sum(t["ret%"] for t in w) / len(w), 1) if w else 0, "avg_loss%": round(sum(t["ret%"] for t in l) / len(l), 1) if l else 0,
-              "pf": round(sum(t["pnl"] for t in w) / -sum(t["pnl"] for t in l), 2) if l and sum(t["pnl"] for t in l) else None, "maxDD": dd, "list": tr}
-json.dump(out, open(os.path.join(ROOT, "bt", f"result_2026_{MKT}_{METHOD}_{EYE}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-for m in ("all", "serve", "explore"):
+              "pf": round(sum(t["pnl"] for t in w) / -sum(t["pnl"] for t in l), 2) if l and sum(t["pnl"] for t in l) else None, "maxDD": dd,
+              "years": {y: [sum(1 for t in tr if t["in"][:4] == y), sum(t["pnl"] for t in tr if t["in"][:4] == y)] for y in sorted({t["in"][:4] for t in tr})}, "list": tr}
+json.dump(out, open(os.path.join(ROOT, "bt", f"result_{START.year}_{MKT}_{METHOD}_{EYE}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+for m in MODES:
     o = out[m]; print(m, {k: v for k, v in o.items() if k != "list"})
-print({k: v for k, v in out.items() if k not in ("all", "serve", "explore")})
+print({k: v for k, v in out.items() if k not in MODES})
