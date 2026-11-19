@@ -2,7 +2,7 @@
 الشريحة SHARD من NSHARDS للتوازي. القائمة من اليوم (انحياز بقاء معلن)."""
 import os, time, json, requests, tvDatafeed as tvd
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "bt", "hist_us"); os.makedirs(OUT, exist_ok=True)
+OUT = os.path.join(ROOT, "bt", "hist_us" + os.environ.get("BT_SUFFIX", "")); os.makedirs(OUT, exist_ok=True)
 SH, N = int(os.environ.get("SHARD", 0)), int(os.environ.get("NSHARDS", 1))
 res = requests.post("https://scanner.tradingview.com/america/scan", json={"filter": [
     {"left": "type", "operation": "equal", "right": "stock"}, {"left": "subtype", "operation": "in_range", "right": ["common", ""]},
@@ -18,7 +18,7 @@ tv = tvd.TvDatafeed(); ok = 0
 for s, e in todo:
     for a in range(3):
         try:
-            d = tv.get_hist(s, e, tvd.Interval.in_daily, n_bars=600)
+            d = tv.get_hist(s, e, tvd.Interval.in_daily, n_bars=int(os.environ.get("NBARS", 600)))
             if d is not None and len(d):
                 d.index = d.index.date; d[["open", "high", "low", "close", "volume"]].to_csv(os.path.join(OUT, f"{s.replace('.', '_')}.csv"), index_label="date"); ok += 1; break
         except Exception as ex: print(s, ex)

@@ -1,0 +1,26 @@
+name: bt-long-history
+on: workflow_dispatch
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - {mkt: sa, shard: 0}
+          - {mkt: us, shard: 0}
+          - {mkt: us, shard: 1}
+          - {mkt: us, shard: 2}
+          - {mkt: us, shard: 3}
+          - {mkt: us, shard: 4}
+          - {mkt: us, shard: 5}
+          - {mkt: us, shard: 6}
+          - {mkt: us, shard: 7}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas websocket-client requests && pip install git+https://github.com/rongardF/tvdatafeed
+      - run: if [ "${{ matrix.mkt }}" = sa ]; then python scripts/bt_fetch.py; else python scripts/bt_fetch_us.py; fi
+        env: {SHARD: "${{ matrix.shard }}", NSHARDS: "8", NBARS: "1800", BT_SUFFIX: "_long"}
+      - uses: actions/upload-artifact@v4
+        with: {name: "long-${{ matrix.mkt }}-${{ matrix.shard }}", path: bt, retention-days: 7}
