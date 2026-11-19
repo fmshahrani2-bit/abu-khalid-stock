@@ -1,0 +1,49 @@
+{
+ "period": [
+  "2026-01-01",
+  "2026-11-19"
+ ],
+ "tasi": [
+  10549.08,
+  10158.9
+ ],
+ "tasi_serve_days": 85,
+ "days": 219,
+ "universe": 263,
+ "all": {
+  "signals": 8,
+  "trades": 0,
+  "wins": 0,
+  "net": 0,
+  "avgR": 0,
+  "avg_win%": 0,
+  "avg_loss%": 0,
+  "pf": null,
+  "maxDD": 0,
+  "list": []
+ },
+ "serve": {
+  "signals": 1,
+  "trades": 0,
+  "wins": 0,
+  "net": 0,
+  "avgR": 0,
+  "avg_win%": 0,
+  "avg_loss%": 0,
+  "pf": null,
+  "maxDD": 0,
+  "list": []
+ },
+ "explore": {
+  "signals": 8,
+  "trades": 0,
+  "wins": 0,
+  "net": 0,
+  "avgR": 0,
+  "avg_win%": 0,
+  "avg_loss%": 0,
+  "pf": null,
+  "maxDD": 0,
+  "list": []
+ }
+}
