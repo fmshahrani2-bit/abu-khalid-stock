@@ -1,0 +1,32 @@
+name: bt-fetch-us
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: {shard: [0, 1, 2, 3, 4, 5]}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas websocket-client requests && pip install git+https://github.com/rongardF/tvdatafeed
+      - run: python scripts/bt_fetch_us.py
+        env: {SHARD: "${{ matrix.shard }}", NSHARDS: "6"}
+      - uses: actions/upload-artifact@v4
+        with: {name: "hist-${{ matrix.shard }}", path: bt}
+  commit:
+    needs: fetch
+    runs-on: ubuntu-latest
+    concurrency: {group: repo-writes, cancel-in-progress: false}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {path: art}
+      - run: |
+          mkdir -p bt/hist_us && for d in art/*; do cp -n $d/hist_us/*.csv bt/hist_us/ 2>/dev/null; [ -f $d/universe_us.csv ] && cp $d/universe_us.csv bt/; done; ls bt/hist_us | wc -l
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bt && git commit -qm "bt: US history $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
