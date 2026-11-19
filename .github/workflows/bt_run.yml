@@ -1,0 +1,44 @@
+name: bt-run-long
+on:
+  workflow_dispatch:
+    inputs:
+      run_id: {description: "bt-long-history run id", required: true}
+permissions:
+  contents: write
+  actions: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        mkt: [sa, us]
+        eye: [none, core]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas
+      - uses: actions/download-artifact@v4
+        with: {run-id: "${{ inputs.run_id }}", github-token: "${{ secrets.GITHUB_TOKEN }}", path: art, pattern: "long-${{ matrix.mkt }}-*"}
+      - run: |
+          mkdir -p bt/hist_long bt/hist_us_long
+          for d in art/*; do cp -n $d/hist_long/*.csv bt/hist_long/ 2>/dev/null; cp -n $d/hist_us_long/*.csv bt/hist_us_long/ 2>/dev/null; [ -f $d/universe_us.csv ] && cp $d/universe_us.csv bt/universe_us.csv; [ -f $d/universe.csv ] && cp $d/universe.csv bt/universe.csv; done
+          ls bt/hist_long | wc -l; ls bt/hist_us_long | wc -l
+          BT_MKT=${{ matrix.mkt }} BT_METHOD=both BT_EYE=${{ matrix.eye }} BT_START=2022-01-01 BT_SUFFIX=_long python scripts/bt_2026.py | cut -c1-400
+          mkdir -p out && cp bt/result_2022_*.json out/
+      - uses: actions/upload-artifact@v4
+        with: {name: "res-${{ matrix.mkt }}-${{ matrix.eye }}", path: out}
+  commit:
+    needs: run
+    runs-on: ubuntu-latest
+    concurrency: {group: repo-writes, cancel-in-progress: false}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {path: res, pattern: "res-*", merge-multiple: true}
+      - run: |
+          cp res/*.json bt/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bt && git commit -qm "bt: 2022-2026 results"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
