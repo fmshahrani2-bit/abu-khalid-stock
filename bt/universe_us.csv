@@ -1,0 +1,1452 @@
+sym,ex,name
+AAPL,NASDAQ,Apple Inc.
+MSFT,NASDAQ,Microsoft Corporation
+NVDA,NASDAQ,NVIDIA Corporation
+GOOG,NASDAQ,Alphabet Inc. Class C
+GOOGL,NASDAQ,Alphabet Inc. Class A
+AMZN,NASDAQ,Amazon.com  Inc.
+SPCX,NASDAQ,Space Exploration Technologies Corp
+AVGO,NASDAQ,Broadcom Inc.
+META,NASDAQ,Meta Platforms Inc Class A
+TSLA,NASDAQ,Tesla  Inc.
+LLY,NYSE,Eli Lilly and Company
+BRK.B,NYSE,Berkshire Hathaway Inc. Class B
+WMT,NASDAQ,Walmart Inc.
+JPM,NYSE,JPMorgan Chase & Co.
+AMD,NASDAQ,Advanced Micro Devices  Inc.
+MU,NASDAQ,Micron Technology  Inc.
+V,NYSE,Visa Inc. Class A
+XOM,NYSE,Exxonmobil Holdings Corporation
+JNJ,NYSE,Johnson & Johnson
+MA,NYSE,Mastercard Incorporated Class A
+ABBV,NYSE,AbbVie  Inc.
+COST,NASDAQ,Costco Wholesale Corporation
+KO,NYSE,Coca-Cola Company
+CVX,NYSE,Chevron Corporation
+PG,NYSE,Procter & Gamble Company
+PLTR,NASDAQ,Palantir Technologies Inc. Class A
+CSCO,NASDAQ,Cisco Systems  Inc.
+ORCL,NYSE,Oracle Corporation
+HD,NYSE,Home Depot  Inc.
+BAC,NYSE,Bank of America Corp
+GE,NYSE,GE Aerospace
+MRK,NYSE,Merck & Co.  Inc.
+INTC,NASDAQ,Intel Corporation
+UNH,NYSE,UnitedHealth Group Incorporated
+PANW,NASDAQ,Palo Alto Networks  Inc.
+PM,NYSE,Philip Morris International Inc.
+MS,NYSE,Morgan Stanley
+AZN,NYSE,AstraZeneca PLC
+AMAT,NASDAQ,Applied Materials  Inc.
+RTX,NYSE,RTX Corporation
+TXN,NASDAQ,Texas Instruments Incorporated
+RY,NYSE,Royal Bank of Canada
+LRCX,NASDAQ,Lam Research Corporation
+TMO,NYSE,Thermo Fisher Scientific Inc.
+CRWD,NASDAQ,CrowdStrike Holdings  Inc. Class A
+CAT,NYSE,Caterpillar Inc.
+GS,NYSE,Goldman Sachs Group  Inc.
+ANET,NYSE,Arista Networks Inc
+NFLX,NASDAQ,Netflix  Inc.
+WFC,NYSE,Wells Fargo & Company
+AMGN,NASDAQ,Amgen Inc.
+LIN,NASDAQ,Linde plc
+IBM,NYSE,International Business Machines Corporation
+AXP,NYSE,American Express Company
+GILD,NASDAQ,Gilead Sciences  Inc.
+DIS,NYSE,Walt Disney Company
+DELL,NYSE,Dell Technologies  Inc. Class C
+GEV,NYSE,GE Vernova Inc.
+TD,NYSE,Toronto-Dominion Bank
+TTE,NYSE,TotalEnergies SE
+C,NYSE,Citigroup Inc.
+MCD,NYSE,McDonald's Corporation
+PEP,NASDAQ,PepsiCo  Inc.
+APH,NYSE,Amphenol Corporation Class A
+VZ,NYSE,Verizon Communications Inc.
+BLK,NYSE,BlackRock  Inc.
+KLAC,NASDAQ,KLA Corporation
+ADI,NASDAQ,Analog Devices  Inc.
+ABT,NYSE,Abbott Laboratories
+WELL,NYSE,Welltower Inc.
+NEE,NYSE,NextEra Energy  Inc.
+QCOM,NASDAQ,QUALCOMM Incorporated
+SHOP,NASDAQ,Shopify  Inc. Class A
+UNP,NYSE,Union Pacific Corporation
+TMUS,NASDAQ,T-Mobile US  Inc.
+DE,NYSE,Deere & Company
+DHR,NYSE,Danaher Corporation
+SCHW,NYSE,Charles Schwab Corp
+COP,NYSE,ConocoPhillips
+PFE,NYSE,Pfizer Inc.
+TJX,NYSE,TJX Companies Inc
+CRM,NYSE,Salesforce  Inc.
+T,NYSE,AT&T Inc
+BX,NYSE,Blackstone Inc.
+ISRG,NASDAQ,Intuitive Surgical  Inc.
+CB,NYSE,Chubb Limited
+UBS,NYSE,UBS Group AG
+UBER,NYSE,Uber Technologies  Inc.
+VRTX,NASDAQ,Vertex Pharmaceuticals Incorporated
+PGR,NYSE,Progressive Corporation
+LMT,NYSE,Lockheed Martin Corporation
+ETN,NYSE,Eaton Corp. Plc
+IBKR,NASDAQ,Interactive Brokers Group  Inc. Class A
+ACN,NYSE,Accenture Plc Class A
+MDT,NYSE,Medtronic Plc
+APP,NASDAQ,AppLovin Corp. Class A
+SPGI,NYSE,S&P Global  Inc.
+BA,NYSE,Boeing Company
+MRVL,NASDAQ,Marvell Technology  Inc.
+LOW,NYSE,Lowe's Companies  Inc.
+MO,NYSE,Altria Group  Inc.
+SCCO,NYSE,Southern Copper Corporation
+MCK,NYSE,McKesson Corporation
+SPOT,NYSE,Spotify Technology SA
+STX,NASDAQ,Seagate Technology Holdings PLC
+SBUX,NASDAQ,Starbucks Corporation
+BMY,NYSE,Bristol-Myers Squibb Company
+SYK,NYSE,Stryker Corporation
+PLD,NYSE,Prologis  Inc.
+ADP,NASDAQ,Automatic Data Processing  Inc.
+PH,NYSE,Parker-Hannifin Corporation
+BKNG,NASDAQ,Booking Holdings Inc.
+BMO,NYSE,Bank of Montreal
+WDC,NASDAQ,Western Digital Corporation
+COF,NYSE,Capital One Financial Corp
+NET,NYSE,Cloudflare Inc Class A
+CME,NASDAQ,CME Group Inc. Class A
+SNDK,NASDAQ,Sandisk Corporation
+SO,NYSE,Southern Company
+MAR,NASDAQ,Marriott International  Inc. Class A
+BNS,NYSE,Bank of Nova Scotia
+NEM,NYSE,Newmont Corporation
+ABNB,NASDAQ,Airbnb  Inc. Class A
+ENB,NYSE,Enbridge Inc.
+CVS,NYSE,CVS Health Corporation
+EQIX,NASDAQ,Equinix  Inc.
+MPC,NYSE,Marathon Petroleum Corporation
+SNOW,NYSE,Snowflake  Inc.
+DUK,NYSE,Duke Energy Corporation
+FTNT,NASDAQ,Fortinet  Inc.
+BNY,NYSE,Bank of New York Mellon Corp
+MRSH,NYSE,Marsh & McLennan Companies  Inc.
+REGN,NASDAQ,Regeneron Pharmaceuticals  Inc.
+CM,NYSE,Canadian Imperial Bank of Commerce
+HCA,NYSE,HCA Healthcare Inc
+ICE,NYSE,Intercontinental Exchange  Inc.
+BN,NYSE,Brookfield Corporation
+VLO,NYSE,Valero Energy Corporation
+PSX,NYSE,Phillips 66
+WM,NYSE,Waste Management  Inc.
+GD,NYSE,General Dynamics Corporation
+NOW,NYSE,ServiceNow  Inc.
+UPS,NYSE,United Parcel Service  Inc. Class B
+GLW,NYSE,Corning Inc
+CSX,NASDAQ,CSX Corporation
+MMM,NYSE,3M Company
+CNQ,NYSE,Canadian Natural Resources Limited
+CEG,NASDAQ,Constellation Energy Corporation
+PWR,NYSE,Quanta Services  Inc.
+USB,NYSE,U.S. Bancorp
+TT,NYSE,Trane Technologies plc
+CMCSA,NASDAQ,Comcast Corporation Class A
+HWM,NYSE,Howmet Aerospace Inc.
+ADBE,NASDAQ,Adobe Inc.
+EMR,NYSE,Emerson Electric Co.
+CTAS,NASDAQ,Cintas Corporation
+PNC,NYSE,PNC Financial Services Group  Inc.
+MSI,NYSE,Motorola Solutions  Inc.
+MNST,NASDAQ,Monster Beverage Corporation
+CDNS,NASDAQ,Cadence Design Systems  Inc.
+AMT,NYSE,American Tower Corporation
+ELV,NYSE,Elevance Health  Inc.
+SNPS,NASDAQ,Synopsys  Inc.
+ECL,NYSE,Ecolab Inc.
+WMB,NYSE,Williams Companies  Inc.
+KKR,NYSE,KKR & Co Inc
+RCL,NYSE,Royal Caribbean Group
+INTU,NASDAQ,Intuit Inc.
+MDLZ,NASDAQ,Mondelez International  Inc. Class A
+SHW,NYSE,Sherwin-Williams Company
+BAM,NYSE,Brookfield Asset Management Ltd. Class A
+JCI,NYSE,Johnson Controls International plc
+MRNA,NASDAQ,Moderna  Inc.
+MCO,NYSE,Moody's Corporation
+AEM,NYSE,Agnico Eagle Mines Limited
+HLT,NASDAQ,Hilton Worldwide Holdings Inc.
+CP,NYSE,Canadian Pacific Kansas City Limited
+TRV,NYSE,Travelers Companies  Inc.
+ITW,NYSE,Illinois Tool Works Inc.
+EPD,NYSE,Enterprise Products Partners L.P.
+CVNA,NYSE,Carvana Co. Class A
+EOG,NYSE,EOG Resources  Inc.
+NOC,NYSE,Northrop Grumman Corp.
+CL,NYSE,Colgate-Palmolive Company
+TGT,NYSE,Target Corporation
+CNI,NYSE,Canadian National Railway Company
+RSG,NYSE,Republic Services  Inc.
+ORLY,NASDAQ,O'Reilly Automotive  Inc.
+SU,NYSE,Suncor Energy Inc.
+FDX,NYSE,FedEx Corporation
+SPG,NYSE,Simon Property Group  Inc.
+VRT,NYSE,Vertiv Holdings Co. Class A
+FCX,NYSE,Freeport-McMoRan  Inc.
+ROST,NASDAQ,Ross Stores  Inc.
+CI,NYSE,Cigna Group
+SLB,NYSE,SLB Limited
+NSC,NYSE,Norfolk Southern Corporation
+AJG,NYSE,Arthur J. Gallagher & Co.
+DASH,NASDAQ,DoorDash  Inc. Class A
+KMI,NYSE,Kinder Morgan Inc Class P
+AON,NYSE,Aon Plc Class A
+MFC,NYSE,Manulife Financial Corporation
+MELI,NASDAQ,MercadoLibre  Inc.
+APO,NYSE,Apollo Global Management Inc
+HON,NASDAQ,Honeywell International Inc.
+GM,NASDAQ,General Motors Company
+APD,NYSE,Air Products and Chemicals  Inc.
+AEP,NASDAQ,American Electric Power Company  Inc.
+DLR,NYSE,Digital Realty Trust  Inc.
+URI,NYSE,United Rentals  Inc.
+TRP,NYSE,TC Energy Corporation
+ALL,NYSE,Allstate Corporation
+COR,NYSE,Cencora  Inc.
+KMB,NASDAQ,Kimberly-Clark Corporation
+MPWR,NASDAQ,Monolithic Power Systems  Inc.
+NXPI,NASDAQ,NXP Semiconductors NV
+HOOD,NASDAQ,Robinhood Markets  Inc. Class A
+CAH,NYSE,Cardinal Health  Inc.
+BSX,NYSE,Boston Scientific Corporation
+DDOG,NASDAQ,Datadog  Inc. Class A
+AFL,NYSE,Aflac Incorporated
+MET,NYSE,MetLife  Inc.
+TRGP,NYSE,Targa Resources Corp.
+HPE,NYSE,Hewlett Packard Enterprise Co.
+TEL,NYSE,TE Connectivity plc
+PSA,NYSE,Public Storage
+FAST,NASDAQ,Fastenal Company
+CRH,NYSE,CRH public limited company
+LNG,NYSE,Cheniere Energy  Inc.
+DB,NYSE,Deutsche Bank Aktiengesellschaft
+EW,NYSE,Edwards Lifesciences Corporation
+D,NYSE,Dominion Energy Inc
+NDAQ,NASDAQ,Nasdaq  Inc.
+CMI,NYSE,Cummins Inc.
+BDX,NYSE,Becton  Dickinson and Company
+NU,NYSE,Nu Holdings Ltd. Class A
+MPLX,NYSE,MPLX LP
+TFC,NYSE,Truist Financial Corporation
+NUE,NYSE,Nucor Corporation
+DAL,NYSE,Delta Air Lines  Inc.
+B,NYSE,Barrick Mining Corporation
+OKE,NYSE,ONEOK  Inc.
+O,NYSE,Realty Income Corporation
+IDXX,NASDAQ,IDEXX Laboratories  Inc.
+PCAR,NASDAQ,PACCAR Inc
+OXY,NYSE,Occidental Petroleum Corporation
+AME,NYSE,AMETEK  Inc.
+WPM,NYSE,Wheaton Precious Metals Corp
+GRMN,NYSE,Garmin Ltd.
+EBAY,NASDAQ,eBay Inc.
+ADSK,NASDAQ,Autodesk  Inc.
+NKE,NYSE,NIKE  Inc. Class B
+XEL,NASDAQ,Xcel Energy Inc.
+ETR,NYSE,Entergy Corporation
+CCEP,NASDAQ,Coca-Cola Europacific Partners plc
+BE,NYSE,Bloom Energy Corporation Class A
+SRE,NYSE,Sempra
+HONA,NASDAQ,Honeywell Aerospace Inc
+A,NYSE,Agilent Technologies  Inc.
+MDLN,NASDAQ,Medline  Inc. Class A
+FANG,NASDAQ,Diamondback Energy  Inc.
+LITE,NASDAQ,Lumentum Holdings  Inc.
+KEYS,NYSE,Keysight Technologies Inc
+CVE,NYSE,Cenovus Energy Inc.
+VMRK,NYSE,Vivmark Residential
+FERG,NYSE,Ferguson Enterprises Inc.
+LHX,NYSE,L3Harris Technologies Inc
+DVN,NYSE,Devon Energy Corporation
+VTR,NYSE,Ventas  Inc.
+WAB,NYSE,Westinghouse Air Brake Technologies Corporation
+PYPL,NASDAQ,PayPal Holdings  Inc.
+EXC,NASDAQ,Exelon Corporation
+KDP,NASDAQ,Keurig Dr Pepper Inc.
+BKR,NASDAQ,Baker Hughes Company Class A
+ROP,NASDAQ,Roper Technologies  Inc.
+CMG,NYSE,Chipotle Mexican Grill  Inc.
+FITB,NYSE,Fifth Third Bancorp
+XYZ,NYSE,Block  Inc. Class A
+TEVA,NYSE,Teva Pharmaceutical Industries Limited
+VYLR,NYSE,Vylor Inc
+WAT,NYSE,Waters Corporation
+WCN,NYSE,Waste Connections  Inc.
+HUM,NYSE,Humana Inc.
+FNV,NYSE,Franco-Nevada Corporation
+F,NYSE,Ford Motor Company
+MSCI,NYSE,MSCI Inc. Class A
+STT,NYSE,State Street Corporation
+TRI,NASDAQ,Thomson Reuters Corporation
+ED,NYSE,Consolidated Edison  Inc.
+VEEV,NYSE,Veeva Systems Inc. Class A
+VIK,NYSE,Viking Holdings Ltd
+AMP,NYSE,Ameriprise Financial  Inc.
+COHR,NYSE,Coherent Corp.
+NTRA,NASDAQ,Natera  Inc.
+FER,NASDAQ,Ferrovial N.V.
+LYV,NYSE,Live Nation Entertainment  Inc.
+YUM,NYSE,Yum! Brands  Inc.
+ROK,NYSE,Rockwell Automation  Inc.
+VST,NYSE,Vistra Corp.
+WDAY,NASDAQ,Workday  Inc. Class A
+CARR,NYSE,Carrier Global Corp.
+IQV,NYSE,IQVIA Holdings Inc
+AIG,NYSE,American International Group  Inc.
+PRU,NYSE,Prudential Financial  Inc.
+TTWO,NASDAQ,Take-Two Interactive Software  Inc.
+PAYX,NASDAQ,Paychex  Inc.
+KR,NYSE,Kroger Co.
+AU,NYSE,Anglogold Ashanti PLC
+FIX,NYSE,Comfort Systems USA  Inc.
+RPRX,NASDAQ,Royalty Pharma Plc Class A
+DHI,NYSE,D.R. Horton  Inc.
+WEC,NYSE,WEC Energy Group Inc
+RKT,NYSE,Rocket Companies  Inc. Class A
+ALAB,NASDAQ,Astera Labs  Inc.
+CIEN,NYSE,Ciena Corporation
+SYY,NYSE,Sysco Corporation
+CCL,NYSE,Carnival Corporation Ltd.
+ALC,NYSE,Alcon AG
+EL,NYSE,Estee Lauder Companies Inc. Class A
+CBRE,NYSE,CBRE Group  Inc. Class A
+MSTR,NASDAQ,Strategy Inc Class A
+GEHC,NASDAQ,GE Healthcare Technologies Inc.
+PEG,NYSE,Public Service Enterprise Group Inc
+P,NYSE,Everpure  Inc. Class A
+OKTA,NASDAQ,Okta  Inc. Class A
+BIIB,NASDAQ,Biogen Inc.
+MLM,NYSE,Martin Marietta Materials  Inc.
+HIG,NYSE,Hartford Insurance Group  Inc.
+TER,NASDAQ,Teradyne  Inc.
+ODFL,NASDAQ,Old Dominion Freight Line  Inc.
+VMC,NYSE,Vulcan Materials Company
+RBLX,NYSE,Roblox Corp. Class A
+ACGL,NASDAQ,Arch Capital Group Ltd.
+HSY,NYSE,Hershey Company
+TKO,NYSE,TKO Group Holdings  Inc. Class A
+RVMD,NASDAQ,Revolution Medicines  Inc.
+CCI,NYSE,Crown Castle Inc.
+UAL,NASDAQ,United Airlines Holdings  Inc.
+FOXA,NASDAQ,Fox Corporation Class A
+FOX,NASDAQ,Fox Corporation Class B
+TEAM,NASDAQ,Atlassian Corp Class A
+ZS,NASDAQ,Zscaler  Inc.
+NTAP,NASDAQ,NetApp  Inc.
+ZTS,NYSE,Zoetis  Inc. Class A
+RMD,NYSE,ResMed Inc.
+IRM,NYSE,Iron Mountain  Inc.
+QSR,NYSE,Restaurant Brands International  Inc.
+MCHP,NASDAQ,Microchip Technology Incorporated
+RKLB,NASDAQ,Rocket Lab Corporation
+EXR,NYSE,Extra Space Storage Inc.
+SUNB,NYSE,Sunbelt Rentals Holdings Inc
+ADM,NYSE,Archer-Daniels-Midland Company
+CNC,NYSE,Centene Corporation
+CLS,NYSE,Celestica Inc.
+STLD,NASDAQ,Steel Dynamics  Inc.
+EQT,NYSE,EQT Corporation
+SN,NYSE,SharkNinja  Inc.
+NTR,NYSE,Nutrien Ltd.
+ILMN,NASDAQ,Illumina  Inc.
+INSM,NASDAQ,Insmed Incorporated
+IR,NYSE,Ingersoll Rand Inc.
+AEE,NYSE,Ameren Corporation
+VG,NYSE,Venture Global  Inc. Class A
+RJF,NYSE,Raymond James Financial  Inc.
+PCG,NYSE,PG&E Corporation
+NTRS,NASDAQ,Northern Trust Corporation
+WTW,NASDAQ,Willis Towers Watson Public Limited Company
+FISV,NASDAQ,Fiserv  Inc.
+MTB,NYSE,M&T Bank Corporation
+FTS,NYSE,Fortis Inc.
+LH,NYSE,Labcorp Holdings Inc.
+DXCM,NASDAQ,DexCom  Inc.
+TWLO,NYSE,Twilio  Inc. Class A
+COIN,NASDAQ,Coinbase Global  Inc. Class A
+HBAN,NASDAQ,Huntington Bancshares Incorporated
+AWK,NYSE,American Water Works Company  Inc.
+TW,NASDAQ,Tradeweb Markets  Inc. Class A
+NBIS,NASDAQ,Nebius Group N.V. Class A
+DG,NYSE,Dollar General Corporation
+KHC,NYSE,Kraft Heinz Company
+OTIS,NYSE,Otis Worldwide Corporation
+EXPE,NASDAQ,Expedia Group  Inc.
+CPRT,NASDAQ,Copart  Inc.
+CINF,NASDAQ,Cincinnati Financial Corporation
+ATO,NYSE,Atmos Energy Corporation
+FLEX,NASDAQ,Flex Ltd
+DGX,NYSE,Quest Diagnostics Incorporated
+WRB,NYSE,W. R. Berkley Corporation
+ARES,NYSE,Ares Management Corporation Class A
+VLTO,NYSE,Veralto Corporation
+DTE,NYSE,DTE Energy Company
+ROIV,NASDAQ,Roivant Sciences Ltd.
+PBA,NYSE,Pembina Pipeline Corporation
+BSP,NASDAQ,Bending Spoons S.p.A.
+VRSN,NASDAQ,VeriSign  Inc.
+WST,NYSE,West Pharmaceutical Services  Inc.
+ECHO,NASDAQ,EchoStar Corporation Class A
+FE,NYSE,FirstEnergy Corp.
+CCJ,NYSE,Cameco Corporation
+BIP,NYSE,Brookfield Infrastructure Partners L.P.
+ES,NYSE,Eversource Energy
+DOV,NYSE,Dover Corporation
+VICI,NYSE,VICI Properties Inc
+FWONK,NASDAQ,Liberty Media Corporation Series C
+PPG,NYSE,PPG Industries  Inc.
+DLTR,NASDAQ,Dollar Tree  Inc.
+WSM,NYSE,Williams-Sonoma  Inc.
+HAL,NYSE,Halliburton Company
+AER,NYSE,AerCap Holdings NV
+DRI,NYSE,Darden Restaurants  Inc.
+PPL,NYSE,PPL Corporation
+ON,NASDAQ,ON Semiconductor Corporation
+CNP,NYSE,CenterPoint Energy  Inc.
+CHD,NYSE,Church & Dwight Co.  Inc.
+CPNG,NYSE,Coupang  Inc. Class A
+JBL,NYSE,Jabil Inc.
+VRSK,NASDAQ,Verisk Analytics  Inc.
+CFG,NYSE,Citizens Financial Group  Inc.
+AXON,NASDAQ,Axon Enterprise Inc
+CRWV,NASDAQ,CoreWeave  Inc. Class A
+TECK,NYSE,Teck Resources Limited Class B
+CTSH,NASDAQ,Cognizant Technology Solutions Corporation Class A
+ZM,NASDAQ,Zoom Communications  Inc. Class A
+HPQ,NYSE,HP Inc.
+EXPD,NYSE,Expeditors International of Washington  Inc.
+MDB,NASDAQ,MongoDB  Inc. Class A
+STE,NYSE,STERIS plc
+LVS,NYSE,Las Vegas Sands Corp.
+TPR,NYSE,Tapestry  Inc.
+ATI,NYSE,ATI Inc
+RBRK,NYSE,Rubrik  Inc. Class A
+EIX,NYSE,Edison International
+UTHR,NASDAQ,United Therapeutics Corporation
+BRO,NYSE,Brown & Brown  Inc.
+FTI,NYSE,TechnipFMC plc
+Q,NYSE,Qnity Electronics  Inc.
+STZ,NYSE,Constellation Brands  Inc. Class A
+CHTR,NASDAQ,Charter Communications  Inc. Class A
+INCY,NASDAQ,Incyte Corporation
+OMC,NYSE,Omnicom Group Inc
+RF,NYSE,Regions Financial Corporation
+IOT,NYSE,Samsara  Inc. Class A
+USFD,NYSE,US Foods Holding Corp.
+VTRS,NASDAQ,Viatris  Inc.
+PFG,NASDAQ,Principal Financial Group  Inc.
+LUV,NYSE,Southwest Airlines Co.
+ARXS,NASDAQ,Arxis  Inc. Class A
+CRDO,NASDAQ,Credo Technology Group Holding Ltd.
+PHM,NYSE,PulteGroup  Inc.
+TROW,NASDAQ,T. Rowe Price Group  Inc.
+RL,NYSE,Ralph Lauren Corporation Class A
+HUBB,NYSE,Hubbell Incorporated
+GPN,NYSE,Global Payments Inc.
+L,NYSE,Loews Corporation
+AMRZ,NYSE,Amrize Ltd
+XYL,NYSE,Xylem Inc.
+DOW,NYSE,Dow  Inc.
+TSN,NYSE,Tyson Foods  Inc. Class A
+KGC,NYSE,Kinross Gold Corporation
+CMS,NYSE,CMS Energy Corporation
+GFS,NASDAQ,GlobalFoundries Inc.
+ENTG,NASDAQ,Entegris  Inc.
+SYF,NYSE,Synchrony Financial
+NI,NYSE,NiSource Inc
+U,NYSE,Unity Software  Inc.
+LPLA,NASDAQ,LPL Financial Holdings Inc.
+PTC,NASDAQ,PTC Inc.
+KEY,NYSE,KeyCorp
+XPO,NYSE,XPO  Inc.
+CDW,NASDAQ,CDW Corporation
+PKG,NYSE,Packaging Corporation of America
+JBHT,NASDAQ,J.B. Hunt Transport Services  Inc.
+BBY,NYSE,Best Buy Co.  Inc.
+THC,NYSE,Tenet Healthcare Corporation
+EFX,NYSE,Equifax Inc.
+BR,NYSE,Broadridge Financial Solutions  Inc.
+SYM,NASDAQ,Symbotic  Inc. Class A
+EVRG,NASDAQ,Evergy  Inc.
+SW,NYSE,Smurfit Westrock PLC
+GH,NASDAQ,Guardant Health  Inc.
+TSCO,NASDAQ,Tractor Supply Company
+ALNY,NASDAQ,Alnylam Pharmaceuticals  Inc
+DD,NYSE,DuPont de Nemours  Inc.
+BCE,NYSE,BCE Inc.
+NRG,NYSE,NRG Energy  Inc.
+RGLD,NASDAQ,Royal Gold  Inc.
+IFF,NYSE,International Flavors & Fragrances Inc.
+AMCR,NYSE,Amcor PLC
+AFRM,NASDAQ,Affirm Holdings  Inc. Class A
+WWD,NASDAQ,Woodward  Inc.
+FTV,NYSE,Fortive Corp.
+ZBH,NYSE,Zimmer Biomet Holdings  Inc.
+EXE,NASDAQ,Expand Energy Corporation
+LEN,NYSE,Lennar Corporation Class A
+FDXF,NYSE,FedEx Freight Holding Company  Inc.
+TOST,NYSE,Toast  Inc. Class A
+LYB,NYSE,LyondellBasell Industries NV
+ITT,NYSE,ITT  Inc.
+RCI,NYSE,Rogers Communications Inc. Class B
+LNT,NASDAQ,Alliant Energy Corporation
+SWKS,NASDAQ,Skyworks Solutions  Inc.
+SNX,NYSE,TD SYNNEX Corporation
+FFIV,NASDAQ,F5  Inc.
+GIS,NYSE,General Mills  Inc.
+J,NYSE,Jacobs Solutions Inc.
+APG,NYSE,APi Group Corporation
+SOFI,NASDAQ,SoFi Technologies Inc
+ROL,NYSE,Rollins  Inc.
+GEN,NASDAQ,Gen Digital Inc.
+GFL,NYSE,GFL Environmental Inc
+PR,NYSE,Permian Resources Corporation Class A
+RDDT,NYSE,Reddit  Inc. Class A
+TPG,NASDAQ,TPG Inc Class A
+SBAC,NASDAQ,SBA Communications Corp. Class A
+BG,NYSE,Bunge Global SA
+SSNC,NASDAQ,SS&C Technologies Holdings  Inc.
+NVT,NYSE,nVent Electric plc
+H,NYSE,Hyatt Hotels Corporation Class A
+AS,NYSE,Amer Sports  Inc.
+FTAI,NASDAQ,FTAI Aviation Ltd.
+ESS,NYSE,Essex Property Trust  Inc.
+CBRS,NASDAQ,Cerebras Systems  Inc. Class A
+BEN,NYSE,Franklin Templeton  Inc.
+RVTY,NYSE,Revvity  Inc.
+ASND,NASDAQ,Ascendis Pharma A/S
+PFGC,NYSE,Performance Food Group Co
+EWBC,NASDAQ,East West Bancorp  Inc.
+PAA,NASDAQ,Plains All American Pipeline  L.P.
+MTSI,NASDAQ,MACOM Technology Solutions Holdings  Inc.
+HST,NASDAQ,Host Hotels & Resorts  Inc.
+WMG,NASDAQ,Warner Music Group Corp. Class A
+FSLR,NASDAQ,First Solar  Inc.
+YUMC,NYSE,Yum China Holdings  Inc.
+TU,NYSE,TELUS Corporation
+GPC,NYSE,Genuine Parts Company
+KIM,NYSE,Kimco Realty Corporation
+CF,NYSE,CF Industries Holdings  Inc.
+RIVN,NASDAQ,Rivian Automotive  Inc. Class A
+RBA,NYSE,RB Global  Inc.
+WES,NYSE,Western Midstream Partners  LP
+IEX,NYSE,IDEX Corporation
+IP,NYSE,International Paper Company
+OVV,NYSE,Ovintiv Inc
+BALL,NYSE,Ball Corporation
+HAS,NASDAQ,Hasbro  Inc.
+CHRW,NASDAQ,C.H. Robinson Worldwide  Inc.
+TYL,NYSE,Tyler Technologies  Inc.
+SWK,NYSE,Stanley Black & Decker  Inc.
+EXEL,NASDAQ,Exelixis  Inc.
+SMCI,NASDAQ,Super Micro Computer  Inc.
+MAS,NYSE,Masco Corporation
+MGA,NYSE,Magna International Inc.
+CHKP,NASDAQ,Check Point Software Technologies Ltd.
+LSCC,NASDAQ,Lattice Semiconductor Corporation
+NBIX,NASDAQ,Neurocrine Biosciences  Inc.
+NTNX,NASDAQ,Nutanix  Inc. Class A
+CRL,NYSE,Charles River Laboratories International  Inc.
+EMA,NYSE,Emera Incorporated
+JHX,NYSE,James Hardie Industries PLC
+ALLE,NYSE,Allegion Public Limited Company
+BURL,NYSE,Burlington Stores  Inc.
+TLN,NASDAQ,Talen Energy Corp
+LAMR,NASDAQ,Lamar Advertising Company Class A
+JAZZ,NASDAQ,Jazz Pharmaceuticals Public Limited Company
+DINO,NYSE,HF Sinclair Corporation
+BBIO,NASDAQ,BridgeBio Pharma  Inc.
+LDOS,NYSE,Leidos Holdings  Inc.
+ULS,NYSE,UL Solutions Inc. Class A
+WCC,NYSE,WESCO International  Inc.
+APA,NASDAQ,APA Corporation
+WPC,NYSE,W. P. Carey Inc.
+CLH,NYSE,Clean Harbors  Inc.
+INVH,NYSE,Invitation Homes  Inc.
+ZBRA,NASDAQ,Zebra Technologies Corporation Class A
+CRBG,NYSE,Corebridge Financial  Inc.
+TSEM,NASDAQ,Tower Semiconductor Ltd
+ARMK,NYSE,Aramark
+PNFP,NYSE,Pinnacle Financial Partners  Inc.
+ICLR,NASDAQ,ICON Plc
+FICO,NYSE,Fair Isaac Corporation
+SOLV,NYSE,Solventum Corporation
+VNOM,NASDAQ,Viper Energy  Inc.
+MANH,NASDAQ,Manhattan Associates  Inc.
+NWSA,NASDAQ,News Corporation Class A
+DOCU,NASDAQ,DocuSign  Inc.
+TRU,NYSE,TransUnion
+NWS,NASDAQ,News Corporation Class B
+OHI,NYSE,Omega Healthcare Investors  Inc.
+FROG,NASDAQ,JFrog Ltd.
+W,NYSE,Wayfair  Inc. Class A
+WY,NYSE,Weyerhaeuser Company
+SJM,NYSE,J.M. Smucker Company
+MKSI,NASDAQ,MKS Inc.
+SGI,NYSE,Somnigroup International Inc.
+BJ,NYSE,BJ's Wholesale Club Holdings  Inc.
+EQH,NYSE,Equitable Holdings  Inc.
+PAG,NYSE,Penske Automotive Group  Inc.
+BF.B,NYSE,Brown-Forman Corporation Class B
+AVY,NYSE,Avery Dennison Corporation
+GKOS,NYSE,Glaukos Corp
+CRCL,NYSE,Circle Internet Group  Inc. Class A
+CART,NASDAQ,Maplebear Inc.
+GME,NYSE,GameStop Corp. Class A
+TXT,NYSE,Textron Inc.
+MAIR,NYSE,Madison Air Solutions Corp. Class A
+LOGI,NASDAQ,Logitech International S.A.
+SUI,NYSE,Sun Communities  Inc.
+PAAS,NYSE,Pan American Silver Corp.
+AHR,NYSE,American Healthcare REIT  Inc.
+CNH,NYSE,CNH Industrial NV
+REG,NASDAQ,Regency Centers Corporation
+CG,NASDAQ,Carlyle Group Inc
+DOC,NYSE,Healthpeak Properties  Inc.
+AKAM,NASDAQ,Akamai Technologies  Inc.
+CRS,NYSE,Carpenter Technology Corporation
+ARCC,NASDAQ,Ares Capital Corporation
+MTZ,NYSE,MasTec  Inc.
+FIS,NYSE,Fidelity National Information Services  Inc.
+DT,NYSE,Dynatrace  Inc.
+NLY,NYSE,Annaly Capital Management  Inc.
+RPM,NYSE,RPM International Inc.
+TOL,NYSE,Toll Brothers  Inc.
+COKE,NASDAQ,Coca-Cola Consolidated  Inc.
+ELAN,NYSE,Elanco Animal Health  Inc.
+TIGO,NASDAQ,Millicom International Cellular SA
+MAA,NYSE,Mid-America Apartment Communities  Inc.
+BAX,NYSE,Baxter International Inc.
+SAIL,NASDAQ,SailPoint  Inc.
+BSY,NASDAQ,Bentley Systems  Incorporated Class B
+CPT,NYSE,Camden Property Trust
+EHC,NYSE,Encompass Health Corporation
+WTRG,NYSE,Essential Utilities  Inc.
+FIVE,NASDAQ,Five Below  Inc.
+BTSG,NASDAQ,BrightSpring Health Services  Inc.
+CLX,NYSE,Clorox Company
+CCK,NYSE,Crown Holdings  Inc.
+WSE,NASDAQ,Wise Group plc Class A
+HRL,NYSE,Hormel Foods Corporation
+JBS,NYSE,JBS N.V. Class A
+SITM,NASDAQ,SiTime Corporation
+LULU,NASDAQ,lululemon athletica inc.
+PNW,NYSE,Pinnacle West Capital Corp
+GDDY,NYSE,GoDaddy  Inc. Class A
+DKS,NYSE,Dick's Sporting Goods  Inc.
+IVZ,NYSE,Invesco Ltd.
+MKC,NYSE,McCormick & Company  Incorporated
+GNRC,NYSE,Generac Holdings Inc.
+SEIC,NASDAQ,SEI Investments Company
+TXRH,NASDAQ,Texas Roadhouse  Inc.
+BMRN,NASDAQ,BioMarin Pharmaceutical Inc.
+FLUT,NYSE,Flutter Entertainment Plc
+WSO,NYSE,Watsco  Inc.
+CDE,NYSE,Coeur Mining  Inc.
+TRMB,NASDAQ,Trimble Inc.
+UNM,NYSE,Unum Group
+JKHY,NASDAQ,Jack Henry & Associates  Inc.
+RYAN,NYSE,Ryan Specialty Holdings  Inc. Class A
+NXT,NASDAQ,Nextpower Inc.
+CHYM,NASDAQ,Chime Financial  Inc. Class A
+DTM,NYSE,DT Midstream  Inc.
+CSGP,NASDAQ,CoStar Group  Inc.
+ELS,NYSE,Equity LifeStyle Properties  Inc.
+MLI,NYSE,Mueller Industries  Inc.
+LII,NYSE,Lennox International Inc.
+MICC,NYSE,Magnum Ice Cream Co. N.V.
+FNF,NYSE,Fidelity National Financial  Inc. - FNF Group
+RRC,NYSE,Range Resources Corporation
+GL,NYSE,Globe Life Inc.
+DPZ,NASDAQ,Domino's Pizza  Inc.
+QXO,NYSE,QXO  Inc.
+COO,NASDAQ,Cooper Companies  Inc.
+TECH,NASDAQ,Bio-Techne Corporation
+FN,NYSE,Fabrinet
+GGG,NYSE,Graco Inc.
+ALGN,NASDAQ,Align Technology  Inc.
+AMH,NYSE,American Homes 4 Rent Class A
+GWRE,NYSE,Guidewire Software  Inc.
+UDR,NYSE,UDR  Inc.
+HII,NYSE,Huntington Ingalls Industries  Inc.
+ALLY,NYSE,Ally Financial Inc
+GSAT,NASDAQ,Globalstar  Inc.
+AR,NYSE,Antero Resources Corporation
+PCOR,NYSE,Procore Technologies Inc
+TEM,NASDAQ,Tempus AI  Inc. Class A
+RRX,NYSE,Regal Rexnord Corporation
+GLPI,NASDAQ,Gaming and Leisure Properties  Inc.
+FDS,NYSE,FactSet Research Systems Inc.
+RGEN,NASDAQ,Repligen Corporation
+PNR,NYSE,Pentair plc
+IT,NYSE,Gartner  Inc.
+NYT,NYSE,New York Times Company Class A
+EVR,NYSE,Evercore Inc. Class A
+AGI,NYSE,Alamos Gold Inc.
+DECK,NYSE,Deckers Outdoor Corporation
+BWXT,NYSE,BWX Technologies  Inc.
+PAYC,NYSE,Paycom Software  Inc.
+SIRI,NASDAQ,SiriusXM Holdings Inc.
+HZN,NYSE,Bright Horizon Energy Corporation
+AES,NYSE,AES Corporation
+HALO,NASDAQ,Halozyme Therapeutics  Inc.
+LTH,NYSE,Life Time Group Holdings  Inc.
+FHN,NYSE,First Horizon Corporation
+OGE,NYSE,OGE Energy Corp.
+MOH,NYSE,Molina Healthcare  Inc.
+ACM,NYSE,AECOM
+ONON,NYSE,On Holding AG Class A
+SF,NYSE,Stifel Financial Corp
+EGP,NYSE,EastGroup Properties  Inc.
+NTSK,NASDAQ,Netskope  Inc. Class A
+KYMR,NASDAQ,Kymera Therapeutics  Inc.
+AVTR,NYSE,Avantor  Inc.
+FLS,NYSE,Flowserve Corporation
+QGEN,NYSE,QIAGEN NV
+ASTS,NASDAQ,AST SpaceMobile  Inc. Class A
+SOLS,NASDAQ,Solstice Advanced Materials  Inc.
+KNX,NYSE,Knight-Swift Transportation Holdings Inc. Class A
+IONQ,NYSE,IonQ  Inc.
+UHS,NYSE,Universal Health Services  Inc. Class B
+BWA,NYSE,BorgWarner Inc.
+ALSN,NYSE,Allison Transmission Holdings  Inc.
+WTFC,NASDAQ,Wintrust Financial Corporation
+BXP,NYSE,BXP Inc
+TGTX,NASDAQ,TG Therapeutics  Inc.
+JAN,NYSE,Janus Living  Inc. Class A
+INIO,NASDAQ,INNIO N.V.
+PINS,NYSE,Pinterest  Inc. Class A
+ALB,NYSE,Albemarle Corporation
+FRO,NYSE,Frontline Plc
+CUBE,NYSE,CubeSmart
+BAH,NYSE,Booz Allen Hamilton Holding Corporation Class A
+UMBF,NASDAQ,UMB Financial Corporation
+ONTO,NYSE,Onto Innovation  Inc.
+SSB,NYSE,SouthState Bank Corporation
+BMNR,NYSE,BitMine Immersion Technologies Inc
+TTC,NYSE,Toro Company
+DVA,NYSE,DaVita Inc.
+CTRE,NYSE,CareTrust REIT  Inc.
+DCI,NYSE,Donaldson Company  Inc.
+BRKR,NASDAQ,Bruker Corporation
+JEF,NYSE,Jefferies Financial Group Inc.
+HUBS,NYSE,HubSpot  Inc.
+AM,NYSE,Antero Midstream Corp.
+FRT,NYSE,Federal Realty Investment Trust
+SMTC,NASDAQ,Semtech Corporation
+PODD,NASDAQ,Insulet Corporation
+ORI,NYSE,Old Republic International Corporation
+AA,NYSE,Alcoa Corporation
+HLI,NYSE,Houlihan Lokey  Inc. Class A
+SCI,NYSE,Service Corporation International
+PCVX,NASDAQ,Vaxcyte  Inc.
+TTEK,NASDAQ,Tetra Tech  Inc.
+DOCN,NYSE,DigitalOcean Holdings  Inc.
+SYRE,NASDAQ,Spyre Therapeutics  Inc
+HSIC,NASDAQ,Henry Schein  Inc.
+BRX,NYSE,Brixmor Property Group  Inc.
+MDGL,NASDAQ,Madrigal Pharmaceuticals  Inc.
+RHP,NYSE,Ryman Hospitality Properties  Inc.
+GMED,NYSE,Globus Medical Inc Class A
+BEP,NYSE,Brookfield Renewable Partners LP
+LEVI,NYSE,Levi Strauss & Co. Class A
+ADC,NYSE,Agree Realty Corporation
+ZION,NASDAQ,Zions Bancorporation NA
+ONB,NASDAQ,Old National Bancorp
+PCTY,NASDAQ,Paylocity Holding Corp.
+VIRT,NYSE,Virtu Financial  Inc. Class A
+FIG,NYSE,Figma  Inc. Class A
+MTCH,NASDAQ,Match Group  Inc.
+HNGE,NYSE,Hinge Health  Inc. Class A
+CBC,NASDAQ,Central Bancompany  Inc.
+IAG,NYSE,IAMGOLD Corporation
+ATR,NYSE,AptarGroup  Inc.
+SARO,NYSE,StandardAero  Inc.
+DRS,NASDAQ,Leonardo DRS  Inc.
+VSAT,NASDAQ,ViaSat  Inc.
+CAE,NASDAQ,CAE Inc.
+DKNG,NASDAQ,DraftKings  Inc. Class A
+AEIS,NASDAQ,Advanced Energy Industries  Inc.
+ZETA,NYSE,Zeta Global Holdings Corp. Class A
+OC,NYSE,Owens Corning
+WMS,NYSE,Advanced Drainage Systems  Inc.
+AMKR,NASDAQ,Amkor Technology  Inc.
+PRAX,NASDAQ,Praxis Precision Medicines  Inc.
+KNTK,NYSE,Kinetik Holdings Inc. Class A
+VOYA,NYSE,Voya Financial  Inc.
+SMMT,NASDAQ,Summit Therapeutics Inc
+JXN,NYSE,Jackson Financial Incorporation Class A
+AOS,NYSE,A. O. Smith Corporation
+S,NYSE,SentinelOne  Inc. Class A
+AAL,NASDAQ,American Airlines Group Inc.
+ALV,NYSE,Autoliv Inc.
+TBBB,NYSE,BBB Foods  Inc. Class A
+OSK,NYSE,Oshkosh Corp
+MHK,NYSE,Mohawk Industries  Inc.
+MGM,NYSE,MGM Resorts International
+PB,NYSE,Prosperity Bancshares  Inc.(R)
+ESTC,NYSE,Elastic NV
+PRMB,NYSE,Primo Brands Corporation Class A
+STRL,NASDAQ,Sterling Infrastructure  Inc.
+WYNN,NASDAQ,Wynn Resorts  Limited
+IDA,NYSE,IDACORP  Inc.
+SANM,NASDAQ,Sanmina Corporation
+RMBS,NASDAQ,Rambus Inc.
+CHWY,NYSE,Chewy  Inc. Class A
+CGNX,NASDAQ,Cognex Corporation
+PTGX,NASDAQ,Protagonist Therapeutics  Inc.
+QNT,NASDAQ,Quantinuum Inc. Class A
+COLB,NASDAQ,Columbia Banking System  Inc.
+EAT,NYSE,Brinker International  Inc.
+RYTM,NASDAQ,Rhythm Pharmaceuticals  Inc.
+VFC,NYSE,V.F. Corporation
+TWST,NASDAQ,Twist Bioscience Corp.
+NCLH,NYSE,Norwegian Cruise Line Holdings Ltd.
+DAR,NYSE,Darling Ingredients Inc
+CNM,NYSE,Core & Main  Inc. Class A
+HQY,NASDAQ,HealthEquity Inc
+LNC,NYSE,Lincoln National Corp
+COMP,NYSE,Compass Inc Class A
+VSXY,NYSE,Victoria's Secret & Company
+ESI,NYSE,Element Solutions Inc
+HBM,NYSE,Hudbay Minerals Inc
+CELH,NASDAQ,Celsius Holdings  Inc.
+TXG,NASDAQ,10x Genomics Inc Class A
+NNN,NYSE,NNN REIT  Inc.
+EPAM,NYSE,EPAM Systems  Inc.
+ALKS,NASDAQ,Alkermes Public Limited Company
+TTAN,NASDAQ,ServiceTitan  Inc. Class A
+APTV,NYSE,Aptiv PLC
+VLY,NASDAQ,Valley National Bancorp
+HL,NYSE,Hecla Mining Company
+CBSH,NASDAQ,Commerce Bancshares  Inc.
+WLK,NYSE,Westlake Corporation
+AXTA,NYSE,Axalta Coating Systems Ltd.
+AXS,NYSE,Axis Capital Holdings Limited
+WAL,NYSE,Western Alliance Bancorp
+REXR,NYSE,Rexford Industrial Realty  Inc.
+UGI,NYSE,UGI Corporation
+LINE,NASDAQ,Lineage  Inc.
+GTLB,NASDAQ,Gitlab  Inc. Class A
+POOL,NASDAQ,Pool Corporation
+MOD,NYSE,Modexus Solutions  Inc.
+AMRX,NASDAQ,Amneal Pharmaceuticals  Inc. Class A
+PBF,NYSE,PBF Energy  Inc. Class A
+KNSA,NASDAQ,Kiniksa Pharmaceuticals International  plc Class A
+BLCO,NYSE,Bausch + Lomb Corporation
+TTMI,NASDAQ,TTM Technologies  Inc.
+ZWS,NYSE,Zurn Elkay Water Solutions Corporation
+DBX,NASDAQ,Dropbox  Inc. Class A
+TAP,NYSE,Molson Coors Beverage Company Class B
+FR,NYSE,First Industrial Realty Trust  Inc.
+URBN,NASDAQ,Urban Outfitters  Inc.
+CROX,NASDAQ,Crocs  Inc.
+VIAV,NASDAQ,Viavi Solutions Inc
+SFD,NASDAQ,Smithfield Foods  Inc.
+ARE,NYSE,Alexandria Real Estate Equities  Inc.
+YOU,NYSE,Clear Secure  Inc. Class A
+CDP,NYSE,COPT Defense Properties
+FCFS,NASDAQ,FirstCash Holdings  Inc.
+SPXC,NYSE,SPX Technologies  Inc.
+RAL,NYSE,Ralliant Corporation
+DUOL,NASDAQ,Duolingo  Inc. Class A
+CGON,NASDAQ,CG Oncology  Inc.
+OSCR,NYSE,Oscar Health  Inc. Class A
+CHRD,NASDAQ,Chord Energy Corporation
+VCTR,NASDAQ,Victory Capital Holdings  Inc. Class A
+AWI,NYSE,Armstrong World Industries  Inc.
+ETSY,NYSE,Etsy  Inc.
+KMX,NYSE,CarMax  Inc.
+TRNO,NYSE,Terreno Realty Corporation
+TTD,NASDAQ,Trade Desk  Inc. Class A
+LW,NYSE,Lamb Weston Holdings  Inc.
+CYTK,NASDAQ,Cytokinetics  Incorporated
+AGCO,NYSE,AGCO Corporation
+CORT,NASDAQ,Corcept Therapeutics Incorporated.
+EGO,NYSE,Eldorado Gold Corporation
+EMN,NYSE,Eastman Chemical Company
+TKR,NYSE,Timken Company
+NFG,NYSE,National Fuel Gas Company
+AXSM,NASDAQ,Axsome Therapeutics  Inc.
+CAG,NYSE,Conagra Brands  Inc.
+XP,NASDAQ,XP Inc. Class A
+STAG,NYSE,STAG Industrial  Inc.
+HUT,NASDAQ,Hut 8 Corp.
+QLYS,NASDAQ,Qualys  Inc.
+CPB,NASDAQ,Campbell's Company
+G,NYSE,Genpact Limited
+SM,NYSE,SM Energy Company
+XMTR,NASDAQ,Xometry  Inc. Class A
+RIOT,NASDAQ,Riot Platforms  Inc.
+CLF,NYSE,Cleveland-Cliffs Inc
+MAC,NYSE,Macerich Company
+DY,NYSE,Dycom Industries  Inc.
+IMVT,NASDAQ,Immunovant Inc
+SOBO,NYSE,South Bow Corp
+MBGL,NYSE,Mobility Global Inc
+ORKA,NASDAQ,Oruka Therapeutics  Inc.
+LNTH,NASDAQ,Lantheus Holdings Inc
+GAP,NYSE,Gap  Inc.
+PACS,NYSE,PACS Group  Inc.
+VICR,NASDAQ,Vicor Corporation
+LYFT,NASDAQ,Lyft  Inc. Class A
+KEX,NYSE,Kirby Corporation
+ELF,NYSE,e.l.f. Beauty  Inc.
+MP,NYSE,MP Materials Corp Class A
+HR,NYSE,Healthcare Realty Trust Incorporated Class A
+OMF,NYSE,OneMain Holdings  Inc.
+AVT,NASDAQ,Avnet  Inc.
+FAF,NYSE,First American Financial Corporation
+TXNM,NYSE,TXNM Energy  Inc.
+SWX,NYSE,Southwest Gas Holdings  Inc.
+FORM,NASDAQ,FormFactor  Inc.
+NAVN,NASDAQ,Navan  Inc. Class A
+TFX,NYSE,Teleflex Incorporated
+FPS,NYSE,Forgent Power Solutions  Inc. Class A
+CHDN,NASDAQ,Churchill Downs Incorporated
+PPC,NASDAQ,Pilgrim's Pride Corporation
+RLI,NYSE,RLI Corp.
+CWEN,NYSE,Clearway Energy  Inc. Class C
+KOD,NASDAQ,Kodiak Sciences  Inc.
+AAON,NASDAQ,AAON  Inc.
+GIL,NYSE,Gildan Activewear Inc.
+CMC,NYSE,Commercial Metals Company
+CVLT,NASDAQ,Commvault Systems  Inc.
+INGM,NYSE,Ingram Micro Holding Corporation
+ZG,NASDAQ,Zillow Group  Inc. Class A
+Z,NASDAQ,Zillow Group  Inc. Class C
+M,NYSE,Macy's  Inc.
+VNO,NYSE,Vornado Realty Trust
+UBSI,NASDAQ,United Bankshares  Inc.
+LOAR,NYSE,Loar Holdings Inc.
+EXLS,NASDAQ,ExlService Holdings  Inc.
+IREN,NASDAQ,IREN Limited
+BIRK,NYSE,Birkenstock Holding plc
+HESM,NYSE,Hess Midstream LP Class A
+MOS,NYSE,Mosaic Company
+MIRM,NASDAQ,Mirum Pharmaceuticals  Inc.
+FTDR,NASDAQ,Frontdoor  Inc.
+KVYO,NYSE,Klaviyo  Inc. Class A
+EPRT,NYSE,Essential Properties Realty Trust  Inc.
+MGY,NYSE,Magnolia Oil & Gas Corp. Class A
+CWST,NASDAQ,Casella Waste Systems  Inc. Class A
+GXO,NYSE,GXO Logistics Inc
+SRRK,NASDAQ,Scholar Rock Holding Corp.
+ARWR,NASDAQ,Arrowhead Pharmaceuticals  Inc.
+CAVA,NYSE,CAVA Group  Inc.
+MTDR,NYSE,Matador Resources Company
+BLDR,NYSE,Builders FirstSource  Inc.
+NE,NYSE,Noble Corporation PLC Class A
+PATH,NYSE,UiPath  Inc. Class A
+GTES,NYSE,Gates Industrial Corporation Ltd.
+RYN,NYSE,Rayonier Inc.
+FNB,NYSE,F.N.B. Corporation
+MSM,NYSE,MSC Industrial Direct Co.  Inc. Class A
+SIGI,NASDAQ,Selective Insurance Group  Inc.
+BROS,NYSE,Dutch Bros  Inc. Class A
+GBCI,NYSE,Glacier Bancorp  Inc.
+ANF,NYSE,Abercrombie & Fitch Co. Class A
+GLBE,NASDAQ,Global-e Online Ltd.
+WULF,NASDAQ,TeraWulf Inc.
+BOX,NYSE,Box  Inc. Class A
+CZR,NASDAQ,Caesars Entertainment  Inc.
+TEX,NYSE,Terex Corporation
+ZGN,NYSE,Ermenegildo Zegna N.V.
+OR,NYSE,OR Royalties Inc.
+FIGR,NASDAQ,Figure Technology Solutions  Inc. Class A
+NOV,NYSE,NOV Inc.
+RNG,NYSE,RingCentral  Inc. Class A
+FLR,NYSE,Fluor Corporation
+MIDD,NASDAQ,Middleby Corporation
+WFRD,NASDAQ,Weatherford International Corp
+HXL,NYSE,Hexcel Corporation
+MKTX,NASDAQ,MarketAxess Holdings Inc.
+WH,NYSE,Wyndham Hotels & Resorts  Inc.
+CRUS,NASDAQ,Cirrus Logic  Inc.
+WEX,NYSE,WEX Inc.
+POWL,NASDAQ,Powell Industries  Inc.
+VNT,NYSE,Vontier Corp
+OCTV,NASDAQ,Octave Intelligence PLC Class B
+JMKE,NYSE,Jersey Mike's Subs  Inc. Class A
+CAKE,NASDAQ,Cheesecake Factory Incorporated
+ACI,NYSE,Albertsons Companies  Inc. Class A
+HOMB,NYSE,Home BancShares  Inc.
+AG,NYSE,First Majestic Silver Corp.
+PECO,NASDAQ,Phillips Edison & Company  Inc.
+OLLI,NASDAQ,Ollie's Bargain Outlet Holdings Inc
+KTOS,NASDAQ,Kratos Defense & Security Solutions  Inc.
+VRNS,NASDAQ,Varonis Systems  Inc.
+AN,NYSE,AutoNation  Inc.
+ESNT,NYSE,Essent Group Ltd.
+BILL,NYSE,BILL Holdings  Inc.
+HRB,NYSE,H&R Block  Inc.
+FBIN,NYSE,Fortune Brands Innovations  Inc.
+OUT,NYSE,OUTFRONT Media Inc.
+RUSHA,NASDAQ,Rush Enterprises  Inc. Class A
+NJR,NYSE,New Jersey Resources Corporation
+HGTY,NYSE,Hagerty Inc Class A
+ASB,NYSE,Associated Banc-Corp
+CAI,NASDAQ,Caris Life Sciences  Inc.
+RDNT,NASDAQ,RadNet  Inc.
+PSN,NYSE,Parsons Corporation
+ORA,NYSE,Ormat Technologies  Inc.
+MTN,NYSE,Vail Resorts  Inc.
+INGR,NYSE,Ingredion Incorporated
+ST,NYSE,Sensata Technologies Holding PLC
+OTEX,NASDAQ,Open Text Corporation
+HAE,NYSE,Haemonetics Corporation
+DOCS,NYSE,Doximity  Inc. Class A
+CHH,NYSE,Choice Hotels International  Inc.
+BXSL,NYSE,Blackstone Secured Lending Fund
+POR,NYSE,Portland General Electric Company
+SBRA,NASDAQ,Sabra Health Care REIT  Inc.
+SGHC,NYSE,Super Group (SGHC) Limited
+BYD,NYSE,Boyd Gaming Corporation
+ALGM,NASDAQ,Allegro MicroSystems  Inc.
+STEP,NASDAQ,StepStone Group  Inc. Class A
+MTG,NYSE,MGIC Investment Corporation
+OGC,NYSE,OceanaGold Corporation
+OZK,NASDAQ,Bank OZK
+BRZE,NASDAQ,Braze  Inc. Class A
+BGC,NASDAQ,BGC Group  Inc. Class A
+AUGO,NASDAQ,Aura Minerals Inc
+MWH,NASDAQ,SOLV Energy Inc Class A
+WAY,NASDAQ,Waystar Holding Corp.
+AUB,NYSE,Atlantic Union Bankshares Corporation
+CE,NYSE,Celanese Corporation
+CON,NYSE,Concentra Group Holdings Parent  Inc.
+GVA,NYSE,Granite Construction Incorporated
+MANE,NYSE,Veradermics  Incorporated
+DLB,NYSE,Dolby Laboratories  Inc. Class A
+OBDC,NYSE,Blue Owl Capital Corporation
+LPX,NYSE,Louisiana-Pacific Corporation
+REYN,NASDAQ,Reynolds Consumer Products Inc
+HRI,NYSE,Herc Holdings  Inc.
+LEA,NYSE,Lear Corporation
+TREX,NYSE,Trex Company  Inc.
+VAL,NYSE,Valaris Ltd.
+PAGP,NASDAQ,Plains GP Holdings LP Class A
+LQDA,NASDAQ,Liquidia Corporation
+AMTM,NYSE,Amentum Holdings  Inc.
+LIVN,NASDAQ,LivaNova Plc
+BIPC,NYSE,Brookfield Infrastructure Corporation Class A
+CNX,NYSE,CNX Resources Corporation
+OGS,NYSE,ONE Gas  Inc.
+MMSI,NASDAQ,Merit Medical Systems  Inc.
+SEZL,NASDAQ,Sezzle Inc.
+VSEC,NASDAQ,VSE Corporation
+SR,NYSE,Spire Inc.
+SNDR,NYSE,Schneider National  Inc. Class B
+AVAV,NASDAQ,AeroVironment  Inc.
+LFST,NASDAQ,Lifestance Health Group  Inc.
+SEI,NYSE,Solaris Energy Infrastructure  Inc. Class A
+CNO,NYSE,CNO Financial Group  Inc.
+NIQ,NYSE,NIQ Global Intelligence PLC
+DPC,NYSE,DPC Holdings PLC
+KLAR,NYSE,Klarna Group Plc
+GLXY,NASDAQ,Galaxy Digital Inc. Class A
+PTCT,NASDAQ,PTC Therapeutics  Inc.
+ACIW,NASDAQ,ACI Worldwide  Inc.
+SKY,NYSE,Champion Homes  Inc.
+INSW,NYSE,International Seaways  Inc.
+ERAS,NASDAQ,Erasca  Inc.
+FND,NYSE,Floor & Decor Holdings  Inc. Class A
+KRG,NYSE,Kite Realty Group Trust
+EBC,NASDAQ,Eastern Bankshares  Inc.
+VSNT,NASDAQ,Versant Media Group  Inc. Class A
+RRR,NASDAQ,Red Rock Resorts  Inc. Class A
+PRM,NYSE,Perimeter Group Inc.
+HASI,NYSE,HA Sustainable Infrastructure Capital  Inc.
+MEOH,NASDAQ,Methanex Corporation
+DNTH,NASDAQ,Dianthus Therapeutics  Inc.
+HHH,NYSE,Howard Hughes Holdings Inc.
+TPC,NYSE,Tutor Perini Corporation
+HWC,NASDAQ,Hancock Whitney Corporation
+GRAL,NASDAQ,GRAIL Inc
+ESAB,NYSE,ESAB Corporation
+WHD,NYSE,Cactus  Inc. Class A
+COGT,NASDAQ,Cogent Biosciences  Inc.
+HLNE,NASDAQ,Hamilton Lane Incorporated Class A
+TENB,NASDAQ,Tenable Holdings  Inc.
+SNEX,NASDAQ,StoneX Group Inc.
+MRCY,NASDAQ,Mercury Systems  Inc.
+ENS,NYSE,EnerSys
+LKQ,NASDAQ,LKQ Corporation
+SITE,NYSE,SiteOne Landscape Supply  Inc.
+CUZ,NYSE,Cousins Properties Incorporated
+RXO,NYSE,RXO  Inc.
+VVV,NYSE,Valvoline  Inc.
+CMBT,NYSE,CMB.TECH NV
+TNL,NYSE,Travel + Leisure Co.
+AROC,NYSE,Archrock Inc.
+OPCH,NASDAQ,Option Care Health Inc
+BC,NYSE,Brunswick Corporation
+NSIT,NASDAQ,Insight Enterprises  Inc.
+TVTX,NASDAQ,Travere Therapeutics  Inc.
+ALH,NYSE,Alliance Laundry Holdings  Inc.
+PEGA,NASDAQ,Pegasystems Inc.
+SSRM,NASDAQ,SSR Mining Inc
+SPHR,NYSE,Sphere Entertainment Co. Class A
+IRDM,NASDAQ,Iridium Communications Inc.
+ADPT,NASDAQ,Adaptive Biotechnologies Corp.
+SYNA,NASDAQ,Synaptics Incorporated
+COLD,NYSE,Americold Realty Trust  Inc.
+BEPC,NYSE,Brookfield Renewable Holdings Corporation Class A
+MUR,NYSE,Murphy Oil Corporation
+MMYT,NASDAQ,MakeMyTrip Ltd.
+PLNT,NYSE,Planet Fitness  Inc. Class A
+SHC,NASDAQ,Sotera Health Company
+CNK,NYSE,Cinemark Holdings  Inc.
+MMED,NASDAQ,MiniMed Group  Inc.
+RDN,NYSE,Radian Group Inc.
+BETA,NYSE,BETA Technologies  Inc. Class A
+SON,NYSE,Sonoco Products Company
+CAMT,NASDAQ,Camtek Ltd
+CRGY,NYSE,Crescent Energy Company Class A
+EPR,NYSE,EPR Properties
+APLE,NYSE,Apple Hospitality REIT Inc
+BWIN,NASDAQ,Baldwin Insurance Group  Inc. Class A
+EWTX,NASDAQ,Edgewise Therapeutics  Inc.
+IONS,NASDAQ,Ionis Pharmaceuticals  Inc.
+MRX,NASDAQ,Marex Group Limited
+MDA,NYSE,MDA Space Ltd
+SKT,NYSE,Tanger Inc.
+MXL,NASDAQ,MaxLinear  Inc.
+KTB,NYSE,Kontoor Brands  Inc.
+BMI,NYSE,Badger Meter  Inc.
+LAUR,NASDAQ,Laureate Education  Inc.
+PL,NYSE,Planet Labs PBC Class A
+FHI,NYSE,Federated Hermes  Inc. Class B
+PVH,NYSE,PVH Corp.
+PIPR,NYSE,Piper Sandler Companies
+NOVT,NASDAQ,Novanta Inc
+TFSL,NASDAQ,TFS Financial Corporation
+DOX,NASDAQ,Amdocs Limited
+ASO,NASDAQ,Academy Sports and Outdoors  Inc.
+RELY,NASDAQ,Remitly Global  Inc.
+KRMN,NYSE,Karman Holdings Inc.
+BLLN,NASDAQ,BillionToOne  Inc. Class A
+SFM,NASDAQ,Sprouts Farmers Market  Inc.
+KGS,NYSE,Kodiak Gas Services  Inc.
+FULT,NASDAQ,Fulton Financial Corporation
+APLD,NASDAQ,Applied Digital Corporation
+ECG,NYSE,Everus Construction Group  Inc.
+MC,NYSE,Moelis & Co. Class A
+ATMU,NYSE,Atmus Filtration Technologies  Inc.
+CORZ,NASDAQ,Core Scientific Inc
+ITRI,NASDAQ,Itron  Inc.
+MIR,NYSE,Mirion Technologies  Inc. Class A
+UCB,NYSE,United Community Banks  Inc.
+SFBS,NYSE,ServisFirst Bancshares Inc
+FFIN,NASDAQ,First Financial Bankshares Inc
+BOOT,NYSE,Boot Barn Holdings  Inc.
+QTWO,NYSE,Q2 Holdings  Inc.
+KRC,NYSE,Kilroy Realty Corporation
+STVN,NYSE,Stevanato Group SpA
+HCC,NYSE,Warrior Met Coal  Inc.
+SLGN,NYSE,Silgan Holdings Inc.
+MAT,NASDAQ,Mattel  Inc.
+OKLO,NYSE,Oklo Inc. Class A
+ARX,NYSE,Accelerant Holdings Class A
+GEO,NYSE,GEO Group Inc
+GLNG,NASDAQ,Golar LNG Limited
+OPLN,NYSE,OPENLANE  Inc.
+WING,NASDAQ,Wingstop  Inc.
+LION,NYSE,Lionsgate Studios Corp.
+TAC,NYSE,TransAlta Corporation
+PAY,NYSE,Paymentus Holdings  Inc Class A
+ALK,NYSE,Alaska Air Group  Inc.
+STWD,NYSE,Starwood Property Trust  Inc.
+ROAD,NASDAQ,Construction Partners  Inc. Class A
+LFTO,NASDAQ,Liftoff Mobile  Inc.
+CNR,NYSE,Core Natural Resources  Inc.
+MDU,NYSE,MDU Resources Group  Inc.
+AVNT,NYSE,Avient Corporation
+FLG,NYSE,Flagstar Bank  National Association
+STNG,NYSE,Scorpio Tankers Inc.
+HTFL,NASDAQ,HeartFlow  Inc.
+GTX,NASDAQ,Garrett Motion Inc
+KBR,NYSE,KBR  Inc.
+THO,NYSE,Thor Industries  Inc.
+DFTX,NASDAQ,Definium Therapeutics  Inc.
+MTH,NYSE,Meritage Homes Corporation
+MGNI,NASDAQ,Magnite  Inc.
+CRC,NYSE,California Resources Corp
+CRK,NYSE,Comstock Resources  Inc.
+RHI,NYSE,Robert Half Inc.
+NP,NYSE,Neptune Insurance Holdings  Inc. Class A
+SIG,NYSE,Signet Jewelers Limited
+VSH,NYSE,Vishay Intertechnology  Inc.
+GNTX,NASDAQ,Gentex Corporation
+TNGX,NASDAQ,Tango Therapeutics  Inc.
+CRSP,NASDAQ,CRISPR Therapeutics AG
+VIA,NYSE,Via Transportation  Inc. Class A
+APPN,NASDAQ,Appian Corporation Class A
+HIMS,NYSE,Hims & Hers Health  Inc. Class A
+GPGI,NYSE,GPGI  Inc. Class A
+CDNA,NASDAQ,CareDx  Inc.
+MRP,NYSE,Millrose Properties Inc Class A
+BBWI,NYSE,Bath & Body Works  Inc.
+TARS,NASDAQ,Tarsus Pharmaceuticals  Inc.
+SRAD,NASDAQ,Sportradar Group AG Class A
+LGN,NASDAQ,Legence Corp. Class A
+CVBF,NASDAQ,CVB Financial Corp.
+DIOD,NASDAQ,Diodes Incorporated
+COCO,NASDAQ,Vita Coco Company  Inc.
+NVST,NYSE,Envista Holdings Corp.
+FA,NASDAQ,First Advantage Corp.
+EQPT,NASDAQ,EquipmentShare.com  Inc. Class A
+COLM,NASDAQ,Columbia Sportswear Company
+LAZ,NYSE,Lazard Inc
+MIAX,NYSE,Miami International Holdings  Inc.
+MWA,NYSE,Mueller Water Products  Inc. Class A
+PII,NYSE,Polaris Inc.
+OLED,NASDAQ,Universal Display Corporation
+XENE,NASDAQ,Xenon Pharmaceuticals Inc.
+DLO,NASDAQ,DLocal Limited Class A
+AAOI,NASDAQ,Applied Optoelectronics  Inc.
+OGN,NYSE,Organon & Co.
+FBP,NYSE,First Bancorp
+TDW,NYSE,Tidewater Inc
+DK,NYSE,Delek US Holdings Inc
+SMG,NYSE,Scotts Miracle-Gro Company Class A
+ZIM,NYSE,ZIM Integrated Shipping Services Ltd.
+BFH,NYSE,Bread Financial Holdings  Inc.
+EXTR,NASDAQ,Extreme Networks  Inc.
+SUPN,NASDAQ,Supernus  Inc.
+RNST,NYSE,Renasant Corporation
+LIF,NASDAQ,Life360  Inc.
+WK,NYSE,Workiva Inc. Class A
+RLAY,NASDAQ,Relay Therapeutics  Inc.
+AVPT,NASDAQ,AvePoint  Inc. Class A
+WSBC,NASDAQ,WesBanco  Inc.
+CGAU,NYSE,Centerra Gold Inc.
+NATL,NYSE,NCR Atleos Corporation
+AEO,NYSE,American Eagle Outfitters  Inc.
+SLG,NYSE,SL Green Realty Corp.
+PTRN,NASDAQ,Pattern Group  Inc. Class A
+HNI,NYSE,HNI Corporation
+VRDN,NASDAQ,Viridian Therapeutics  Inc.
+IRT,NYSE,Independence Realty Trust  Inc.
+IRON,NASDAQ,Disc Medicine  Inc.
+SGRY,NASDAQ,Surgery Partners  Inc.
+POST,NYSE,Post Holdings  Inc.
+ABCL,NASDAQ,AbCellera Biologics  Inc.
+CURB,NYSE,Curbline Properties Corp.
+ARQT,NASDAQ,Arcutis Biotherapeutics Inc
+BNL,NYSE,Broadstone Net Lease  Inc.
+ASH,NYSE,Ashland Inc.
+AXGN,NASDAQ,Axogen  Inc.
+FLY,NASDAQ,Firefly Aerospace  Inc.
+CVI,NYSE,CVR Energy  Inc.
+WSC,NASDAQ,WillScot Holdings Corporation Class A
+ELVN,NASDAQ,Enliven Therapeutics  Inc.
+FIGS,NYSE,FIGS  Inc. Class A
+PBLS,NASDAQ,Parabilis Medicines  Inc.
+HGV,NYSE,Hilton Grand Vacations  Inc.
+HAYW,NYSE,Hayward Holdings  Inc.
+AMLX,NASDAQ,Amylyx Pharmaceuticals  Inc.
+DHT,NYSE,DHT Holdings  Inc.
+KD,NYSE,Kyndryl Holdings Incorporation
+LBTYA,NASDAQ,Liberty Global Ltd. Class A
+OII,NYSE,Oceaneering International  Inc.
+FIBK,NASDAQ,First Interstate BancSystem  Inc.
+TDC,NYSE,Teradata Corporation
+INTA,NASDAQ,Intapp  Inc.
+HP,NYSE,Helmerich & Payne  Inc.
+HOG,NYSE,Harley-Davidson  Inc.
+VKTX,NASDAQ,Viking Therapeutics  Inc.
+FRVO,NASDAQ,Fervo Energy Company Class A
+TMDX,NASDAQ,TransMedics Group  Inc.
+SKE,NYSE,Skeena Resources Limited
+HIW,NYSE,Highwoods Properties  Inc.
+AVA,NYSE,Avista Corporation
+WRBY,NYSE,Warby Parker  Inc. Class A
+FFBC,NASDAQ,First Financial Bancorp.
+FRSH,NASDAQ,Freshworks  Inc. Class A
+TOWN,NASDAQ,TowneBank
+TRMD,NASDAQ,TORM PLC Class A
+MMS,NYSE,MAXIMUS  Inc.
+IRTC,NASDAQ,iRhythm Holdings  Inc.
+CALM,NASDAQ,Cal-Maine Foods  Inc.
+REZI,NYSE,Resideo Technologies  Inc.
+ACHC,NASDAQ,Acadia Healthcare Company  Inc.
+SFNC,NASDAQ,Simmons First National Corporation Class A
+MCHB,NASDAQ,Mechanics Bancorp. Class A
+LRN,NYSE,Stride  Inc.
+KLIC,NASDAQ,Kulicke & Soffa Industries  Inc.
+PARR,NYSE,Par Pacific Holdings Inc
+PK,NYSE,Park Hotels & Resorts  Inc.
+FRPT,NASDAQ,Freshpet Inc
+ACMR,NASDAQ,ACM Research  Inc. Class A
+PPLI,NASDAQ,People Incorporated
+ECO,NYSE,Okeanis Eco Tankers Corp.
+TDS,NYSE,Telephone and Data Systems  Inc.
+PRIM,NYSE,Primoris Services Corporation
+PRVA,NASDAQ,Privia Health Group  Inc.
+GBDC,NASDAQ,Golub Capital BDC  Inc.
+SLDE,NASDAQ,Slide Insurance Holdings  Inc.
+CXT,NYSE,Crane NXT  Co.
+SHAK,NYSE,Shake Shack  Inc. Class A
+WBI,NYSE,Waterbridge Infrastructure LLC Class A
+OSW,NASDAQ,OneSpaWorld Holdings Ltd.
+SBCF,NASDAQ,Seacoast Banking Corporation of Florida
+PFSI,NYSE,PennyMac Financial Services  Inc.
+CENX,NASDAQ,Century Aluminum Company
+CWK,NYSE,Cushman & Wakefield Ltd.
+VGNT,NYSE,Versigent PLC
+GPK,NYSE,Graphic Packaging Holding Company
+MNDY,NASDAQ,monday.com Ltd.
+DYN,NASDAQ,Dyne Therapeutics Inc
+ACAD,NASDAQ,ACADIA Pharmaceuticals Inc.
+UNFI,NYSE,United Natural Foods  Inc.
+SHOO,NASDAQ,Steven Madden  Ltd.
+XERS,NASDAQ,Xeris Biopharma Holdings  Inc.
+LMND,NYSE,Lemonade Inc
+ENPH,NASDAQ,Enphase Energy  Inc.
+CARG,NASDAQ,CarGurus  Inc. Class A
+BLSH,NYSE,Bullish
+VCEL,NASDAQ,Vericel Corporation
+SPNT,NYSE,SiriusPoint Ltd
+SLS,NASDAQ,SELLAS Life Sciences Group  Inc.
+FSK,NYSE,FS KKR Capital Corp.
+DNLI,NASDAQ,Denali Therapeutics Inc.
+CALY,NYSE,Callaway Golf Company
+WT,NYSE,WisdomTree  Inc.
+KNF,NYSE,Knife River Corporation
+SBLK,NASDAQ,Star Bulk Carriers Corp.
+FOUR,NYSE,Shift4 Payments  Inc. Class A
+DRH,NASDAQ,DiamondRock Hospitality Company
+ADMA,NASDAQ,ADMA Biologics  Inc.
+SLM,NASDAQ,SLM Corp
+BKU,NYSE,BankUnited  Inc.
+CLBK,NASDAQ,Columbia Financial Inc
+FG,NYSE,F&G Annuities & Life Inc
+HTGC,NYSE,Hercules Capital  Inc.
+FHB,NASDAQ,First Hawaiian  Inc.
+CLBT,NASDAQ,Cellebrite DI Ltd.
+BSM,NYSE,Black Stone Minerals LP
+CSTM,NYSE,Constellium SE Class A
+APAM,NYSE,Artisan Partners Asset Management  Inc. Class A
+KN,NYSE,Knowles Corp.
+VERX,NASDAQ,Vertex  Inc. Class A
+NMIH,NASDAQ,NMI Holdings  Inc.
+PFS,NYSE,Provident Financial Services  Inc.
+FSLY,NASDAQ,Fastly  Inc. Class A
+ATRC,NASDAQ,AtriCure  Inc.
+AKR,NYSE,Acadia Realty Trust
+CELC,NASDAQ,Celcuity Inc.
+HTO,NASDAQ,H2O America
+KBH,NYSE,KB Home
+AYA,NASDAQ,Aya Gold & Silver Inc.
+AAP,NYSE,Advance Auto Parts  Inc.
+YETI,NYSE,YETI Holdings  Inc.
+RSI,NYSE,Rush Street Interactive  Inc. Class A
+CLMT,NASDAQ,Calumet  Inc.
+CXW,NYSE,CoreCivic  Inc.
+ARIS,NYSE,Aris Mining Corp
+AMBA,NASDAQ,Ambarella  Inc.
+BANC,NYSE,Banc of California  Inc.
+ALGT,NASDAQ,Allegiant Travel Company
+KYIV,NASDAQ,Kyivstar Group Ltd.
+FLYW,NASDAQ,Flywire Corp.
+MBX,NASDAQ,MBX Biosciences  Inc.
+PENG,NASDAQ,Penguin Solutions Incorporation
+KSS,NYSE,Kohl's Corporation
+STGW,NASDAQ,Stagwell  Inc. Class A
+PATK,NASDAQ,Patrick Industries  Inc.
+BOBS,NYSE,Bob's Discount Furniture  Inc.
+TRMK,NASDAQ,Trustmark Corporation
+UE,NYSE,Urban Edge Properties
+WIX,NASDAQ,Wix.com Ltd.
+PGNY,NASDAQ,Progyny  Inc.
+FUL,NYSE,H.B. Fuller Company
+XNCR,NASDAQ,Xencor  Inc.
+CSQR,NYSE,Csquare  Inc.
+IMAX,NYSE,IMAX Corporation
+GRND,NYSE,Grindr Inc.
+ATRO,NASDAQ,Astronics Corporation
+IDYA,NASDAQ,IDEAYA Biosciences  Inc.
+PENN,NASDAQ,PENN Entertainment  Inc.
+BBT,NYSE,Beacon Financial Corporation
+TALO,NYSE,Talos Energy  Inc.
+ACCV,NASDAQ,Accelevation Holdings Corp. Class A
+ERO,NYSE,Ero Copper Corp.
+FCPT,NYSE,Four Corners Property Trust  Inc.
+SDRL,NYSE,Seadrill Limited
+NOG,NYSE,Northern Oil and Gas  Inc.
+NEOG,NASDAQ,Neogen Corp
+IVT,NYSE,InvenTrust Properties Corp
+BFAM,NYSE,Bright Horizons Family Solutions  Inc.
+LCII,NYSE,LCI Industries
+POWI,NASDAQ,Power Integrations  Inc.
+DNOW,NYSE,DNOW Inc.
+EEFT,NASDAQ,Euronet Worldwide  Inc.
+BHF,NASDAQ,Brighthouse Financial  Inc.
+PEB,NYSE,Pebblebrook Hotel Trust
+PBH,NYSE,Prestige Consumer Healthcare Inc
+PRCH,NASDAQ,Porch Group  Inc.
+DAN,NYSE,Dana Incorporated
+LTC,NYSE,LTC Properties  Inc.
+ATEN,NYSE,A10 Networks  Inc.
+NAMS,NASDAQ,NewAmsterdam Pharma Company N.V.
+MD,NYSE,Pediatrix Medical Group  Inc.
+SMA,NYSE,SmartStop Self Storage REIT  Inc.
+NTST,NYSE,NETSTREIT Corp.
+AXTI,NASDAQ,AXT  Inc.
+AVAH,NASDAQ,Aveanna Healthcare Holdings Inc
+SHO,NYSE,Sunstone Hotel Investors  Inc.
+PRGO,NYSE,Perrigo Co. Plc
+VECO,NASDAQ,Veeco Instruments Inc.
+RCUS,NYSE,Arcus Biosciences  Inc.
+EFXT,NYSE,Enerflex Ltd.
+TRN,NYSE,Trinity Industries  Inc.
+MH,NYSE,McGraw Hill  Inc.
+GCT,NASDAQ,GigaCloud Technology  Inc. Class A
+PHVS,NASDAQ,Pharvaris N.V.
+LASR,NASDAQ,nLIGHT  Inc.
+NCNO,NASDAQ,nCino Inc
+WTTR,NYSE,Select Water Solutions  Inc. Class A
+BUSE,NASDAQ,First Busey Corporation
+BEAM,NASDAQ,Beam Therapeutics  Inc.
+CLDX,NASDAQ,Celldex Therapeutics  Inc.
+ASST,NASDAQ,Strive  Inc. Class A
+AMPL,NASDAQ,Amplitude Inc Class A
+RH,NYSE,RH
+OUST,NASDAQ,Ouster  Inc.
+NWBI,NASDAQ,Northwest Bancshares  Inc.
+DV,NYSE,DoubleVerify Holdings  Inc.
+CTRI,NYSE,Centuri Holdings  Inc.
+BHVN,NYSE,Biohaven Ltd.
+LIFE,NASDAQ,Ethos Technologies Inc. Class A
+LIND,NASDAQ,Lindblad Expeditions Holdings  Inc.
+VCYT,NASDAQ,Veracyte  Inc.
+DXC,NYSE,DXC Technology Co.
+WWW,NYSE,Wolverine World Wide  Inc.
+CALX,NYSE,Calix  Inc.
+UCTT,NASDAQ,Ultra Clean Holdings  Inc.
+UTZ,NYSE,UTZ Brands  Inc. Class A
+SDGR,NASDAQ,Schrodinger  Inc.
+MAN,NYSE,ManpowerGroup Inc.
+ALMR,NASDAQ,Alamar Biosciences  Inc.
+WAFD,NASDAQ,WaFd  Inc.
+ARDT,NYSE,Ardent Health  Inc.
+BTU,NYSE,Peabody Energy Corporation
+NESR,NASDAQ,National Energy Services Reunited Corp.
+LBRT,NYSE,Liberty Energy  Inc. Class A
+KRP,NYSE,Kimbell Royalty Partners LP
+XHR,NYSE,Xenia Hotels & Resorts  Inc.
+PBI,NYSE,Pitney Bowes Inc.
+SONO,NASDAQ,Sonos  Inc.
+AUPH,NASDAQ,Aurinia Pharmaceuticals Inc.
+VC,NASDAQ,Visteon Corporation
+FTRE,NASDAQ,Fortrea Holdings Inc.
