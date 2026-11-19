@@ -1,0 +1,49 @@
+name: bt-meta
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  meta:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - {mkt: sa, shard: 0}
+          - {mkt: us, shard: 0}
+          - {mkt: us, shard: 1}
+          - {mkt: us, shard: 2}
+          - {mkt: us, shard: 3}
+          - {mkt: us, shard: 4}
+          - {mkt: us, shard: 5}
+          - {mkt: us, shard: 6}
+          - {mkt: us, shard: 7}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas websocket-client requests && pip install git+https://github.com/rongardF/tvdatafeed
+      - run: python scripts/bt_meta.py
+        env: {BT_MKT: "${{ matrix.mkt }}", SHARD: "${{ matrix.shard }}", NSHARDS: "8"}
+      - uses: actions/upload-artifact@v4
+        with: {name: "meta-${{ matrix.mkt }}-${{ matrix.shard }}", path: "bt/meta_*.json"}
+  commit:
+    needs: meta
+    runs-on: ubuntu-latest
+    concurrency: {group: repo-writes, cancel-in-progress: false}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {path: m, pattern: "meta-*", merge-multiple: true}
+      - run: |
+          python3 - <<'PY'
+          import json,glob
+          for mk in ("sa","us"):
+              out={}
+              for f in sorted(glob.glob(f"m/meta_{mk}_*.json")):
+                  for k,v in json.load(open(f)).items(): out.setdefault(k,{}).update(v)
+              json.dump(out,open(f"bt/meta_{mk}.json","w"),ensure_ascii=False); print(mk,len(out))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bt/meta_sa.json bt/meta_us.json && git commit -qm "bt: meta"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
