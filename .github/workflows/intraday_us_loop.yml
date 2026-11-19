@@ -1,0 +1,47 @@
+name: intraday-us-loop
+# فحص السوق الأمريكي أثناء جلسة نيويورك (جدولة كل 15 دقيقة تأخرت حتى 5 ساعات). تشغيل واحد يفحص كل 15 دقيقة داخل نفسه.
+# المواعيد بتوقيت UTC؛ السكربت يتحقق من ساعات الجلسة الفعلية.
+on:
+  schedule:
+    - cron: "0 14 * * 1-5"     # 17:00 الرياض
+    - cron: "30 15 * * 1-5"    # احتياط
+    - cron: "0 17 * * 1-5"     # احتياط
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: intraday-us-loop
+  cancel-in-progress: false
+jobs:
+  loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests pandas websocket-client && pip install git+https://github.com/rongardF/tvdatafeed
+      - name: scan every 15 minutes until 21:15 UTC
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          end=$(date -u -d "21:15" +%s)
+          while [ "$(date -u +%s)" -lt "$end" ]; do
+            now=$(date -u +%H%M)
+            if [ "$now" -ge "1330" ]; then
+              git pull --rebase -q || true
+              python scripts/intraday_us.py || echo "scan failed"
+              git add data/intraday_us data/shapes 2>/dev/null || true
+              if ! git diff --cached --quiet; then
+                git commit -q -m "intraday-us: $(date -u +%F\ %H:%M)"
+                for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+              fi
+            fi
+            s=$(( 900 - $(date -u +%s) % 900 )); [ $s -lt 60 ] && s=$((s+900))
+            sleep $s
+          done

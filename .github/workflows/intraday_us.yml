@@ -1,8 +1,5 @@
 name: intraday-us
 on:
-  schedule:
-    - cron: "*/15 13-20 * * 1-5"   # يغطي جلسة نيويورك صيفاً وشتاءً؛ السكربت يتحقق من ساعات الجلسة الفعلية
-    - cron: "0,10 21 * * 1-5"
   workflow_dispatch:
     inputs:
       test: {description: 'رسالة تجربة', required: false, default: ''}

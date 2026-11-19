@@ -1,8 +1,5 @@
 name: intraday-scan
 on:
-  schedule:
-    - cron: "*/15 7-11 * * 0-4"   # كل 15 دقيقة من 10:00 إلى 14:45 الرياض، الأحد–الخميس
-    - cron: "0,12 12 * * 0-4"     # 15:00 و15:12 الرياض (بعد مزاد الإغلاق)
   workflow_dispatch:
     inputs:
       test: {description: 'رسالة تجربة', required: false, default: ''}

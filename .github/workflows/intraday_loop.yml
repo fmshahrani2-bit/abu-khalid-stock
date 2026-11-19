@@ -1,0 +1,47 @@
+name: intraday-loop
+# فحص السوق السعودي أثناء الجلسة. جدولة GitHub كل 15 دقيقة لم تُطلق أي تشغيل (19 نوفمبر)، لذلك:
+# تشغيل واحد يبدأ قبل الافتتاح ويفحص كل 15 دقيقة داخل نفسه حتى 15:15 الرياض. مواعيد احتياطية إذا تأخر الأول.
+on:
+  schedule:
+    - cron: "45 6 * * 0-4"    # 09:45 الرياض
+    - cron: "20 8 * * 0-4"    # 11:20 احتياط
+    - cron: "40 9 * * 0-4"    # 12:40 احتياط
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: intraday-loop
+  cancel-in-progress: false
+jobs:
+  loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests pandas websocket-client && pip install git+https://github.com/rongardF/tvdatafeed
+      - name: scan every 15 minutes until 15:15 Riyadh
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          end=$(date -u -d "12:15" +%s)
+          while [ "$(date -u +%s)" -lt "$end" ]; do
+            now=$(date -u +%H%M)
+            if [ "$now" -ge "0700" ]; then
+              git pull --rebase -q || true
+              python scripts/intraday_scan.py || echo "scan failed"
+              git add data/intraday data/shapes
+              if ! git diff --cached --quiet; then
+                git commit -q -m "intraday: $(date -u +%F\ %H:%M)"
+                for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+              fi
+            fi
+            s=$(( 900 - $(date -u +%s) % 900 )); [ $s -lt 60 ] && s=$((s+900))
+            sleep $s
+          done
