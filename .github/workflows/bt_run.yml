@@ -22,7 +22,7 @@ jobs:
         with: {run-id: "${{ inputs.run_id }}", github-token: "${{ secrets.GITHUB_TOKEN }}", path: art, pattern: "long-${{ matrix.mkt }}-*"}
       - run: |
           mkdir -p bt/hist_long bt/hist_us_long
-          for d in art/*; do cp -n $d/hist_long/*.csv bt/hist_long/ 2>/dev/null; cp -n $d/hist_us_long/*.csv bt/hist_us_long/ 2>/dev/null; [ -f $d/universe_us.csv ] && cp $d/universe_us.csv bt/universe_us.csv; [ -f $d/universe.csv ] && cp $d/universe.csv bt/universe.csv; done
+          for d in art/*; do cp -n $d/hist_long/*.csv bt/hist_long/ 2>/dev/null; cp -n $d/hist_us_long/*.csv bt/hist_us_long/ 2>/dev/null; if [ -f $d/universe_us.csv ]; then cp $d/universe_us.csv bt/; fi; if [ -f $d/universe.csv ]; then cp $d/universe.csv bt/; fi; done
           ls bt/hist_long | wc -l; ls bt/hist_us_long | wc -l
           BT_MKT=${{ matrix.mkt }} BT_METHOD=both BT_EYE=${{ matrix.eye }} BT_START=2022-01-01 BT_SUFFIX=_long python scripts/bt_2026.py | cut -c1-400
           mkdir -p out && cp bt/result_2022_*.json out/
