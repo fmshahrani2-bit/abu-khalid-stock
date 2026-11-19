@@ -26,7 +26,7 @@
      "fwd": {
       "mcap": 22575336500,
       "eps_fy_next": 0.1,
-      "rev_fy_next": 10555267831.510918,
+      "rev_fy_next": 10554474649.633665,
       "rev_fwd_growth": 2.4,
       "ni_ntm": 1202022274.8280916,
       "fcf_ntm": null,
@@ -116,15 +116,15 @@
      "fin": "مالية تدعمه",
      "next_results": "2027-02-02",
      "fwd": {
-      "mcap": 2001374194,
+      "mcap": 2043781253,
       "eps_fy_next": 1.2,
       "rev_fy_next": 382900000,
       "rev_fwd_growth": 12.0,
       "ni_ntm": null,
       "fcf_ntm": null,
-      "pe_fwd": null,
+      "pe_fwd": 27.8,
       "ev_ebitda_fwd": null,
-      "ps_fwd": null,
+      "ps_fwd": 5.3,
       "debt_fy": null
      },
      "why": "قرب قمة السنة، أقوى من المؤشر (+20 شهر، +59 ثلاثة أشهر)",
@@ -162,7 +162,7 @@
      "fin": "مالية ضعيفة: الاختيار بالسعر",
      "next_results": null,
      "fwd": {
-      "mcap": 1267852125,
+      "mcap": 1329910171,
       "eps_fy_next": null,
       "rev_fy_next": null,
       "rev_fwd_growth": null,
@@ -263,7 +263,7 @@
      "fin": "مالية متوسطة",
      "next_results": "2027-02-04",
      "fwd": {
-      "mcap": 17017094773.375063,
+      "mcap": 17017095702.999998,
       "eps_fy_next": 5.4,
       "rev_fy_next": 2865596852,
       "rev_fwd_growth": -2.6,
@@ -309,7 +309,7 @@
      "fin": "مالية تدعمه",
      "next_results": "2026-12-08",
      "fwd": {
-      "mcap": 5283947486.030122,
+      "mcap": 5283947754,
       "eps_fy_next": 0.6,
       "rev_fy_next": 912386299,
       "rev_fwd_growth": 9.4,
@@ -401,7 +401,7 @@
      "fin": "مالية ضعيفة: الاختيار بالسعر",
      "next_results": "2027-03-11",
      "fwd": {
-      "mcap": 1957647503.338919,
+      "mcap": 1957647583,
       "eps_fy_next": 0.5,
       "rev_fy_next": 1476424241,
       "rev_fwd_growth": 3.1,
@@ -493,7 +493,7 @@
      "fin": "مالية متوسطة",
      "next_results": "2026-12-15",
      "fwd": {
-      "mcap": 161421015.80787405,
+      "mcap": 161421021,
       "eps_fy_next": 1.3,
       "rev_fy_next": 349664000,
       "rev_fwd_growth": 11.1,
@@ -539,7 +539,7 @@
      "fin": "مالية تدعمه",
      "next_results": "2027-02-25",
      "fwd": {
-      "mcap": 528802308.57641083,
+      "mcap": 528802307.00000006,
       "eps_fy_next": -0.9,
       "rev_fy_next": 93242857,
       "rev_fwd_growth": 10.1,
@@ -631,7 +631,7 @@
      "fin": "مالية ضعيفة: الاختيار بالسعر",
      "next_results": "2027-02-11",
      "fwd": {
-      "mcap": 4717600510.655509,
+      "mcap": 4717600098,
       "eps_fy_next": 0.2,
       "rev_fy_next": 6955159741,
       "rev_fwd_growth": 6.4,
@@ -723,7 +723,7 @@
      "fin": "مالية ضعيفة: الاختيار بالسعر",
      "next_results": "2027-03-18",
      "fwd": {
-      "mcap": 293323443.9503105,
+      "mcap": 293323456,
       "eps_fy_next": 0.7,
       "rev_fy_next": 346185000,
       "rev_fwd_growth": 14.6,
@@ -769,7 +769,7 @@
      "fin": "مالية ضعيفة: الاختيار بالسعر",
      "next_results": "2026-12-11",
      "fwd": {
-      "mcap": 9603854619.015106,
+      "mcap": 9603854980,
       "eps_fy_next": -0.1,
       "rev_fy_next": 890513931,
       "rev_fwd_growth": 10.9,
@@ -815,7 +815,7 @@
      "fin": "مالية ضعيفة: الاختيار بالسعر",
      "next_results": "2026-12-01",
      "fwd": {
-      "mcap": 5922956551.507689,
+      "mcap": 5922957031,
       "eps_fy_next": 1.5,
       "rev_fy_next": 1290395493,
       "rev_fwd_growth": 4.6,
@@ -861,7 +861,7 @@
      "fin": "مالية ضعيفة: الاختيار بالسعر",
      "next_results": "2026-11-27",
      "fwd": {
-      "mcap": 1661679664.2587323,
+      "mcap": 1661679565,
       "eps_fy_next": 2.1,
       "rev_fy_next": 3375757737,
       "rev_fwd_growth": 1.7,
