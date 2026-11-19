@@ -30,6 +30,32 @@ days = [x for x in T.index if x >= START]
 COM, CAP, RISK, MAXP = (0.0005 if MKT == "us" else 0.00178), 12500, 1000, 8
 METHOD = os.environ.get("BT_METHOD", "both")
 
+EYE = os.environ.get("BT_EYE", "none")
+def eye_checks(d, i):
+    """نظرات العين الثماني (S80) بنفس تعريفات scripts/nominate.py، ببيانات حتى اليوم i فقط."""
+    w = d.iloc[max(0, i - 259): i + 1]; c, h, l, v = w.close, w.high, w.low, w.volume
+    if len(w) < 210: return None
+    ma = {k: c.rolling(k).mean() for k in (9, 21, 50, 200)}
+    up = all(ma[k].iloc[-1] > ma[k].iloc[-6] for k in ma)
+    order = ma[9].iloc[-1] > ma[21].iloc[-1] > ma[50].iloc[-1] > ma[200].iloc[-1]
+    gap = (ma[9].iloc[-1] / ma[50].iloc[-1] - 1) * 100; ext = (c.iloc[-1] / ma[9].iloc[-1] - 1) * 100
+    tw = T.loc[:w.index[-1]].iloc[-len(w):]
+    def lows(lo, k=3, n=90):
+        lo = lo.iloc[-n:].tolist(); return [lo[j] for j in range(k, len(lo) - k) if lo[j] == min(lo[j - k:j + k + 1])]
+    sl, il = lows(l), lows(tw.low)
+    rs_eye = len(sl) >= 2 and sl[-1] > sl[-2] and len(il) >= 2 and il[-1] < il[-2]
+    low_first = l.iloc[-60:].idxmin() < tw.low.iloc[-60:].idxmin()
+    chg = c.diff().iloc[-20:]; vv = v.iloc[-20:]; upv, dnv = vv[chg > 0].mean(), vv[chg < 0].mean()
+    take_me = bool(upv and dnv and upv > dnv * 1.2)
+    rng = lambda n: ((h - l) / c).iloc[-n:].mean(); calm = rng(10) < rng(50) * 0.8
+    return {"up": up, "order": order, "gap": gap < 8, "ext": abs(ext) < 4, "rs": rs_eye, "lowfirst": bool(low_first), "takeme": take_me, "calm": bool(calm)}
+def eye_ok(d, i):
+    if EYE == "none": return True
+    e = eye_checks(d, i)
+    if e is None: return False
+    if EYE == "core": return e["up"] and e["order"] and e["gap"] and e["takeme"]   # الزاوية والترتيب والتقارب و"خذني معك"
+    return sum(e.values()) >= int(EYE)
+
 def screen(s, i):
     d = D[s]; c = d.close
     if i < 250 or pd.isna(d.sma200.iloc[i]): return False
@@ -92,7 +118,7 @@ def run(mode):
                     if (d.close.iloc[i] - stop) / d.close.iloc[i] < 0.10:
                         signals += 1; sh = {"shape": "مقاومة أفقية"}
                         if r.open <= piv * 1.03: entry = r.open
-            if entry is None: continue
+            if entry is None or not eye_ok(d, i): continue
             if entry <= stop: continue
             risk = RISK * (1 if (mode != "explore" or serve) else 0.2)
             q = int(min(risk / (entry - stop), (CAP if (mode != "explore" or serve) else CAP * 0.2) / entry))
@@ -124,7 +150,7 @@ for m in ("all", "serve", "explore"):
     out[m] = {"signals": sg, "trades": len(tr), "wins": len(w), "net": sum(t["pnl"] for t in tr), "avgR": round(sum(t["R"] for t in tr) / len(tr), 2) if tr else 0,
               "avg_win%": round(sum(t["ret%"] for t in w) / len(w), 1) if w else 0, "avg_loss%": round(sum(t["ret%"] for t in l) / len(l), 1) if l else 0,
               "pf": round(sum(t["pnl"] for t in w) / -sum(t["pnl"] for t in l), 2) if l and sum(t["pnl"] for t in l) else None, "maxDD": dd, "list": tr}
-json.dump(out, open(os.path.join(ROOT, "bt", f"result_2026_{MKT}_{METHOD}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(out, open(os.path.join(ROOT, "bt", f"result_2026_{MKT}_{METHOD}_{EYE}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 for m in ("all", "serve", "explore"):
     o = out[m]; print(m, {k: v for k, v in o.items() if k != "list"})
 print({k: v for k, v in out.items() if k not in ("all", "serve", "explore")})
