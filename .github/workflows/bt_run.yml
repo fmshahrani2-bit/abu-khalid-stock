@@ -13,16 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - {mkt: sa, eye: core, extra: "sector"}
-          - {mkt: sa, eye: core, extra: "shoulder"}
-          - {mkt: sa, eye: core, extra: "sector,shoulder"}
-          - {mkt: sa, eye: none, extra: "sector,shoulder"}
-          - {mkt: us, eye: none, extra: "mcap"}
-          - {mkt: us, eye: none, extra: "ipo"}
-          - {mkt: us, eye: none, extra: "mcap,ipo"}
-          - {mkt: us, eye: none, extra: "sector"}
-          - {mkt: us, eye: none, extra: "shoulder"}
-          - {mkt: us, eye: none, extra: "ipo,mcap,sector,shoulder"}
+          - {mkt: sa, eye: none, extra: "sector"}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
