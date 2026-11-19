@@ -59,6 +59,32 @@ def eye_ok(d, i):
     if EYE == "core": return e["up"] and e["order"] and e["gap"] and e["takeme"]   # الزاوية والترتيب والتقارب و"خذني معك"
     return sum(e.values()) >= int(EYE)
 
+# --- معايير إضافية من الكورس (BT_EXTRA = sector,shoulder,mcap,ipo) ---
+EXTRA = set(filter(None, os.environ.get("BT_EXTRA", "").split(",")))
+from vcp import _pivots
+META = json.load(open(os.path.join(ROOT, "bt", f"meta_{MKT}.json"), encoding="utf-8")) if EXTRA else {}
+if "sector" in EXTRA:   # القطاع الأقوى خلال الأسبوع (S16 41:38): ثلث القطاعات الأعلى بوسيط عائد 5 جلسات. "الثلث" اختيار آلي
+    r5 = pd.DataFrame({s: d.close / d.close.shift(5) - 1 for s, d in D.items()})
+    sec = pd.Series({s: META.get(s, {}).get("sector") for s in D})
+    med = r5.T.groupby(sec).median().T
+    TOPSEC = {dt_: set(row.dropna().sort_values(ascending=False).index[:max(1, len(row.dropna()) // 3)]) for dt_, row in med.iterrows()}
+def extra_ok(s, d, i):
+    day = d.index[i]; m = META.get(s, {})
+    if "sector" in EXTRA and m.get("sector") not in TOPSEC.get(day, set()): return False
+    if "mcap" in EXTRA:     # ميد 2–10 مليار (S16 12:20)، القيمة يوم الإشارة ≈ القيمة الحالية × السعر يومها ÷ السعر الحالي
+        if not m.get("mcap") or not m.get("close"): return False
+        mc = m["mcap"] * d.close.iloc[i] / m["close"]
+        if not (2e9 <= mc <= 10e9): return False
+    if "ipo" in EXTRA:      # طُرح خلال 5 سنوات (S16 14:31)، تاريخ الطرح ≈ أول شمعة يومية
+        if not m.get("first") or (day - pd.Timestamp(m["first"])).days > 5 * 365: return False
+    if "shoulder" in EXTRA: # الكتف الأيمن أقل = لا شراء (SEL-05، S49): آخر ثلاث قمم A<B>C وC<A والسعر تحت B
+        w = d.iloc[max(0, i - 89): i + 1]
+        hs = [x for x in _pivots(w.high.tolist(), w.low.tolist(), 2) if x[1] == "H"][-3:]
+        if len(hs) == 3:
+            A, B, C = (x[2] for x in hs)
+            if B > A and B > C and C < A and d.close.iloc[i] < B: return False
+    return True
+
 def screen(s, i):
     return bool(D[s]["ok"].iloc[i]) and i >= 250
 
@@ -120,7 +146,7 @@ def run(mode):
                     if (d.close.iloc[i] - stop) / d.close.iloc[i] < 0.10:
                         signals += 1; sh = {"shape": "مقاومة أفقية"}
                         if r.open <= piv * 1.03: entry = r.open
-            if entry is None or not eye_ok(d, i): continue
+            if entry is None or not eye_ok(d, i) or not extra_ok(s, d, i): continue
             if entry <= stop: continue
             f = (1 if (mode != "explore" or serve) else 0.2) if mode != "succ" else LV[lvl[0]]
             q = int(min(RISK * f / (entry - stop), CAP * f / entry))
@@ -155,7 +181,7 @@ for m in MODES:
               "avg_win%": round(sum(t["ret%"] for t in w) / len(w), 1) if w else 0, "avg_loss%": round(sum(t["ret%"] for t in l) / len(l), 1) if l else 0,
               "pf": round(sum(t["pnl"] for t in w) / -sum(t["pnl"] for t in l), 2) if l and sum(t["pnl"] for t in l) else None, "maxDD": dd,
               "years": {y: [sum(1 for t in tr if t["in"][:4] == y), sum(t["pnl"] for t in tr if t["in"][:4] == y)] for y in sorted({t["in"][:4] for t in tr})}, "list": tr}
-json.dump(out, open(os.path.join(ROOT, "bt", f"result_{START.year}_{MKT}_{METHOD}_{EYE}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(out, open(os.path.join(ROOT, "bt", f"result_{START.year}_{MKT}_{METHOD}_{EYE}" + ("_" + "-".join(sorted(EXTRA)) if EXTRA else "") + ".json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 for m in MODES:
     o = out[m]; print(m, {k: v for k, v in o.items() if k != "list"})
 print({k: v for k, v in out.items() if k not in MODES})

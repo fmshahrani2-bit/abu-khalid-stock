@@ -10,9 +10,19 @@ jobs:
   run:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        mkt: [sa, us]
-        eye: [none, core]
+        include:
+          - {mkt: sa, eye: core, extra: "sector"}
+          - {mkt: sa, eye: core, extra: "shoulder"}
+          - {mkt: sa, eye: core, extra: "sector,shoulder"}
+          - {mkt: sa, eye: none, extra: "sector,shoulder"}
+          - {mkt: us, eye: none, extra: "mcap"}
+          - {mkt: us, eye: none, extra: "ipo"}
+          - {mkt: us, eye: none, extra: "mcap,ipo"}
+          - {mkt: us, eye: none, extra: "sector"}
+          - {mkt: us, eye: none, extra: "shoulder"}
+          - {mkt: us, eye: none, extra: "ipo,mcap,sector,shoulder"}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -24,10 +34,10 @@ jobs:
           mkdir -p bt/hist_long bt/hist_us_long; ls art; ls art/* | head
           for d in art/*; do cp -n $d/hist_long/*.csv bt/hist_long/ 2>/dev/null || true; cp -n $d/hist_us_long/*.csv bt/hist_us_long/ 2>/dev/null || true; if [ -f $d/universe_us.csv ]; then cp $d/universe_us.csv bt/; fi; if [ -f $d/universe.csv ]; then cp $d/universe.csv bt/; fi; done
           ls bt/hist_long | wc -l; ls bt/hist_us_long | wc -l
-          BT_MKT=${{ matrix.mkt }} BT_METHOD=both BT_EYE=${{ matrix.eye }} BT_START=2022-01-01 BT_SUFFIX=_long python scripts/bt_2026.py | cut -c1-400
+          BT_MKT=${{ matrix.mkt }} BT_METHOD=both BT_EYE=${{ matrix.eye }} BT_START=2022-01-01 BT_SUFFIX=_long BT_EXTRA="${{ matrix.extra }}" BT_MODES=all,serve,explore python scripts/bt_2026.py | cut -c1-400
           mkdir -p out && cp bt/result_2022_*.json out/
       - uses: actions/upload-artifact@v4
-        with: {name: "res-${{ matrix.mkt }}-${{ matrix.eye }}", path: out}
+        with: {name: "res-${{ matrix.mkt }}-${{ matrix.eye }}-${{ strategy.job-index }}", path: out}
   commit:
     needs: run
     runs-on: ubuntu-latest
