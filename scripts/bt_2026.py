@@ -7,14 +7,19 @@
 import os, sys, json, glob, pandas as pd
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from vcp import detect
-H = os.path.join(ROOT, "bt", "hist")
-names = dict(l.strip().split(",", 1) for l in open(os.path.join(ROOT, "bt", "universe.csv"), encoding="utf-8").readlines()[1:])
-T = pd.read_csv(os.path.join(H, "TASI.csv"), index_col=0, parse_dates=True)
+MKT = os.environ.get("BT_MKT", "sa")
+if MKT == "us":   # السوق الأمريكي: المؤشر S&P 500، حجم الاختراق 1.5× (S18-11)، عمولة تقديرية 0.05% (ليست من الكورس)
+    H = os.path.join(ROOT, "bt", "hist_us"); IDX = "SPX"; VOLX = 1.5
+    names = {l.split(",")[0].replace(".", "_"): l.strip().split(",", 2)[2] for l in open(os.path.join(ROOT, "bt", "universe_us.csv"), encoding="utf-8").readlines()[1:]}
+else:
+    H = os.path.join(ROOT, "bt", "hist"); IDX = "TASI"; VOLX = 1.25
+    names = dict(l.strip().split(",", 1) for l in open(os.path.join(ROOT, "bt", "universe.csv"), encoding="utf-8").readlines()[1:])
+T = pd.read_csv(os.path.join(H, f"{IDX}.csv"), index_col=0, parse_dates=True)
 T["sma50"] = T.close.rolling(50).mean()
 D = {}
 for f in glob.glob(os.path.join(H, "*.csv")):
     s = os.path.basename(f)[:-4]
-    if s == "TASI": continue
+    if s == IDX: continue
     d = pd.read_csv(f, index_col=0, parse_dates=True)
     if len(d) < 260: continue
     d = d.reindex(T.index).dropna()  # جلسات تاسي فقط
@@ -22,7 +27,7 @@ for f in glob.glob(os.path.join(H, "*.csv")):
     D[s] = d
 START, END = pd.Timestamp("2026-01-01"), T.index[-1]
 days = [x for x in T.index if x >= START]
-COM, CAP, RISK, MAXP = 0.00178, 12500, 1000, 8
+COM, CAP, RISK, MAXP = (0.0005 if MKT == "us" else 0.00178), 12500, 1000, 8
 METHOD = os.environ.get("BT_METHOD", "both")
 
 def screen(s, i):
@@ -82,7 +87,7 @@ def run(mode):
                 hh = d.high.iloc[i - 20:i]; piv = hh.max()
                 touches = int((hh >= piv * 0.985).sum())
                 vavg = d.volume.iloc[i - 50:i].mean()
-                if touches >= 2 and d.close.iloc[i] > piv and d.close.iloc[i - 1] <= piv and d.volume.iloc[i] >= 1.25 * vavg:
+                if touches >= 2 and d.close.iloc[i] > piv and d.close.iloc[i - 1] <= piv and d.volume.iloc[i] >= VOLX * vavg:
                     stop = d.low.iloc[i - 9:i + 1].min() * 0.999
                     if (d.close.iloc[i] - stop) / d.close.iloc[i] < 0.10:
                         signals += 1; sh = {"shape": "مقاومة أفقية"}
@@ -119,7 +124,7 @@ for m in ("all", "serve", "explore"):
     out[m] = {"signals": sg, "trades": len(tr), "wins": len(w), "net": sum(t["pnl"] for t in tr), "avgR": round(sum(t["R"] for t in tr) / len(tr), 2) if tr else 0,
               "avg_win%": round(sum(t["ret%"] for t in w) / len(w), 1) if w else 0, "avg_loss%": round(sum(t["ret%"] for t in l) / len(l), 1) if l else 0,
               "pf": round(sum(t["pnl"] for t in w) / -sum(t["pnl"] for t in l), 2) if l and sum(t["pnl"] for t in l) else None, "maxDD": dd, "list": tr}
-json.dump(out, open(os.path.join(ROOT, "bt", f"result_2026_{METHOD}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(out, open(os.path.join(ROOT, "bt", f"result_2026_{MKT}_{METHOD}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 for m in ("all", "serve", "explore"):
     o = out[m]; print(m, {k: v for k, v in o.items() if k != "list"})
 print({k: v for k, v in out.items() if k not in ("all", "serve", "explore")})
