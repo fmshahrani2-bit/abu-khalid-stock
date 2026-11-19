@@ -1,76 +1,124 @@
 {
- "when": "2026-11-18T20:52:39",
+ "when": "2026-11-19T12:52:54",
  "tasi": {
-  "close": 10200.16,
-  "PerfW": 0.20758363026731622,
-  "Perf1M": 0.0839907374700684,
-  "Perf3M": -6.54452900097668,
-  "PerfY": -7.3496885817548945,
-  "SMA20": 10023.0825,
-  "SMA50": 10314.452800000001,
-  "SMA200": 10845.26415,
-  "SMA10W": 10249.202000000001,
-  "SMA30W": 10718.255333333333
+  "close": 10158.9,
+  "PerfW": -1.3999615651150987,
+  "Perf1M": 0.4588380716934451,
+  "Perf3M": -6.922559613576847,
+  "PerfY": -8.51966814978105,
+  "SMA20": 10046.2345,
+  "SMA50": 10297.3164,
+  "SMA200": 10839.1495,
+  "SMA10W": 10245.076,
+  "SMA30W": 10716.880000000001
  },
  "steps": {
   "main": 271,
-  "F2_yr20": 12,
-  "F3_w30": 9,
+  "F2_yr20": 13,
+  "F3_w30": 10,
   "F4_sma50": 7,
   "F5_sma20": 6,
-  "F6_rs": 4
+  "F6_rs": 6
  },
  "topSectors": [
   [
    "Health Technology",
-   4.656862745098041
-  ],
-  [
-   "Energy Minerals",
-   3.200624512099923
-  ],
-  [
-   "Consumer Durables",
-   2.3974763406940114
+   1.7954722872755748
   ],
   [
    "Miscellaneous",
-   0.6688963210702198
+   0.6622516556291397
   ],
   [
-   "Utilities",
-   0.32414910858994445
+   "Transportation",
+   -0.11428571428571185
+  ],
+  [
+   "Energy Minerals",
+   -0.2741603838245315
+  ],
+  [
+   "Consumer Durables",
+   -1.197604790419154
   ]
  ],
  "watchlist": [
   {
-   "sym": "7211",
-   "name": "Saudi Azm for Communicatio",
-   "sector": "Technology Services",
+   "sym": "4280",
+   "name": "Kingdom Holding Co.",
+   "sector": "Finance",
    "sectorRank": 9,
-   "close": 34.7,
-   "yr": 43.7,
-   "m1_vs_tasi": 20.5,
-   "m3_vs_tasi": 59.2,
+   "close": 13.3,
+   "yr": 70.1,
+   "m1_vs_tasi": 1.3,
+   "m3_vs_tasi": 1.7,
    "above200": true,
-   "from52H": -1.0,
-   "ext10W": 14.5,
+   "from52H": -16.6,
+   "ext10W": 3.2,
    "salesOK": true,
    "epsOK": false,
    "gmOK": true
   },
   {
+   "sym": "7211",
+   "name": "Saudi Azm for Communicatio",
+   "sector": "Technology Services",
+   "sectorRank": 11,
+   "close": 33.98,
+   "yr": 36.2,
+   "m1_vs_tasi": 14.3,
+   "m3_vs_tasi": 56.4,
+   "above200": true,
+   "from52H": -3.0,
+   "ext10W": 12.4,
+   "salesOK": true,
+   "epsOK": false,
+   "gmOK": true
+  },
+  {
+   "sym": "6015",
+   "name": "Americana Restaurants Inte",
+   "sector": "Consumer Services",
+   "sectorRank": 14,
+   "close": 2.69,
+   "yr": 43.1,
+   "m1_vs_tasi": 10.2,
+   "m3_vs_tasi": 16.3,
+   "above200": true,
+   "from52H": -2.2,
+   "ext10W": 8.2,
+   "salesOK": false,
+   "epsOK": true,
+   "gmOK": true
+  },
+  {
+   "sym": "3008",
+   "name": "Al Kathiri Holding Company",
+   "sector": "Distribution Services",
+   "sectorRank": 15,
+   "close": 11.27,
+   "yr": 452.5,
+   "m1_vs_tasi": 933.5,
+   "m3_vs_tasi": 878.5,
+   "above200": true,
+   "from52H": -5.5,
+   "ext10W": 439.8,
+   "salesOK": false,
+   "epsOK": false,
+   "gmOK": false
+  },
+  {
    "sym": "4190",
    "name": "Jarir Marketing Co.",
    "sector": "Retail Trade",
-   "sectorRank": 13,
-   "close": 17.42,
-   "yr": 31.0,
-   "m1_vs_tasi": 2.8,
-   "m3_vs_tasi": 10.5,
+   "sectorRank": 16,
+   "close": 17.9,
+   "yr": 35.6,
+   "m1_vs_tasi": 4.8,
+   "m3_vs_tasi": 13.8,
    "above200": true,
-   "from52H": -5.2,
-   "ext10W": 4.4,
+   "from52H": -2.6,
+   "ext10W": 7.0,
    "salesOK": false,
    "epsOK": false,
    "gmOK": true
@@ -79,37 +127,21 @@
    "sym": "2110",
    "name": "Saudi Cable Co.",
    "sector": "Producer Manufacturing",
-   "sectorRank": 17,
-   "close": 199.3,
-   "yr": 50.9,
+   "sectorRank": 19,
+   "close": 197.4,
+   "yr": 46.5,
    "m1_vs_tasi": 11.2,
-   "m3_vs_tasi": 19.5,
+   "m3_vs_tasi": 18.8,
    "above200": true,
-   "from52H": -0.3,
-   "ext10W": 12.6,
+   "from52H": -1.3,
+   "ext10W": 11.6,
    "salesOK": false,
    "epsOK": null,
    "gmOK": false
-  },
-  {
-   "sym": "6015",
-   "name": "Americana Restaurants Inte",
-   "sector": "Consumer Services",
-   "sectorRank": 18,
-   "close": 2.67,
-   "yr": 41.3,
-   "m1_vs_tasi": 9.8,
-   "m3_vs_tasi": 15.1,
-   "above200": true,
-   "from52H": -1.8,
-   "ext10W": 7.5,
-   "salesOK": false,
-   "epsOK": true,
-   "gmOK": true
   }
  ],
  "pullbacks_above50_below20": [],
- "breadth_above50": 64,
- "breadth_above200": 35,
+ "breadth_above50": 60,
+ "breadth_above200": 36,
  "universe": 271
 }
