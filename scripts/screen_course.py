@@ -7,7 +7,7 @@
 - احتياط: اجتاز الأساس ولم يصبح مرشحاً. من لم يجتز الأساس يُحذف، إلا مركز المستخدم المملوك (يبقى احتياطاً).
 - نمو المبيعات والربحية والهامش للعرض فقط (قرار المستخدم 2026-11-09).
 مكتبة بايثون القياسية فقط."""
-import csv, datetime as dt, json, os, re, urllib.request
+import csv, datetime as dt, json, os, re, statistics, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCAN = "https://scanner.tradingview.com/ksa/scan"
@@ -16,7 +16,7 @@ TASI_LEVEL = 10630  # المحاضر 7 نوفمبر 2026: تجاوزه لازم 
 COLS = ["name", "description", "close", "change", "high", "low", "open", "volume", "average_volume_30d_calc",
         "Perf.1M", "Perf.3M", "Perf.Y", "SMA20", "SMA50", "SMA200", "SMA10|1W", "SMA30|1W", "price_52_week_high",
         "High.All", "total_revenue_yoy_growth_fq", "earnings_per_share_diluted_yoy_growth_fq", "gross_margin_ttm",
-        "earnings_release_next_date"]
+        "earnings_release_next_date", "Perf.W", "sector"]
 TCOLS = ["close", "change", "SMA20", "SMA50", "SMA200", "Perf.1M", "Perf.3M", "Perf.Y"]
 MAIN = re.compile(r"[1-8]\d{3}")
 
@@ -37,9 +37,27 @@ def main_market(rows):
     return [r for r in rows if MAIN.fullmatch(str(r.get("name") or "")) and r.get("close") is not None]
 
 
+def sector_ranks(rows):
+    """قوة القطاع كما في المهمة: وسيط أداء الأسبوع لكل قطاع على كل أسهم السوق الرئيسية، ثم ترتيب.
+    الثلث الأعلى قوي والثلث الأدنى ضعيف ("الثلث" اختيار آلي، حجمه round(عدد القطاعات/3))."""
+    by = {}
+    for r in main_market(rows):
+        if r.get("sector") and r.get("Perf.W") is not None:
+            by.setdefault(r["sector"], []).append(r["Perf.W"])
+    ranked = sorted(((s, statistics.median(v)) for s, v in by.items()), key=lambda x: -x[1])
+    n = len(ranked)
+    k = max(1, round(n / 3)) if n else 0
+    out = {}
+    for i, (s, m) in enumerate(ranked, 1):
+        label = "قطاع قوي هذا الأسبوع" if i <= k else ("قطاع ضعيف" if i > n - k else "وسط")
+        out[s] = {"rank": i, "medW": round(m, 2), "label": label}
+    return out
+
+
 def classify(rows, tasi, held=HELD):
     """يعيد صفوف الأسهم (مرشح/احتياط) بحقول البطاقة. status و next يتركان لمهمة Claude."""
     market_ok = "نعم" if gt(tasi["close"], tasi["SMA50"]) else "لا"
+    secs = sector_ranks(rows)
     out = []
     for r in main_market(rows):
         sym = str(r["name"])
@@ -59,7 +77,9 @@ def classify(rows, tasi, held=HELD):
                "rs3m": r1(r["Perf.3M"] - tasi["Perf.3M"]) if r["Perf.3M"] is not None else None,
                "ext10w": pct(c, r["SMA10|1W"]), "from52H": pct(c, r["price_52_week_high"]),
                "salesG": r1(s), "epsG": r1(r["earnings_per_share_diluted_yoy_growth_fq"]),
-               "gm": r1(r["gross_margin_ttm"]),
+               "gm": r1(r["gross_margin_ttm"]), "sector": r.get("sector"),
+               "sectorRank": secs.get(r.get("sector"), {}).get("rank"),
+               "sectorLabel": secs.get(r.get("sector"), {}).get("label"),
                "cond_sales": "غير متوفر" if s is None else ("نعم" if s >= 25 else "لا"),
                "cond_market": market_ok, "held": sym in held, "base_pass": base,
                "earnings_next": r.get("earnings_release_next_date"), "status": None, "next": None}

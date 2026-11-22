@@ -86,6 +86,31 @@ class Classify(unittest.TestCase):
         self.assertEqual(r["cond_market"], "لا")  # تاسي تحت متوسط 50
 
 
+class Sectors(unittest.TestCase):
+    def rows(self):
+        # 6 قطاعات؛ الوسيط الأسبوعي: A=5, B=4, C=3, D=2, E=1, F=0 (ثلث = قطاعان)
+        out = []
+        for i, (sec, ws) in enumerate({"A": [4, 5, 9], "B": [4], "C": [1, 3, 8], "D": [2, 2], "E": [1], "F": [0, -3, 7]}.items()):
+            for j, w in enumerate(ws):
+                out.append(stock(f"{i + 1}{j}00"[:4], sector=sec, **{"Perf.W": w}))
+        return out
+
+    def test_rank_by_median_weekly(self):
+        ranks = sc.sector_ranks(self.rows())
+        self.assertEqual([s for s, _ in sorted(ranks.items(), key=lambda x: x[1]["rank"])], list("ABCDEF"))
+        self.assertEqual(ranks["A"]["medW"], 5)
+
+    def test_thirds_labels(self):
+        lab = {s: v["label"] for s, v in sc.sector_ranks(self.rows()).items()}
+        self.assertEqual(lab, {"A": "قطاع قوي هذا الأسبوع", "B": "قطاع قوي هذا الأسبوع", "C": "وسط", "D": "وسط",
+                               "E": "قطاع ضعيف", "F": "قطاع ضعيف"})
+
+    def test_rows_carry_sector_rank(self):
+        out = {r["sym"]: r for r in sc.classify(self.rows(), TASI, held=set())}
+        r = out["1000"]
+        self.assertEqual((r["sector"], r["sectorRank"], r["sectorLabel"]), ("A", 1, "قطاع قوي هذا الأسبوع"))
+
+
 class Breadth(unittest.TestCase):
     def test_counts_main_market_only(self):
         rows = [stock("1111"), stock("2222", SMA50=101.0, SMA200=101.0, **{"Perf.Y": -1.0}),
