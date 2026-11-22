@@ -17,6 +17,11 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install yfinance pandas matplotlib requests websocket-client && pip install git+https://github.com/rongardF/tvdatafeed || true
       - run: python scripts/fetch_data.py
+      - name: course screen (card rows)
+        continue-on-error: true   # فشل الفلترة لا يمنع حفظ بقية البيانات
+        run: |
+          python -m unittest discover -s tests
+          python scripts/screen_course.py
       - run: python scripts/notify.py
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
