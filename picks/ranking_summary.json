@@ -1,6 +1,11 @@
 {
  "date": "2026-11-22",
- "note": "أول نسخة من تحليل المحادثة 2026-11-22 (claude/analysis/2026-11-22_ranking_all_mentions.md)",
+ "note": "تشغيل مهمة التحليل اليومية؛ ترتيب الأمريكي بالطريقة الحرفية (القطاع الأقوى ← التصحيح مقارنة بالمؤشر ← القرب من القمة)",
+ "data": {
+  "us_close": "2026-11-20",
+  "sa_close": "2026-11-22",
+  "computed": "2026-11-22 15:05 UTC"
+ },
  "sa": {
   "passing": [
    "6015",
@@ -11,34 +16,33 @@
  "us": {
   "passing": [
    "KNSA",
-   "NTSK",
    "TGTX",
    "EVER",
+   "NTSK",
    "FROG"
   ],
   "partial": [
-   "FIGS",
-   "XMTR",
-   "XNCR",
+   "ACHC",
+   "AMGN",
+   "BAH",
    "BTSG",
    "CDNA",
-   "CRWD",
-   "MRNA",
    "CRVL",
+   "CRWD",
    "DIS",
-   "SG",
-   "ACHC",
-   "VEON",
-   "GILD",
-   "SAIC",
-   "AMGN",
-   "MHK",
+   "FIGS",
    "GEO",
-   "RRC",
-   "OKTA",
+   "GILD",
    "KYMR",
+   "MHK",
+   "MRNA",
+   "OKTA",
+   "RRC",
+   "SAIC",
+   "SG",
    "TENB",
-   "BAH"
+   "XMTR",
+   "XNCR"
   ]
  },
  "beta_hard_gate_first": {
