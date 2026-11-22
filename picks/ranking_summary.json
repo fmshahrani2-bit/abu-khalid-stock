@@ -1,0 +1,47 @@
+{
+ "date": "2026-11-22",
+ "note": "أول نسخة من تحليل المحادثة 2026-11-22 (claude/analysis/2026-11-22_ranking_all_mentions.md)",
+ "sa": {
+  "passing": [
+   "6015",
+   "2381"
+  ],
+  "partial": []
+ },
+ "us": {
+  "passing": [
+   "KNSA",
+   "NTSK",
+   "TGTX",
+   "EVER",
+   "FROG"
+  ],
+  "partial": [
+   "FIGS",
+   "XMTR",
+   "XNCR",
+   "BTSG",
+   "CDNA",
+   "CRWD",
+   "MRNA",
+   "CRVL",
+   "DIS",
+   "SG",
+   "ACHC",
+   "VEON",
+   "GILD",
+   "SAIC",
+   "AMGN",
+   "MHK",
+   "GEO",
+   "RRC",
+   "OKTA",
+   "KYMR",
+   "TENB",
+   "BAH"
+  ]
+ },
+ "beta_hard_gate_first": {
+  "us": "NTSK"
+ }
+}
