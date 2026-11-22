@@ -1,45 +1,45 @@
 {
- "when": "2026-11-19T20:56:45",
+ "when": "2026-11-22T19:09:55",
  "tasi": {
-  "close": 10158.9,
-  "PerfW": -1.3999615651150987,
-  "Perf1M": 0.4588380716934451,
-  "Perf3M": -6.922559613576847,
-  "PerfY": -8.51966814978105,
-  "SMA20": 10046.2345,
-  "SMA50": 10297.3164,
-  "SMA200": 10839.1495,
-  "SMA10W": 10245.076,
-  "SMA30W": 10716.880000000001
+  "close": 9960.44,
+  "PerfW": -3.3158481232843235,
+  "Perf1M": 0.7511495845715961,
+  "Perf3M": -10.125584022550626,
+  "PerfY": -9.50739126603197,
+  "SMA20": 10072.3315,
+  "SMA50": 10276.3798,
+  "SMA200": 10831.66115,
+  "SMA10W": 10163.326,
+  "SMA30W": 10678.575
  },
  "steps": {
   "main": 271,
-  "F2_yr20": 13,
-  "F3_w30": 10,
-  "F4_sma50": 7,
-  "F5_sma20": 6,
-  "F6_rs": 6
+  "F2_yr20": 12,
+  "F3_w30": 7,
+  "F4_sma50": 6,
+  "F5_sma20": 4,
+  "F6_rs": 4
  },
  "topSectors": [
   [
-   "Health Technology",
-   1.7954722872755748
+   "Communications",
+   -1.539942252165545
   ],
   [
-   "Miscellaneous",
-   0.6622516556291397
+   "Health Technology",
+   -1.8429487179487214
   ],
   [
    "Transportation",
-   -0.11428571428571185
+   -1.8856806128461927
   ],
   [
-   "Energy Minerals",
-   -0.2741603838245315
+   "Miscellaneous",
+   -2.2950819672131098
   ],
   [
-   "Consumer Durables",
-   -1.197604790419154
+   "Utilities",
+   -2.760463045414074
   ]
  ],
  "watchlist": [
@@ -47,14 +47,14 @@
    "sym": "4280",
    "name": "Kingdom Holding Co.",
    "sector": "Finance",
-   "sectorRank": 9,
-   "close": 13.3,
-   "yr": 70.1,
-   "m1_vs_tasi": 1.3,
-   "m3_vs_tasi": 1.7,
+   "sectorRank": 8,
+   "close": 12.95,
+   "yr": 64.1,
+   "m1_vs_tasi": 1.2,
+   "m3_vs_tasi": 3.3,
    "above200": true,
-   "from52H": -16.6,
-   "ext10W": 3.2,
+   "from52H": -18.8,
+   "ext10W": 0.6,
    "salesOK": true,
    "epsOK": false,
    "gmOK": true
@@ -63,14 +63,14 @@
    "sym": "7211",
    "name": "Saudi Azm for Communicatio",
    "sector": "Technology Services",
-   "sectorRank": 11,
-   "close": 33.98,
-   "yr": 36.2,
-   "m1_vs_tasi": 14.3,
-   "m3_vs_tasi": 56.4,
+   "sectorRank": 10,
+   "close": 32.74,
+   "yr": 31.8,
+   "m1_vs_tasi": 3.6,
+   "m3_vs_tasi": 40.6,
    "above200": true,
-   "from52H": -3.0,
-   "ext10W": 12.4,
+   "from52H": -6.6,
+   "ext10W": 6.5,
    "salesOK": true,
    "epsOK": false,
    "gmOK": true
@@ -79,69 +79,54 @@
    "sym": "6015",
    "name": "Americana Restaurants Inte",
    "sector": "Consumer Services",
-   "sectorRank": 14,
-   "close": 2.69,
-   "yr": 43.1,
-   "m1_vs_tasi": 10.2,
-   "m3_vs_tasi": 16.3,
+   "sectorRank": 15,
+   "close": 2.68,
+   "yr": 43.3,
+   "m1_vs_tasi": 10.5,
+   "m3_vs_tasi": 21.3,
    "above200": true,
-   "from52H": -2.2,
-   "ext10W": 8.2,
+   "from52H": -2.5,
+   "ext10W": 6.8,
    "salesOK": false,
    "epsOK": true,
-   "gmOK": true
-  },
-  {
-   "sym": "3008",
-   "name": "Al Kathiri Holding Company",
-   "sector": "Distribution Services",
-   "sectorRank": 15,
-   "close": 11.27,
-   "yr": 452.5,
-   "m1_vs_tasi": 933.5,
-   "m3_vs_tasi": 878.5,
-   "above200": true,
-   "from52H": -5.5,
-   "ext10W": 439.8,
-   "salesOK": false,
-   "epsOK": false,
-   "gmOK": false
-  },
-  {
-   "sym": "4190",
-   "name": "Jarir Marketing Co.",
-   "sector": "Retail Trade",
-   "sectorRank": 16,
-   "close": 17.9,
-   "yr": 35.6,
-   "m1_vs_tasi": 4.8,
-   "m3_vs_tasi": 13.8,
-   "above200": true,
-   "from52H": -2.6,
-   "ext10W": 7.0,
-   "salesOK": false,
-   "epsOK": false,
    "gmOK": true
   },
   {
    "sym": "2110",
    "name": "Saudi Cable Co.",
    "sector": "Producer Manufacturing",
-   "sectorRank": 19,
-   "close": 197.4,
-   "yr": 46.5,
-   "m1_vs_tasi": 11.2,
-   "m3_vs_tasi": 18.8,
+   "sectorRank": 18,
+   "close": 194,
+   "yr": 46.4,
+   "m1_vs_tasi": 10.0,
+   "m3_vs_tasi": 20.0,
    "above200": true,
-   "from52H": -1.3,
-   "ext10W": 11.6,
+   "from52H": -3.0,
+   "ext10W": 9.1,
    "salesOK": false,
    "epsOK": null,
    "gmOK": false
   }
  ],
- "pullbacks_above50_below20": [],
- "breadth_above50": 60,
- "breadth_above200": 36,
+ "pullbacks_above50_below20": [
+  {
+   "sym": "4190",
+   "name": "Jarir Marketing Co.",
+   "sector": "Retail Trade",
+   "sectorRank": 17,
+   "close": 17.05,
+   "yr": 28.7,
+   "m1_vs_tasi": 0.9,
+   "m3_vs_tasi": 10.1,
+   "above200": true,
+   "from52H": -7.2,
+   "ext10W": 1.6,
+   "salesOK": false,
+   "epsOK": false,
+   "gmOK": true
+  }
+ ],
+ "breadth_above50": 52,
+ "breadth_above200": 29,
  "universe": 271
 }
