@@ -1,5 +1,5 @@
 {
- "computed": "2026-11-22 15:05 UTC",
+ "computed": "2026-11-23 01:59 UTC",
  "stocks": {
   "2381|sa": {
    "sym": "2381",
@@ -10531,90 +10531,90 @@
  "sectors": {
   "sa": {
    "stats": {
-    "Commercial Services": {
-     "n": 18,
-     "perfW_med": -1.87,
-     "from52h_med": -39.86
-    },
-    "Health Services": {
-     "n": 20,
-     "perfW_med": -3.02,
-     "from52h_med": -35.66
-    },
-    "Finance": {
-     "n": 92,
-     "perfW_med": -4.12,
-     "from52h_med": -28.84
-    },
-    "Distribution Services": {
-     "n": 31,
-     "perfW_med": -3.02,
-     "from52h_med": -31.8
-    },
-    "Transportation": {
-     "n": 11,
-     "perfW_med": -1.89,
-     "from52h_med": -38.92
+    "Technology Services": {
+     "n": 23,
+     "perfW_med": -3.71,
+     "from52h_med": -31.65
     },
     "Consumer Services": {
      "n": 27,
      "perfW_med": -1.14,
      "from52h_med": -33.02
     },
-    "Non-Energy Minerals": {
-     "n": 32,
-     "perfW_med": -4.87,
-     "from52h_med": -31.53
-    },
     "Process Industries": {
      "n": 38,
      "perfW_med": -3.19,
      "from52h_med": -28.96
     },
-    "Producer Manufacturing": {
-     "n": 23,
-     "perfW_med": -5.65,
-     "from52h_med": -32.0
+    "Distribution Services": {
+     "n": 31,
+     "perfW_med": -3.02,
+     "from52h_med": -31.8
     },
-    "Technology Services": {
-     "n": 23,
-     "perfW_med": -3.71,
-     "from52h_med": -31.65
-    },
-    "Consumer Non-Durables": {
-     "n": 18,
-     "perfW_med": -4.64,
-     "from52h_med": -32.04
-    },
-    "Consumer Durables": {
-     "n": 7,
-     "perfW_med": -3.61,
-     "from52h_med": -35.48
+    "Non-Energy Minerals": {
+     "n": 32,
+     "perfW_med": -4.87,
+     "from52h_med": -31.53
     },
     "Industrial Services": {
      "n": 7,
      "perfW_med": -4.46,
      "from52h_med": -36.0
     },
-    "Utilities": {
-     "n": 6,
-     "perfW_med": -3.23,
-     "from52h_med": -21.17
+    "Health Services": {
+     "n": 20,
+     "perfW_med": -3.02,
+     "from52h_med": -35.66
     },
-    "Communications": {
-     "n": 6,
-     "perfW_med": -2.59,
-     "from52h_med": -22.28
+    "Consumer Durables": {
+     "n": 7,
+     "perfW_med": -3.61,
+     "from52h_med": -35.48
     },
     "Health Technology": {
      "n": 6,
      "perfW_med": -1.77,
      "from52h_med": -29.71
     },
+    "Utilities": {
+     "n": 6,
+     "perfW_med": -3.23,
+     "from52h_med": -21.17
+    },
+    "Finance": {
+     "n": 92,
+     "perfW_med": -4.12,
+     "from52h_med": -28.84
+    },
+    "Consumer Non-Durables": {
+     "n": 18,
+     "perfW_med": -4.64,
+     "from52h_med": -32.04
+    },
     "Retail Trade": {
      "n": 19,
      "perfW_med": -4.8,
      "from52h_med": -38.62
+    },
+    "Transportation": {
+     "n": 11,
+     "perfW_med": -1.89,
+     "from52h_med": -38.92
+    },
+    "Commercial Services": {
+     "n": 18,
+     "perfW_med": -1.87,
+     "from52h_med": -39.86
+    },
+    "Producer Manufacturing": {
+     "n": 23,
+     "perfW_med": -5.65,
+     "from52h_med": -32.0
+    },
+    "Communications": {
+     "n": 6,
+     "perfW_med": -2.59,
+     "from52h_med": -22.28
     }
    },
    "top3_week": [
@@ -10625,30 +10625,25 @@
   },
   "us": {
    "stats": {
-    "Health Technology": {
-     "n": 255,
-     "perfW_med": -6.31,
-     "from52h_med": -27.2
-    },
-    "Consumer Services": {
-     "n": 102,
-     "perfW_med": -4.32,
-     "from52h_med": -21.2
+    "Consumer Non-Durables": {
+     "n": 81,
+     "perfW_med": -2.48,
+     "from52h_med": -15.85
     },
     "Finance": {
      "n": 475,
      "perfW_med": -4.88,
      "from52h_med": -16.05
     },
-    "Retail Trade": {
-     "n": 82,
-     "perfW_med": -4.87,
-     "from52h_med": -24.3
+    "Health Technology": {
+     "n": 255,
+     "perfW_med": -6.31,
+     "from52h_med": -27.2
     },
-    "Process Industries": {
-     "n": 68,
-     "perfW_med": -7.72,
-     "from52h_med": -29.48
+    "Consumer Durables": {
+     "n": 50,
+     "perfW_med": -5.68,
+     "from52h_med": -20.67
     },
     "Electronic Technology": {
      "n": 168,
@@ -10660,35 +10655,55 @@
      "perfW_med": -8.8,
      "from52h_med": -32.14
     },
-    "Transportation": {
-     "n": 72,
-     "perfW_med": -6.26,
-     "from52h_med": -24.58
+    "Industrial Services": {
+     "n": 80,
+     "perfW_med": -9.21,
+     "from52h_med": -28.99
     },
     "Technology Services": {
      "n": 247,
      "perfW_med": -8.96,
      "from52h_med": -27.27
     },
-    "Commercial Services": {
-     "n": 74,
-     "perfW_med": -6.72,
-     "from52h_med": -20.82
+    "Consumer Services": {
+     "n": 102,
+     "perfW_med": -4.32,
+     "from52h_med": -21.2
+    },
+    "Retail Trade": {
+     "n": 82,
+     "perfW_med": -4.87,
+     "from52h_med": -24.3
+    },
+    "Transportation": {
+     "n": 72,
+     "perfW_med": -6.26,
+     "from52h_med": -24.58
+    },
+    "Miscellaneous": {
+     "n": 16,
+     "perfW_med": -6.23,
+     "from52h_med": -22.33
+    },
+    "Process Industries": {
+     "n": 68,
+     "perfW_med": -7.72,
+     "from52h_med": -29.48
+    },
+    "Utilities": {
+     "n": 62,
+     "perfW_med": -2.07,
+     "from52h_med": -11.41
     },
     "Non-Energy Minerals": {
      "n": 64,
      "perfW_med": -16.1,
      "from52h_med": -42.51
     },
-    "Industrial Services": {
-     "n": 80,
-     "perfW_med": -9.21,
-     "from52h_med": -28.99
-    },
-    "Utilities": {
-     "n": 62,
-     "perfW_med": -2.07,
-     "from52h_med": -11.41
+    "Commercial Services": {
+     "n": 74,
+     "perfW_med": -6.72,
+     "from52h_med": -20.82
     },
     "Communications": {
      "n": 20,
@@ -10699,21 +10714,6 @@
      "n": 58,
      "perfW_med": -9.36,
      "from52h_med": -27.97
-    },
-    "Consumer Durables": {
-     "n": 50,
-     "perfW_med": -5.68,
-     "from52h_med": -20.67
-    },
-    "Consumer Non-Durables": {
-     "n": 81,
-     "perfW_med": -2.48,
-     "from52h_med": -15.85
-    },
-    "Miscellaneous": {
-     "n": 16,
-     "perfW_med": -6.23,
-     "from52h_med": -22.33
     },
     "Health Services": {
      "n": 41,
