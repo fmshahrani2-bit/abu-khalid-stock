@@ -1,61 +1,77 @@
 {
- "when": "2026-11-24T00:18:12",
+ "when": "2026-11-24T22:44:31",
  "tasi": {
-  "close": 9937.26,
-  "PerfW": -3.0791108128774414,
-  "Perf1M": 0.5166808615663474,
-  "Perf3M": -11.043415442430382,
-  "PerfY": -9.780362648576608,
-  "SMA20": 10081.1055,
-  "SMA50": 10257.8336,
-  "SMA200": 10824.43705,
-  "SMA10W": 10161.008,
-  "SMA30W": 10677.802333333333
+  "close": 9977.06,
+  "PerfW": -2.0807590879246116,
+  "Perf1M": 3.1870190124843405,
+  "Perf3M": -11.18199258444871,
+  "PerfY": -9.294342044733428,
+  "SMA20": 10080.636,
+  "SMA50": 10239.8056,
+  "SMA200": 10818.484950000002,
+  "SMA10W": 10164.988000000001,
+  "SMA30W": 10679.128999999999
  },
  "steps": {
   "main": 271,
-  "F2_yr20": 10,
-  "F3_w30": 8,
-  "F4_sma50": 4,
-  "F5_sma20": 3,
-  "F6_rs": 3
+  "F2_yr20": 11,
+  "F3_w30": 9,
+  "F4_sma50": 6,
+  "F5_sma20": 5,
+  "F6_rs": 5
  },
  "topSectors": [
   [
+   "Communications",
+   -1.6480853126514778
+  ],
+  [
    "Energy Minerals",
-   -1.8768768768768769
-  ],
-  [
-   "Miscellaneous",
-   -2.2950819672131098
-  ],
-  [
-   "Transportation",
-   -2.528089887640445
+   -1.6736401673640182
   ],
   [
    "Utilities",
-   -2.8688524590163933
+   -1.9018404907975426
   ],
   [
-   "Communications",
-   -3.0464216634429353
+   "Health Services",
+   -2.0229885057471324
+  ],
+  [
+   "Miscellaneous",
+   -2.3026315789473633
   ]
  ],
  "watchlist": [
   {
-   "sym": "7211",
-   "name": "Saudi Azm for Communicatio",
-   "sector": "Technology Services",
-   "sectorRank": 6,
-   "close": 32.68,
-   "yr": 32.1,
-   "m1_vs_tasi": 3.7,
-   "m3_vs_tasi": 41.9,
+   "sym": "2283",
+   "name": "First Milling Co.",
+   "sector": "Process Industries",
+   "sectorRank": 7,
+   "close": 61.3,
+   "yr": 21.5,
+   "m1_vs_tasi": 20.4,
+   "m3_vs_tasi": 25.9,
    "above200": true,
-   "from52H": -6.7,
-   "ext10W": 6.3,
-   "salesOK": true,
+   "from52H": -0.5,
+   "ext10W": 13.0,
+   "salesOK": false,
+   "epsOK": false,
+   "gmOK": true
+  },
+  {
+   "sym": "4144",
+   "name": "Raoom trading Company",
+   "sector": "Process Industries",
+   "sectorRank": 7,
+   "close": 78,
+   "yr": 28.0,
+   "m1_vs_tasi": 2.1,
+   "m3_vs_tasi": 16.6,
+   "above200": true,
+   "from52H": -13.2,
+   "ext10W": 4.7,
+   "salesOK": false,
    "epsOK": false,
    "gmOK": true
   },
@@ -63,16 +79,32 @@
    "sym": "6015",
    "name": "Americana Restaurants Inte",
    "sector": "Consumer Services",
-   "sectorRank": 16,
-   "close": 2.65,
-   "yr": 41.7,
-   "m1_vs_tasi": 9.4,
-   "m3_vs_tasi": 23.3,
+   "sectorRank": 11,
+   "close": 2.66,
+   "yr": 42.2,
+   "m1_vs_tasi": 16.6,
+   "m3_vs_tasi": 22.9,
    "above200": true,
-   "from52H": -3.6,
-   "ext10W": 5.7,
+   "from52H": -3.3,
+   "ext10W": 6.1,
    "salesOK": false,
    "epsOK": true,
+   "gmOK": true
+  },
+  {
+   "sym": "7211",
+   "name": "Saudi Azm for Communicatio",
+   "sector": "Technology Services",
+   "sectorRank": 15,
+   "close": 32.2,
+   "yr": 30.6,
+   "m1_vs_tasi": 3.1,
+   "m3_vs_tasi": 38.3,
+   "above200": true,
+   "from52H": -8.1,
+   "ext10W": 4.9,
+   "salesOK": true,
+   "epsOK": false,
    "gmOK": true
   },
   {
@@ -80,20 +112,37 @@
    "name": "Saudi Cable Co.",
    "sector": "Producer Manufacturing",
    "sectorRank": 17,
-   "close": 198,
-   "yr": 47.2,
-   "m1_vs_tasi": 12.5,
-   "m3_vs_tasi": 23.0,
+   "close": 195.1,
+   "yr": 42.4,
+   "m1_vs_tasi": 14.6,
+   "m3_vs_tasi": 20.1,
    "above200": true,
-   "from52H": -1.5,
-   "ext10W": 11.1,
+   "from52H": -2.9,
+   "ext10W": 9.7,
    "salesOK": false,
-   "epsOK": null,
+   "epsOK": false,
    "gmOK": false
   }
  ],
- "pullbacks_above50_below20": [],
- "breadth_above50": 41,
- "breadth_above200": 25,
+ "pullbacks_above50_below20": [
+  {
+   "sym": "1325",
+   "name": "Watani Iron Steel Co",
+   "sector": "Non-Energy Minerals",
+   "sectorRank": 12,
+   "close": 2.7,
+   "yr": 33.7,
+   "m1_vs_tasi": 4.0,
+   "m3_vs_tasi": 42.9,
+   "above200": true,
+   "from52H": -30.4,
+   "ext10W": 2.2,
+   "salesOK": true,
+   "epsOK": null,
+   "gmOK": true
+  }
+ ],
+ "breadth_above50": 48,
+ "breadth_above200": 28,
  "universe": 271
 }
