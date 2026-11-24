@@ -1,25 +1,27 @@
 {
- "date": "2026-11-23",
- "note": "تشغيل مهمة اختيارات المحاضر؛ لا تغيير عن أمس (نفس بيانات الإغلاق)",
+ "date": "2026-11-24",
+ "note": "تشغيل مهمة اختيارات المحاضر",
  "data": {
-  "us_close": "2026-11-20",
-  "sa_close": "2026-11-22",
-  "computed": "2026-11-23 01:59 UTC"
+  "us_close": "2026-11-23",
+  "sa_close": "2026-11-23",
+  "computed": "2026-11-24 05:35 UTC"
  },
  "sa": {
   "passing": [
-   "6015",
-   "2381"
+   "6015"
   ],
-  "partial": []
+  "partial": [
+   "2381"
+  ]
  },
  "us": {
   "passing": [
    "KNSA",
+   "NTSK",
    "TGTX",
    "EVER",
-   "NTSK",
-   "FROG"
+   "FROG",
+   "XNCR"
   ],
   "partial": [
    "ACHC",
@@ -28,10 +30,8 @@
    "BTSG",
    "CDNA",
    "CRVL",
-   "CRWD",
    "DIS",
    "FIGS",
-   "GEO",
    "GILD",
    "KYMR",
    "MHK",
@@ -41,8 +41,10 @@
    "SAIC",
    "SG",
    "TENB",
-   "XMTR",
-   "XNCR"
+   "TLN",
+   "TSLA",
+   "VEON",
+   "XMTR"
   ]
  },
  "beta_hard_gate_first": {
