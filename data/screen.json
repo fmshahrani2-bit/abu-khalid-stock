@@ -1,76 +1,60 @@
 {
- "when": "2026-11-22T19:57:05",
+ "when": "2026-11-24T00:18:12",
  "tasi": {
-  "close": 9960.44,
-  "PerfW": -3.3158481232843235,
-  "Perf1M": 0.7511495845715961,
-  "Perf3M": -10.125584022550626,
-  "PerfY": -9.50739126603197,
-  "SMA20": 10072.3315,
-  "SMA50": 10276.3798,
-  "SMA200": 10831.66115,
-  "SMA10W": 10163.326,
-  "SMA30W": 10678.575
+  "close": 9937.26,
+  "PerfW": -3.0791108128774414,
+  "Perf1M": 0.5166808615663474,
+  "Perf3M": -11.043415442430382,
+  "PerfY": -9.780362648576608,
+  "SMA20": 10081.1055,
+  "SMA50": 10257.8336,
+  "SMA200": 10824.43705,
+  "SMA10W": 10161.008,
+  "SMA30W": 10677.802333333333
  },
  "steps": {
   "main": 271,
-  "F2_yr20": 12,
-  "F3_w30": 7,
-  "F4_sma50": 6,
-  "F5_sma20": 4,
-  "F6_rs": 4
+  "F2_yr20": 10,
+  "F3_w30": 8,
+  "F4_sma50": 4,
+  "F5_sma20": 3,
+  "F6_rs": 3
  },
  "topSectors": [
   [
-   "Communications",
-   -1.539942252165545
-  ],
-  [
-   "Health Technology",
-   -1.8429487179487214
-  ],
-  [
-   "Transportation",
-   -1.8856806128461927
+   "Energy Minerals",
+   -1.8768768768768769
   ],
   [
    "Miscellaneous",
    -2.2950819672131098
   ],
   [
+   "Transportation",
+   -2.528089887640445
+  ],
+  [
    "Utilities",
-   -2.760463045414074
+   -2.8688524590163933
+  ],
+  [
+   "Communications",
+   -3.0464216634429353
   ]
  ],
  "watchlist": [
   {
-   "sym": "4280",
-   "name": "Kingdom Holding Co.",
-   "sector": "Finance",
-   "sectorRank": 8,
-   "close": 12.95,
-   "yr": 64.1,
-   "m1_vs_tasi": 1.2,
-   "m3_vs_tasi": 3.3,
-   "above200": true,
-   "from52H": -18.8,
-   "ext10W": 0.6,
-   "salesOK": true,
-   "epsOK": false,
-   "gmOK": true
-  },
-  {
    "sym": "7211",
    "name": "Saudi Azm for Communicatio",
    "sector": "Technology Services",
-   "sectorRank": 10,
-   "close": 32.74,
-   "yr": 31.8,
-   "m1_vs_tasi": 3.6,
-   "m3_vs_tasi": 40.6,
+   "sectorRank": 6,
+   "close": 32.68,
+   "yr": 32.1,
+   "m1_vs_tasi": 3.7,
+   "m3_vs_tasi": 41.9,
    "above200": true,
-   "from52H": -6.6,
-   "ext10W": 6.5,
+   "from52H": -6.7,
+   "ext10W": 6.3,
    "salesOK": true,
    "epsOK": false,
    "gmOK": true
@@ -79,14 +63,14 @@
    "sym": "6015",
    "name": "Americana Restaurants Inte",
    "sector": "Consumer Services",
-   "sectorRank": 15,
-   "close": 2.68,
-   "yr": 43.3,
-   "m1_vs_tasi": 10.5,
-   "m3_vs_tasi": 21.3,
+   "sectorRank": 16,
+   "close": 2.65,
+   "yr": 41.7,
+   "m1_vs_tasi": 9.4,
+   "m3_vs_tasi": 23.3,
    "above200": true,
-   "from52H": -2.5,
-   "ext10W": 6.8,
+   "from52H": -3.6,
+   "ext10W": 5.7,
    "salesOK": false,
    "epsOK": true,
    "gmOK": true
@@ -95,38 +79,21 @@
    "sym": "2110",
    "name": "Saudi Cable Co.",
    "sector": "Producer Manufacturing",
-   "sectorRank": 18,
-   "close": 194,
-   "yr": 46.4,
-   "m1_vs_tasi": 10.0,
-   "m3_vs_tasi": 20.0,
+   "sectorRank": 17,
+   "close": 198,
+   "yr": 47.2,
+   "m1_vs_tasi": 12.5,
+   "m3_vs_tasi": 23.0,
    "above200": true,
-   "from52H": -3.0,
-   "ext10W": 9.1,
+   "from52H": -1.5,
+   "ext10W": 11.1,
    "salesOK": false,
    "epsOK": null,
    "gmOK": false
   }
  ],
- "pullbacks_above50_below20": [
-  {
-   "sym": "4190",
-   "name": "Jarir Marketing Co.",
-   "sector": "Retail Trade",
-   "sectorRank": 17,
-   "close": 17.05,
-   "yr": 28.7,
-   "m1_vs_tasi": 0.9,
-   "m3_vs_tasi": 10.1,
-   "above200": true,
-   "from52H": -7.2,
-   "ext10W": 1.6,
-   "salesOK": false,
-   "epsOK": false,
-   "gmOK": true
-  }
- ],
- "breadth_above50": 52,
- "breadth_above200": 29,
+ "pullbacks_above50_below20": [],
+ "breadth_above50": 41,
+ "breadth_above200": 25,
  "universe": 271
 }
