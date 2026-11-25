@@ -1,108 +1,76 @@
 {
- "when": "2026-11-24T22:44:31",
+ "when": "2026-11-25T21:57:51",
  "tasi": {
-  "close": 9977.06,
-  "PerfW": -2.0807590879246116,
-  "Perf1M": 3.1870190124843405,
-  "Perf3M": -11.18199258444871,
-  "PerfY": -9.294342044733428,
-  "SMA20": 10080.636,
-  "SMA50": 10239.8056,
-  "SMA200": 10818.484950000002,
-  "SMA10W": 10164.988000000001,
-  "SMA30W": 10679.128999999999
+  "close": 9913.98,
+  "PerfW": -3.1500239829706325,
+  "Perf1M": 3.365053283051288,
+  "Perf3M": -12.013227330092178,
+  "PerfY": -8.567755358766686,
+  "SMA20": 10075.1615,
+  "SMA50": 10222.452800000001,
+  "SMA200": 10811.4494,
+  "SMA10W": 10158.68,
+  "SMA30W": 10677.026333333333
  },
  "steps": {
   "main": 271,
-  "F2_yr20": 11,
-  "F3_w30": 9,
+  "F2_yr20": 10,
+  "F3_w30": 8,
   "F4_sma50": 6,
   "F5_sma20": 5,
   "F6_rs": 5
  },
  "topSectors": [
   [
+   "Consumer Non-Durables",
+   -1.4145141451414538
+  ],
+  [
    "Communications",
-   -1.6480853126514778
-  ],
-  [
-   "Energy Minerals",
-   -1.6736401673640182
-  ],
-  [
-   "Utilities",
-   -1.9018404907975426
-  ],
-  [
-   "Health Services",
-   -2.0229885057471324
+   -2.0843431895298097
   ],
   [
    "Miscellaneous",
    -2.3026315789473633
+  ],
+  [
+   "Process Industries",
+   -2.8997867803837942
+  ],
+  [
+   "Finance",
+   -3.05719921104537
   ]
  ],
  "watchlist": [
   {
-   "sym": "2283",
-   "name": "First Milling Co.",
-   "sector": "Process Industries",
-   "sectorRank": 7,
-   "close": 61.3,
-   "yr": 21.5,
-   "m1_vs_tasi": 20.4,
-   "m3_vs_tasi": 25.9,
-   "above200": true,
-   "from52H": -0.5,
-   "ext10W": 13.0,
-   "salesOK": false,
-   "epsOK": false,
-   "gmOK": true
-  },
-  {
    "sym": "4144",
    "name": "Raoom trading Company",
    "sector": "Process Industries",
-   "sectorRank": 7,
-   "close": 78,
-   "yr": 28.0,
-   "m1_vs_tasi": 2.1,
-   "m3_vs_tasi": 16.6,
+   "sectorRank": 4,
+   "close": 85.8,
+   "yr": 41.8,
+   "m1_vs_tasi": 22.8,
+   "m3_vs_tasi": 27.4,
    "above200": true,
-   "from52H": -13.2,
-   "ext10W": 4.7,
+   "from52H": -4.5,
+   "ext10W": 14.0,
    "salesOK": false,
    "epsOK": false,
    "gmOK": true
   },
   {
-   "sym": "6015",
-   "name": "Americana Restaurants Inte",
-   "sector": "Consumer Services",
-   "sectorRank": 11,
-   "close": 2.66,
-   "yr": 42.2,
-   "m1_vs_tasi": 16.6,
-   "m3_vs_tasi": 22.9,
+   "sym": "4280",
+   "name": "Kingdom Holding Co.",
+   "sector": "Finance",
+   "sectorRank": 5,
+   "close": 13.1,
+   "yr": 64.6,
+   "m1_vs_tasi": 12.4,
+   "m3_vs_tasi": 5.2,
    "above200": true,
-   "from52H": -3.3,
-   "ext10W": 6.1,
-   "salesOK": false,
-   "epsOK": true,
-   "gmOK": true
-  },
-  {
-   "sym": "7211",
-   "name": "Saudi Azm for Communicatio",
-   "sector": "Technology Services",
-   "sectorRank": 15,
-   "close": 32.2,
-   "yr": 30.6,
-   "m1_vs_tasi": 3.1,
-   "m3_vs_tasi": 38.3,
-   "above200": true,
-   "from52H": -8.1,
-   "ext10W": 4.9,
+   "from52H": -17.8,
+   "ext10W": 1.7,
    "salesOK": true,
    "epsOK": false,
    "gmOK": true
@@ -111,38 +79,53 @@
    "sym": "2110",
    "name": "Saudi Cable Co.",
    "sector": "Producer Manufacturing",
-   "sectorRank": 17,
-   "close": 195.1,
-   "yr": 42.4,
-   "m1_vs_tasi": 14.6,
-   "m3_vs_tasi": 20.1,
+   "sectorRank": 6,
+   "close": 196.9,
+   "yr": 48.0,
+   "m1_vs_tasi": 22.0,
+   "m3_vs_tasi": 23.8,
    "above200": true,
-   "from52H": -2.9,
-   "ext10W": 9.7,
+   "from52H": -2.0,
+   "ext10W": 10.6,
    "salesOK": false,
    "epsOK": false,
    "gmOK": false
-  }
- ],
- "pullbacks_above50_below20": [
+  },
   {
-   "sym": "1325",
-   "name": "Watani Iron Steel Co",
-   "sector": "Non-Energy Minerals",
-   "sectorRank": 12,
-   "close": 2.7,
-   "yr": 33.7,
-   "m1_vs_tasi": 4.0,
-   "m3_vs_tasi": 42.9,
+   "sym": "6015",
+   "name": "Americana Restaurants Inte",
+   "sector": "Consumer Services",
+   "sectorRank": 11,
+   "close": 2.65,
+   "yr": 42.5,
+   "m1_vs_tasi": 11.9,
+   "m3_vs_tasi": 23.8,
    "above200": true,
-   "from52H": -30.4,
-   "ext10W": 2.2,
+   "from52H": -3.6,
+   "ext10W": 5.7,
+   "salesOK": false,
+   "epsOK": true,
+   "gmOK": true
+  },
+  {
+   "sym": "7211",
+   "name": "Saudi Azm for Communicatio",
+   "sector": "Technology Services",
+   "sectorRank": 14,
+   "close": 32.4,
+   "yr": 33.1,
+   "m1_vs_tasi": 11.5,
+   "m3_vs_tasi": 40.1,
+   "above200": true,
+   "from52H": -7.5,
+   "ext10W": 5.5,
    "salesOK": true,
-   "epsOK": null,
+   "epsOK": false,
    "gmOK": true
   }
  ],
- "breadth_above50": 48,
- "breadth_above200": 28,
+ "pullbacks_above50_below20": [],
+ "breadth_above50": 50,
+ "breadth_above200": 27,
  "universe": 271
 }
