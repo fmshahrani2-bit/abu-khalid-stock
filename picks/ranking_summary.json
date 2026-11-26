@@ -1,10 +1,10 @@
 {
- "date": "2026-11-25",
+ "date": "2026-11-26",
  "note": "تشغيل مهمة اختيارات المحاضر",
  "data": {
-  "us_close": "2026-11-24",
-  "sa_close": "2026-11-24",
-  "computed": "2026-11-25 04:37 UTC"
+  "us_close": "2026-11-25",
+  "sa_close": "2026-11-25",
+  "computed": "2026-11-26 03:48 UTC"
  },
  "sa": {
   "passing": [
@@ -19,9 +19,7 @@
    "KNSA",
    "TGTX",
    "XNCR",
-   "MRNA",
    "NTSK",
-   "EVER",
    "FROG"
   ],
   "partial": [
@@ -33,14 +31,17 @@
    "CRVL",
    "DIS",
    "DOCU",
+   "EVER",
    "FIGS",
+   "GEO",
    "GILD",
    "KYMR",
    "MHK",
+   "MRNA",
+   "NX",
    "SAIC",
    "SG",
    "TENB",
-   "TSLA",
    "XMTR"
   ]
  },
