@@ -1,0 +1,33 @@
+name: bt-stopmgmt
+# اختبار إدارة الوقف V0–V4 (مواصفات v1.0، المحرك v1.0.1) على البيانات الطويلة من تشغيل bt-long-history 46055212200.
+# يعمل فقط عند الدفع إلى فرع bt-stopmgmt، ولا يلمس main.
+on:
+  push:
+    branches: [bt-stopmgmt]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - uses: actions/download-artifact@v4
+        with: {run-id: "46055212200", github-token: "${{ secrets.GITHUB_TOKEN }}", path: art, pattern: "long-*"}
+      - run: |
+          mkdir -p bt/hist_long bt/hist_us_long
+          for d in art/*; do cp -n $d/hist_long/*.csv bt/hist_long/ 2>/dev/null || true; cp -n $d/hist_us_long/*.csv bt/hist_us_long/ 2>/dev/null || true; done
+          ls bt/hist_long | wc -l; ls bt/hist_us_long | wc -l
+          REPO=$PWD python stopmgmt/datacheck.py
+          cd stopmgmt
+          REPO=$GITHUB_WORKSPACE BT_SUFFIX=_long python bt_stopmgmt.py sa | cut -c1-600
+          REPO=$GITHUB_WORKSPACE BT_SUFFIX=_long python bt_stopmgmt.py us | cut -c1-600
+          gzip -f out/*_long.json; ls -la out
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stopmgmt/out && git commit -qm "bt-stopmgmt: results v1.0.1 long [skip ci]" && git push -q origin HEAD:bt-stopmgmt
