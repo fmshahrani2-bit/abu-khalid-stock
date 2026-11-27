@@ -4,6 +4,7 @@ name: bt-stopmgmt
 on:
   push:
     branches: [bt-stopmgmt]
+    paths: ["stopmgmt/bt_stopmgmt.py", ".github/workflows/bt_stopmgmt.yml"]
 permissions:
   contents: write
   actions: read
