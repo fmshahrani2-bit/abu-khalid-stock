@@ -1,0 +1,1047 @@
+{
+ "sa": {
+  "R0": {
+   "n": 53,
+   "expR": [
+    0.689,
+    -0.033,
+    1.493
+   ],
+   "medR": -0.648,
+   "win%": 26.4,
+   "pf": 2.16,
+   "net": 30825,
+   "dd": 9345,
+   "reach25": 13,
+   "ex_top1": 23946,
+   "ex_top3": 11332,
+   "ex_top5": 1268
+  },
+  "status_counts": {
+   "reject": 30,
+   "unknown": 22,
+   "nores": 1
+  },
+  "tol1%_pivot_unkPass": {
+   "accepted": {
+    "n": 23,
+    "expR": [
+     1.716,
+     0.319,
+     3.282
+    ],
+    "medR": -0.648,
+    "win%": 43.5,
+    "pf": 3.68,
+    "net": 33920,
+    "dd": 7341,
+    "reach25": 10,
+    "ex_top1": 27041,
+    "ex_top3": 14428,
+    "ex_top5": 4630
+   },
+   "rejected": {
+    "n": 30,
+    "expR": [
+     -0.098,
+     -0.677,
+     0.647
+    ],
+    "medR": -0.633,
+    "win%": 13.3,
+    "pf": 0.78,
+    "net": -3095,
+    "dd": 8645,
+    "reach25": 3,
+    "ex_top1": -8099,
+    "ex_top3": -13190,
+    "ex_top5": -13926
+   },
+   "acc_minus_rej": [
+    1.813,
+    0.249,
+    3.493
+   ],
+   "pre2023": [
+    2.159,
+    0.115
+   ],
+   "post2023": [
+    0.12,
+    -0.204
+   ],
+   "rejected_reach25": 3,
+   "rejected_profit_lost": 10852,
+   "rejected_losses_avoided": -13948,
+   "rejected_in_top5_winners": 1
+  },
+  "tol1%_pivot_unkReject": {
+   "accepted": {
+    "n": 1,
+    "expR": [
+     -1.071
+    ],
+    "medR": -1.071,
+    "win%": 0.0,
+    "pf": 0.0,
+    "net": -1342,
+    "dd": 1342,
+    "reach25": 0,
+    "ex_top1": 0,
+    "ex_top3": 0,
+    "ex_top5": 0
+   },
+   "rejected": {
+    "n": 52,
+    "expR": [
+     0.723,
+     -0.025,
+     1.562
+    ],
+    "medR": -0.625,
+    "win%": 26.9,
+    "pf": 2.27,
+    "net": 32167,
+    "dd": 8003,
+    "reach25": 13,
+    "ex_top1": 25288,
+    "ex_top3": 12675,
+    "ex_top5": 2610
+   },
+   "acc_minus_rej": null,
+   "pre2023": [
+    -1.071,
+    1.522
+   ],
+   "post2023": [
+    null,
+    -0.139
+   ],
+   "rejected_reach25": 13,
+   "rejected_profit_lost": 57417,
+   "rejected_losses_avoided": -25250,
+   "rejected_in_top5_winners": 5
+  },
+  "tol2%_pivot_unkPass": {
+   "accepted": {
+    "n": 21,
+    "expR": [
+     1.984,
+     0.501,
+     3.583
+    ],
+    "medR": -0.579,
+    "win%": 47.6,
+    "pf": 4.41,
+    "net": 36015,
+    "dd": 7341,
+    "reach25": 10,
+    "ex_top1": 29136,
+    "ex_top3": 16522,
+    "ex_top5": 6725
+   },
+   "rejected": {
+    "n": 32,
+    "expR": [
+     -0.16,
+     -0.718,
+     0.525
+    ],
+    "medR": -0.669,
+    "win%": 12.5,
+    "pf": 0.68,
+    "net": -5190,
+    "dd": 8861,
+    "reach25": 3,
+    "ex_top1": -10193,
+    "ex_top3": -15284,
+    "ex_top5": -16021
+   },
+   "acc_minus_rej": [
+    2.143,
+    0.535,
+    3.853
+   ],
+   "pre2023": [
+    2.566,
+    -0.086
+   ],
+   "post2023": [
+    0.12,
+    -0.204
+   ],
+   "rejected_reach25": 3,
+   "rejected_profit_lost": 10852,
+   "rejected_losses_avoided": -16042,
+   "rejected_in_top5_winners": 1
+  },
+  "tol2%_pivot_unkReject": {
+   "accepted": {
+    "n": 1,
+    "expR": [
+     -1.071
+    ],
+    "medR": -1.071,
+    "win%": 0.0,
+    "pf": 0.0,
+    "net": -1342,
+    "dd": 1342,
+    "reach25": 0,
+    "ex_top1": 0,
+    "ex_top3": 0,
+    "ex_top5": 0
+   },
+   "rejected": {
+    "n": 52,
+    "expR": [
+     0.723,
+     -0.025,
+     1.562
+    ],
+    "medR": -0.625,
+    "win%": 26.9,
+    "pf": 2.27,
+    "net": 32167,
+    "dd": 8003,
+    "reach25": 13,
+    "ex_top1": 25288,
+    "ex_top3": 12675,
+    "ex_top5": 2610
+   },
+   "acc_minus_rej": null,
+   "pre2023": [
+    -1.071,
+    1.522
+   ],
+   "post2023": [
+    null,
+    -0.139
+   ],
+   "rejected_reach25": 13,
+   "rejected_profit_lost": 57417,
+   "rejected_losses_avoided": -25250,
+   "rejected_in_top5_winners": 5
+  },
+  "tol1%_entry_unkPass": {
+   "accepted": {
+    "n": 23,
+    "expR": [
+     1.716,
+     0.319,
+     3.282
+    ],
+    "medR": -0.648,
+    "win%": 43.5,
+    "pf": 3.68,
+    "net": 33920,
+    "dd": 7341,
+    "reach25": 10,
+    "ex_top1": 27041,
+    "ex_top3": 14428,
+    "ex_top5": 4630
+   },
+   "rejected": {
+    "n": 30,
+    "expR": [
+     -0.098,
+     -0.677,
+     0.647
+    ],
+    "medR": -0.633,
+    "win%": 13.3,
+    "pf": 0.78,
+    "net": -3095,
+    "dd": 8645,
+    "reach25": 3,
+    "ex_top1": -8099,
+    "ex_top3": -13190,
+    "ex_top5": -13926
+   },
+   "acc_minus_rej": [
+    1.813,
+    0.249,
+    3.493
+   ],
+   "pre2023": [
+    2.159,
+    0.115
+   ],
+   "post2023": [
+    0.12,
+    -0.204
+   ],
+   "rejected_reach25": 3,
+   "rejected_profit_lost": 10852,
+   "rejected_losses_avoided": -13948,
+   "rejected_in_top5_winners": 1
+  },
+  "tol1%_entry_unkReject": {
+   "accepted": {
+    "n": 1,
+    "expR": [
+     -1.071
+    ],
+    "medR": -1.071,
+    "win%": 0.0,
+    "pf": 0.0,
+    "net": -1342,
+    "dd": 1342,
+    "reach25": 0,
+    "ex_top1": 0,
+    "ex_top3": 0,
+    "ex_top5": 0
+   },
+   "rejected": {
+    "n": 52,
+    "expR": [
+     0.723,
+     -0.025,
+     1.562
+    ],
+    "medR": -0.625,
+    "win%": 26.9,
+    "pf": 2.27,
+    "net": 32167,
+    "dd": 8003,
+    "reach25": 13,
+    "ex_top1": 25288,
+    "ex_top3": 12675,
+    "ex_top5": 2610
+   },
+   "acc_minus_rej": null,
+   "pre2023": [
+    -1.071,
+    1.522
+   ],
+   "post2023": [
+    null,
+    -0.139
+   ],
+   "rejected_reach25": 13,
+   "rejected_profit_lost": 57417,
+   "rejected_losses_avoided": -25250,
+   "rejected_in_top5_winners": 5
+  },
+  "by_status": {
+   "accept": {
+    "n": 0
+   },
+   "reject": {
+    "n": 30,
+    "expR": [
+     -0.098,
+     -0.677,
+     0.647
+    ],
+    "medR": -0.633,
+    "win%": 13.3,
+    "pf": 0.78,
+    "net": -3095,
+    "dd": 8645,
+    "reach25": 3,
+    "ex_top1": -8099,
+    "ex_top3": -13190,
+    "ex_top5": -13926
+   },
+   "nores": {
+    "n": 1,
+    "expR": [
+     -1.071
+    ],
+    "medR": -1.071,
+    "win%": 0.0,
+    "pf": 0.0,
+    "net": -1342,
+    "dd": 1342,
+    "reach25": 0,
+    "ex_top1": 0,
+    "ex_top3": 0,
+    "ex_top5": 0
+   },
+   "unknown": {
+    "n": 22,
+    "expR": [
+     1.842,
+     0.377,
+     3.4
+    ],
+    "medR": -0.613,
+    "win%": 45.5,
+    "pf": 4.12,
+    "net": 35263,
+    "dd": 5999,
+    "reach25": 10,
+    "ex_top1": 28383,
+    "ex_top3": 15770,
+    "ex_top5": 5972
+   }
+  },
+  "by_status_years": {
+   "accept": {},
+   "reject": {
+    "2020": [
+     2,
+     0.286
+    ],
+    "2021": [
+     4,
+     0.836
+    ],
+    "2022": [
+     4,
+     -0.691
+    ],
+    "2023": [
+     5,
+     1.472
+    ],
+    "2024": [
+     10,
+     -0.767
+    ],
+    "2025": [
+     5,
+     -0.754
+    ]
+   },
+   "nores": {
+    "2022": [
+     1,
+     -1.071
+    ]
+   },
+   "unknown": {
+    "2020": [
+     6,
+     1.904
+    ],
+    "2021": [
+     9,
+     3.39
+    ],
+    "2022": [
+     2,
+     -0.998
+    ],
+    "2023": [
+     2,
+     -0.828
+    ],
+    "2024": [
+     3,
+     0.752
+    ]
+   }
+  },
+  "by_status_regime": {
+   "accept": {},
+   "reject": {
+    "up": [
+     15,
+     -0.314
+    ],
+    "side": [
+     6,
+     -0.495
+    ],
+    "down": [
+     9,
+     0.528
+    ]
+   },
+   "nores": {
+    "up": [
+     1,
+     -1.071
+    ]
+   },
+   "unknown": {
+    "up": [
+     21,
+     1.961
+    ],
+    "side": [
+     1,
+     -0.648
+    ]
+   }
+  },
+  "Q_R0": {
+   "n": 37,
+   "net_Q": 9493,
+   "cashrisk_total_x_initial": 4.38,
+   "expR_Q": 1.725,
+   "dd_Q": 6942
+  },
+  "Q_acc_unkPass": {
+   "n": 21,
+   "net_Q": 13108,
+   "cashrisk_total_x_initial": 4.89,
+   "expR_Q": 3.785,
+   "dd_Q": 3700
+  },
+  "Q_acc_unkReject": {
+   "n": 1,
+   "net_Q": -268,
+   "cashrisk_total_x_initial": 1.0,
+   "expR_Q": -1.071,
+   "dd_Q": 268
+  }
+ },
+ "us": {
+  "R0": {
+   "n": 365,
+   "expR": [
+    -0.08,
+    -0.293,
+    0.142
+   ],
+   "medR": -1.047,
+   "win%": 19.7,
+   "pf": 0.91,
+   "net": -23610,
+   "dd": 57568,
+   "reach25": 50,
+   "ex_top1": -31690,
+   "ex_top3": -44829,
+   "ex_top5": -56266
+  },
+  "status_counts": {
+   "reject": 207,
+   "unknown": 151,
+   "nores": 5,
+   "accept": 2
+  },
+  "tol1%_pivot_unkPass": {
+   "accepted": {
+    "n": 158,
+    "expR": [
+     -0.087,
+     -0.413,
+     0.271
+    ],
+    "medR": -1.046,
+    "win%": 18.4,
+    "pf": 0.85,
+    "net": -17033,
+    "dd": 27078,
+    "reach25": 22,
+    "ex_top1": -25113,
+    "ex_top3": -36790,
+    "ex_top5": -46653
+   },
+   "rejected": {
+    "n": 207,
+    "expR": [
+     -0.074,
+     -0.345,
+     0.214
+    ],
+    "medR": -1.048,
+    "win%": 20.8,
+    "pf": 0.95,
+    "net": -6577,
+    "dd": 35372,
+    "reach25": 28,
+    "ex_top1": -13840,
+    "ex_top3": -24846,
+    "ex_top5": -34304
+   },
+   "acc_minus_rej": [
+    -0.013,
+    -0.463,
+    0.434
+   ],
+   "pre2023": [
+    -0.148,
+    -0.405
+   ],
+   "post2023": [
+    -0.021,
+    0.138
+   ],
+   "rejected_reach25": 28,
+   "rejected_profit_lost": 134858,
+   "rejected_losses_avoided": -141435,
+   "rejected_in_top5_winners": 2
+  },
+  "tol1%_pivot_unkReject": {
+   "accepted": {
+    "n": 7,
+    "expR": [
+     -0.627,
+     -1.06,
+     -0.01
+    ],
+    "medR": -1.049,
+    "win%": 14.3,
+    "pf": 0.26,
+    "net": -3524,
+    "dd": 3973,
+    "reach25": 0,
+    "ex_top1": -4779,
+    "ex_top3": -3973,
+    "ex_top5": -2097
+   },
+   "rejected": {
+    "n": 358,
+    "expR": [
+     -0.069,
+     -0.29,
+     0.169
+    ],
+    "medR": -1.047,
+    "win%": 19.8,
+    "pf": 0.92,
+    "net": -20086,
+    "dd": 55156,
+    "reach25": 50,
+    "ex_top1": -28166,
+    "ex_top3": -41306,
+    "ex_top5": -52742
+   },
+   "acc_minus_rej": [
+    -0.558,
+    -1.08,
+    0.128
+   ],
+   "pre2023": [
+    -0.203,
+    -0.276
+   ],
+   "post2023": [
+    -0.698,
+    0.102
+   ],
+   "rejected_reach25": 50,
+   "rejected_profit_lost": 233485,
+   "rejected_losses_avoided": -253571,
+   "rejected_in_top5_winners": 5
+  },
+  "tol2%_pivot_unkPass": {
+   "accepted": {
+    "n": 129,
+    "expR": [
+     -0.181,
+     -0.521,
+     0.21
+    ],
+    "medR": -1.047,
+    "win%": 17.1,
+    "pf": 0.76,
+    "net": -23322,
+    "dd": 29619,
+    "reach25": 17,
+    "ex_top1": -29198,
+    "ex_top3": -40027,
+    "ex_top5": -49368
+   },
+   "rejected": {
+    "n": 236,
+    "expR": [
+     -0.025,
+     -0.292,
+     0.257
+    ],
+    "medR": -1.047,
+    "win%": 21.2,
+    "pf": 1.0,
+    "net": -288,
+    "dd": 38550,
+    "reach25": 33,
+    "ex_top1": -8368,
+    "ex_top3": -21267,
+    "ex_top5": -31401
+   },
+   "acc_minus_rej": [
+    -0.156,
+    -0.6,
+    0.325
+   ],
+   "pre2023": [
+    -0.228,
+    -0.307
+   ],
+   "post2023": [
+    -0.133,
+    0.176
+   ],
+   "rejected_reach25": 33,
+   "rejected_profit_lost": 161507,
+   "rejected_losses_avoided": -161795,
+   "rejected_in_top5_winners": 3
+  },
+  "tol2%_pivot_unkReject": {
+   "accepted": {
+    "n": 7,
+    "expR": [
+     -0.627,
+     -1.06,
+     -0.01
+    ],
+    "medR": -1.049,
+    "win%": 14.3,
+    "pf": 0.26,
+    "net": -3524,
+    "dd": 3973,
+    "reach25": 0,
+    "ex_top1": -4779,
+    "ex_top3": -3973,
+    "ex_top5": -2097
+   },
+   "rejected": {
+    "n": 358,
+    "expR": [
+     -0.069,
+     -0.29,
+     0.169
+    ],
+    "medR": -1.047,
+    "win%": 19.8,
+    "pf": 0.92,
+    "net": -20086,
+    "dd": 55156,
+    "reach25": 50,
+    "ex_top1": -28166,
+    "ex_top3": -41306,
+    "ex_top5": -52742
+   },
+   "acc_minus_rej": [
+    -0.558,
+    -1.08,
+    0.128
+   ],
+   "pre2023": [
+    -0.203,
+    -0.276
+   ],
+   "post2023": [
+    -0.698,
+    0.102
+   ],
+   "rejected_reach25": 50,
+   "rejected_profit_lost": 233485,
+   "rejected_losses_avoided": -253571,
+   "rejected_in_top5_winners": 5
+  },
+  "tol1%_entry_unkPass": {
+   "accepted": {
+    "n": 158,
+    "expR": [
+     -0.087,
+     -0.413,
+     0.271
+    ],
+    "medR": -1.046,
+    "win%": 18.4,
+    "pf": 0.85,
+    "net": -17033,
+    "dd": 27078,
+    "reach25": 22,
+    "ex_top1": -25113,
+    "ex_top3": -36790,
+    "ex_top5": -46653
+   },
+   "rejected": {
+    "n": 207,
+    "expR": [
+     -0.074,
+     -0.345,
+     0.214
+    ],
+    "medR": -1.048,
+    "win%": 20.8,
+    "pf": 0.95,
+    "net": -6577,
+    "dd": 35372,
+    "reach25": 28,
+    "ex_top1": -13840,
+    "ex_top3": -24846,
+    "ex_top5": -34304
+   },
+   "acc_minus_rej": [
+    -0.013,
+    -0.463,
+    0.434
+   ],
+   "pre2023": [
+    -0.148,
+    -0.405
+   ],
+   "post2023": [
+    -0.021,
+    0.138
+   ],
+   "rejected_reach25": 28,
+   "rejected_profit_lost": 134858,
+   "rejected_losses_avoided": -141435,
+   "rejected_in_top5_winners": 2
+  },
+  "tol1%_entry_unkReject": {
+   "accepted": {
+    "n": 7,
+    "expR": [
+     -0.627,
+     -1.06,
+     -0.01
+    ],
+    "medR": -1.049,
+    "win%": 14.3,
+    "pf": 0.26,
+    "net": -3524,
+    "dd": 3973,
+    "reach25": 0,
+    "ex_top1": -4779,
+    "ex_top3": -3973,
+    "ex_top5": -2097
+   },
+   "rejected": {
+    "n": 358,
+    "expR": [
+     -0.069,
+     -0.29,
+     0.169
+    ],
+    "medR": -1.047,
+    "win%": 19.8,
+    "pf": 0.92,
+    "net": -20086,
+    "dd": 55156,
+    "reach25": 50,
+    "ex_top1": -28166,
+    "ex_top3": -41306,
+    "ex_top5": -52742
+   },
+   "acc_minus_rej": [
+    -0.558,
+    -1.08,
+    0.128
+   ],
+   "pre2023": [
+    -0.203,
+    -0.276
+   ],
+   "post2023": [
+    -0.698,
+    0.102
+   ],
+   "rejected_reach25": 50,
+   "rejected_profit_lost": 233485,
+   "rejected_losses_avoided": -253571,
+   "rejected_in_top5_winners": 5
+  },
+  "by_status": {
+   "accept": {
+    "n": 2,
+    "expR": [
+     0.009
+    ],
+    "medR": 0.009,
+    "win%": 50.0,
+    "pf": 1.88,
+    "net": 586,
+    "dd": 669,
+    "reach25": 0,
+    "ex_top1": -669,
+    "ex_top3": 0,
+    "ex_top5": 0
+   },
+   "reject": {
+    "n": 207,
+    "expR": [
+     -0.074,
+     -0.345,
+     0.214
+    ],
+    "medR": -1.048,
+    "win%": 20.8,
+    "pf": 0.95,
+    "net": -6577,
+    "dd": 35372,
+    "reach25": 28,
+    "ex_top1": -13840,
+    "ex_top3": -24846,
+    "ex_top5": -34304
+   },
+   "nores": {
+    "n": 5,
+    "expR": [
+     -0.882,
+     -1.054,
+     -0.542
+    ],
+    "medR": -1.049,
+    "win%": 0.0,
+    "pf": 0.0,
+    "net": -4110,
+    "dd": 4110,
+    "reach25": 0,
+    "ex_top1": -3973,
+    "ex_top3": -2097,
+    "ex_top5": 0
+   },
+   "unknown": {
+    "n": 151,
+    "expR": [
+     -0.062,
+     -0.403,
+     0.323
+    ],
+    "medR": -1.046,
+    "win%": 18.5,
+    "pf": 0.88,
+    "net": -13509,
+    "dd": 25478,
+    "reach25": 22,
+    "ex_top1": -21589,
+    "ex_top3": -33267,
+    "ex_top5": -43130
+   }
+  },
+  "by_status_years": {
+   "accept": {
+    "2023": [
+     2,
+     0.009
+    ]
+   },
+   "reject": {
+    "2020": [
+     2,
+     -1.05
+    ],
+    "2021": [
+     70,
+     -0.361
+    ],
+    "2022": [
+     9,
+     -0.608
+    ],
+    "2023": [
+     22,
+     0.466
+    ],
+    "2024": [
+     50,
+     -0.247
+    ],
+    "2025": [
+     27,
+     0.351
+    ],
+    "2026": [
+     27,
+     0.372
+    ]
+   },
+   "nores": {
+    "2021": [
+     1,
+     -0.203
+    ],
+    "2024": [
+     2,
+     -1.05
+    ],
+    "2025": [
+     1,
+     -1.049
+    ],
+    "2026": [
+     1,
+     -1.057
+    ]
+   },
+   "unknown": {
+    "2020": [
+     9,
+     -0.056
+    ],
+    "2021": [
+     66,
+     -0.163
+    ],
+    "2022": [
+     6,
+     -0.106
+    ],
+    "2023": [
+     11,
+     1.259
+    ],
+    "2024": [
+     28,
+     -0.427
+    ],
+    "2025": [
+     18,
+     0.77
+    ],
+    "2026": [
+     13,
+     -1.014
+    ]
+   }
+  },
+  "by_status_regime": {
+   "accept": {
+    "up": [
+     2,
+     0.009
+    ]
+   },
+   "reject": {
+    "up": [
+     196,
+     -0.044
+    ],
+    "side": [
+     2,
+     -1.134
+    ],
+    "down": [
+     9,
+     -0.49
+    ]
+   },
+   "nores": {
+    "up": [
+     5,
+     -0.882
+    ]
+   },
+   "unknown": {
+    "up": [
+     146,
+     -0.067
+    ],
+    "down": [
+     5,
+     0.083
+    ]
+   }
+  },
+  "Q_R0": {
+   "n": 365,
+   "net_Q": -4480,
+   "cashrisk_total_x_initial": 2.77,
+   "expR_Q": -0.066,
+   "dd_Q": 18825
+  },
+  "Q_acc_unkPass": {
+   "n": 158,
+   "net_Q": -2367,
+   "cashrisk_total_x_initial": 2.69,
+   "expR_Q": -0.016,
+   "dd_Q": 8302
+  },
+  "Q_acc_unkReject": {
+   "n": 7,
+   "net_Q": -1261,
+   "cashrisk_total_x_initial": 1.92,
+   "expR_Q": -1.149,
+   "dd_Q": 1261
+  }
+ }
+}
