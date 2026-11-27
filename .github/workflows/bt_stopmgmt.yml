@@ -26,6 +26,7 @@ jobs:
           cd stopmgmt
           REPO=$GITHUB_WORKSPACE BT_SUFFIX=_long python bt_stopmgmt.py sa | cut -c1-600
           REPO=$GITHUB_WORKSPACE BT_SUFFIX=_long python bt_stopmgmt.py us | cut -c1-600
+          cp ../bt/hist_long/TASI.csv out/TASI_long.csv; cp ../bt/hist_us_long/SPX.csv out/SPX_long.csv
           gzip -f out/*_long.json; ls -la out
       - run: |
           git config user.name "github-actions[bot]"
