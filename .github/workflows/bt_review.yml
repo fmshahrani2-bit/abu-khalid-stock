@@ -1,0 +1,31 @@
+name: bt-review
+# المراجعة البصرية: عينة عشوائية وشارتات عمياء ومفتاح مختوم (بروتوكول 2026-11-27). لا يغيّر أي قاعدة.
+# يعمل فقط عند الدفع إلى فرع bt-stopmgmt، ولا يلمس main.
+on:
+  push:
+    branches: [bt-stopmgmt]
+    paths: ["stopmgmt/review_sample.py", ".github/workflows/bt_review.yml"]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - uses: actions/download-artifact@v4
+        with: {run-id: "46055212200", github-token: "${{ secrets.GITHUB_TOKEN }}", path: art, pattern: "long-*"}
+      - run: |
+          mkdir -p bt/hist_long bt/hist_us_long
+          for d in art/*; do cp -n $d/hist_long/*.csv bt/hist_long/ 2>/dev/null || true; cp -n $d/hist_us_long/*.csv bt/hist_us_long/ 2>/dev/null || true; done
+          ls bt/hist_long | wc -l; ls bt/hist_us_long | wc -l
+          pip install matplotlib
+          REPO=$PWD python stopmgmt/review_sample.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stopmgmt/review && git commit -qm "bt-review: blinded charts + sealed key [skip ci]" && git push -q origin HEAD:bt-stopmgmt
