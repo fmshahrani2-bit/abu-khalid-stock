@@ -1,7 +1,9 @@
 """bt_ranking.py — اختبار ترتيب الإشارات حسب reports/2026-11-27/visual_review/arbitration/round2/BT_RANKING_SPEC.md.
 يعيد استخدام الإشارات والمحاكاة من bt_readings.py كما هي (يُنفَّذ الجزء الأول منه)، ويضيف:
 ميزات الترتيب، وسجل الحركة اليومي لكل صفقة، ومحفظة يومية بقيمة سوقية. لا يعدّل أي ملف قائم.
-الاستخدام: python3 bt_ranking.py  → out/ranking_us.json
+الاستخدام: python3 bt_ranking.py  → out/ranking_us_v1.1.json
+v1.1 (2026-11-28): إصلاح تسرب زمني أشار إليه ChatGPT. في فترة الاختيار تُقطع كل صفقة عند إغلاق 2026-02-27، والمفتوح منها يُقيَّم بسعر ذلك اليوم.
+فترة التحقق محفظة جديدة فارغة تبدأ من 2026-03-02.
 """
 import os, sys, json, random
 import numpy as np, pandas as pd
@@ -64,6 +66,16 @@ def sim_daily(sg):
     t0["events"] = ev; t0["risk"] = q1 * (E - S0)
     return t0
 
+def truncate(t, end):
+    """يقطع الصفقة عند إغلاق end: الحركات بعده تُحذف، والكمية المتبقية تُقيَّم بإغلاق end مع تكلفة البيع."""
+    if t["out"] != "open" and pd.Timestamp(t["out"]) <= end: return t
+    ev = [e for e in t["events"] if e[0] <= end]
+    if not ev: return None
+    qty = sum(dq for _, dq, _ in ev); px = float(D[t["sym"]].close.loc[:end].iloc[-1])
+    pnl = sum(c for _, _, c in ev) + px * (1 - SLIP) * (1 - COM) * qty
+    u = dict(t); u.update({"events": ev, "pnl": round(pnl, 2), "R": round(pnl / t["risk"], 3), "out": "open", "cut": True})
+    return u
+
 def run_portfolio(sigs, key=None, rng=None, lo_day=None, hi_day=None):
     sigs = [s for s in sigs if (lo_day is None or s["day"] >= lo_day) and (hi_day is None or s["day"] <= hi_day)]
     byday = {}
@@ -81,12 +93,14 @@ def run_portfolio(sigs, key=None, rng=None, lo_day=None, hi_day=None):
             t = SIM[(sg["sym"], sg["i"])]
             if t is None or sum(x["maxcost"] for x in live) + t["maxcost"] > MAXINV: continue
             res.append(t)
+    if hi_day is not None: res = [x for x in (truncate(t, hi_day) for t in res) if x]
     return res
 
-def metrics(tr):
+def metrics(tr, end=None):
     if not tr: return {"trades": 0}
     st = stats(tr)
     days = T.index[T.index >= min(e[0] for t in tr for e in t["events"])]
+    if end is not None: days = days[days <= end]
     cash = pd.Series(0.0, index=days); pos = {}
     for t in tr:
         for (dt, dq, c) in t["events"]:
@@ -115,16 +129,16 @@ for pool in ("R0", "A"):
     sameday = pd.Series([s["day"] for s in sigs]).value_counts()
     P = {"signals": len(sigs), "days_with_2plus": int((sameday >= 2).sum()), "checkout_signals": sum(s["shape"] != "VCP" for s in sigs), "periods": {}}
     for per, lo_d, hi_d in (("all", None, None), ("select", None, SPLIT_END), ("validate", VAL_START, None)):
-        R = {"ORDER": metrics(run_portfolio(sigs, lo_day=lo_d, hi_day=hi_d))}
-        for c, k in CRIT.items(): R[c] = metrics(run_portfolio(sigs, key=k, lo_day=lo_d, hi_day=hi_d))
-        rnd = [metrics(run_portfolio(sigs, rng=random.Random(j), lo_day=lo_d, hi_day=hi_d)) for j in range(300)]
+        R = {"ORDER": metrics(run_portfolio(sigs, lo_day=lo_d, hi_day=hi_d), hi_d)}
+        for c, k in CRIT.items(): R[c] = metrics(run_portfolio(sigs, key=k, lo_day=lo_d, hi_day=hi_d), hi_d)
+        rnd = [metrics(run_portfolio(sigs, rng=random.Random(j), lo_day=lo_d, hi_day=hi_d), hi_d) for j in range(300)]
         R["RANDOM"] = {m: {"p5": round(float(np.percentile([x.get(m) or 0 for x in rnd], 5)), 2),
                            "median": round(float(np.median([x.get(m) or 0 for x in rnd])), 2),
                            "p95": round(float(np.percentile([x.get(m) or 0 for x in rnd], 95)), 2)}
                        for m in ("net", "pf", "trades", "mtm_maxDD", "ret_to_dd")}
         P["periods"][per] = R
     out["pools"][pool] = P
-json.dump(out, open(os.path.join(OUT, "ranking_us.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str)
+json.dump(out, open(os.path.join(OUT, "ranking_us_v1.1.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str)
 for pool, P in out["pools"].items():
     print(pool, "signals", P["signals"], "days>=2", P["days_with_2plus"], "checkout", P["checkout_signals"])
     for per, R in P["periods"].items():
