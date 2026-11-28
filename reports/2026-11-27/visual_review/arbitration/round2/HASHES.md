@@ -39,3 +39,11 @@
 - `ef7d7b97dfe44a973c564ae3f70ddd56d2a569aceb024e6ceba2d450cfec8176` R-28.png
 - `ccdff7c13f2fda5be88b79478dbb4786d0b391829e86070fc5e1004eb35e9d85` R-29.png
 - `f9f65db72c15421e4761efad5847d20583d3394fb3f5bf88e64f7048cb7065be` R-30.png
+
+## أحكام Claude (مُودعة قبل إرسال الحزمة لـChatGPT)
+- `534533e04db7da3464199f63ab9e358fcca546b801307253e0a992182ea62279` claude_round2_rulings_30.csv
+
+الملف نفسه خارج المستودع. يُرفع بعد أن يثبّت ChatGPT أحكامه، وبإذن المستخدم.
+
+## الحزمة المرسلة لـChatGPT
+- `dd648e104a8b64a7bac6dceaad0f71c069298ea7703fa79db5fce6efe65a4da8` round2_blind_package.zip (البروتوكول، ونصوص الكورس، والفهرس، و30 شارتاً)
