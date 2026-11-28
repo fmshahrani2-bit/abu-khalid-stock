@@ -1,0 +1,541 @@
+[
+ {
+  "cid": "R-01",
+  "market": "SA",
+  "stratum": "B",
+  "sym": "1080",
+  "day": "2025-08-31",
+  "close": 24.21,
+  "bars": 60,
+  "up60": 8.5,
+  "dn60": -10.7,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-02",
+  "market": "US",
+  "stratum": "A",
+  "sym": "EIX",
+  "day": "2026-04-02",
+  "close": 73.46,
+  "bars": 60,
+  "up60": 3.8,
+  "dn60": -11.5,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-03",
+  "market": "SA",
+  "stratum": "A",
+  "sym": "1180",
+  "day": "2026-04-13",
+  "close": 43.94,
+  "bars": 60,
+  "up60": 0.9,
+  "dn60": -12.9,
+  "C": "غير واضح",
+  "G": "دخول",
+  "GA": {
+   "fill": 43.94,
+   "stopped": true,
+   "day": 6,
+   "maxR": 0.13,
+   "endR": -1.0
+  },
+  "GB": {
+   "fill": 43.94,
+   "stopped": true,
+   "day": 6,
+   "maxR": 0.13,
+   "endR": -1.0
+  }
+ },
+ {
+  "cid": "R-04",
+  "market": "US",
+  "stratum": "B",
+  "sym": "ALGN",
+  "day": "2026-04-08",
+  "close": 176.83,
+  "bars": 60,
+  "up60": 13.3,
+  "dn60": -14.3,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-05",
+  "market": "US",
+  "stratum": "A",
+  "sym": "PAGP",
+  "day": "2026-07-16",
+  "close": 25.48,
+  "bars": 60,
+  "up60": 12.6,
+  "dn60": -3.2,
+  "C": "غير واضح",
+  "G": "غير واضح"
+ },
+ {
+  "cid": "R-06",
+  "market": "SA",
+  "stratum": "B",
+  "sym": "7211",
+  "day": "2025-07-01",
+  "close": 30.8,
+  "bars": 60,
+  "up60": 2.9,
+  "dn60": -22.1,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-07",
+  "market": "SA",
+  "stratum": "A",
+  "sym": "4015",
+  "day": "2025-07-15",
+  "close": 175.5,
+  "bars": 60,
+  "up60": 2.6,
+  "dn60": -19.1,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-08",
+  "market": "US",
+  "stratum": "A",
+  "sym": "AFL",
+  "day": "2026-07-13",
+  "close": 123.3,
+  "bars": 60,
+  "up60": 5.6,
+  "dn60": -10.8,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-09",
+  "market": "SA",
+  "stratum": "B",
+  "sym": "1303",
+  "day": "2025-07-14",
+  "close": 8.8,
+  "bars": 60,
+  "up60": 29.5,
+  "dn60": -3.4,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-10",
+  "market": "US",
+  "stratum": "A",
+  "sym": "PFG",
+  "day": "2026-04-07",
+  "close": 91.06,
+  "bars": 60,
+  "up60": 23.5,
+  "dn60": -0.5,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-11",
+  "market": "SA",
+  "stratum": "B",
+  "sym": "2300",
+  "day": "2026-07-30",
+  "close": 69.0,
+  "bars": 60,
+  "up60": 2.2,
+  "dn60": -36.3,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-12",
+  "market": "US",
+  "stratum": "A",
+  "sym": "PH",
+  "day": "2025-08-22",
+  "close": 752.33,
+  "bars": 60,
+  "up60": 15.6,
+  "dn60": -4.9,
+  "C": "دخول",
+  "G": "دخول",
+  "CA": {
+   "fill": null
+  },
+  "CB": {
+   "fill": 763.0,
+   "stopped": true,
+   "day": 17,
+   "maxR": 0.58,
+   "endR": -1.0
+  },
+  "GA": {
+   "fill": 755.5,
+   "stopped": true,
+   "day": 34,
+   "maxR": 0.7,
+   "endR": -1.0
+  },
+  "GB": {
+   "fill": 755.5,
+   "stopped": true,
+   "day": 34,
+   "maxR": 0.7,
+   "endR": -1.0
+  }
+ },
+ {
+  "cid": "R-13",
+  "market": "US",
+  "stratum": "A",
+  "sym": "CMBT",
+  "day": "2026-08-04",
+  "close": 15.92,
+  "bars": 60,
+  "up60": 33.1,
+  "dn60": -0.1,
+  "C": "لا",
+  "G": "دخول",
+  "GA": {
+   "fill": 16.46,
+   "stopped": false,
+   "day": null,
+   "maxR": 3.24,
+   "endR": 1.38,
+   "bars": 60
+  },
+  "GB": {
+   "fill": 16.46,
+   "stopped": false,
+   "day": null,
+   "maxR": 3.24,
+   "endR": 1.38,
+   "bars": 60
+  }
+ },
+ {
+  "cid": "R-14",
+  "market": "SA",
+  "stratum": "B",
+  "sym": "4240",
+  "day": "2025-07-08",
+  "close": 28.08,
+  "bars": 60,
+  "up60": 26.0,
+  "dn60": -21.0,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-15",
+  "market": "US",
+  "stratum": "B",
+  "sym": "FTS",
+  "day": "2026-02-20",
+  "close": 56.3,
+  "bars": 60,
+  "up60": 4.4,
+  "dn60": -2.8,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-16",
+  "market": "SA",
+  "stratum": "A",
+  "sym": "1321",
+  "day": "2026-07-21",
+  "close": 220.9,
+  "bars": 60,
+  "up60": -1.3,
+  "dn60": -25.8,
+  "C": "دخول",
+  "G": "لا",
+  "CA": {
+   "fill": null
+  },
+  "CB": {
+   "fill": null
+  }
+ },
+ {
+  "cid": "R-17",
+  "market": "US",
+  "stratum": "B",
+  "sym": "IFF",
+  "day": "2026-08-31",
+  "close": 86.33,
+  "bars": 57,
+  "up60": 10.4,
+  "dn60": -9.0,
+  "C": "غير واضح",
+  "G": "دخول",
+  "GA": {
+   "fill": null
+  },
+  "GB": {
+   "fill": null
+  }
+ },
+ {
+  "cid": "R-18",
+  "market": "US",
+  "stratum": "B",
+  "sym": "HIMS",
+  "day": "2025-07-24",
+  "close": 57.32,
+  "bars": 60,
+  "up60": 22.9,
+  "dn60": -28.9,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-19",
+  "market": "US",
+  "stratum": "B",
+  "sym": "UBS",
+  "day": "2026-08-11",
+  "close": 53.69,
+  "bars": 60,
+  "up60": 4.3,
+  "dn60": -14.5,
+  "C": "دخول",
+  "G": "دخول",
+  "CA": {
+   "fill": null
+  },
+  "CB": {
+   "fill": null
+  },
+  "GA": {
+   "fill": null
+  },
+  "GB": {
+   "fill": 54.3,
+   "stopped": true,
+   "day": 24,
+   "maxR": 0.89,
+   "endR": -1.34
+  }
+ },
+ {
+  "cid": "R-20",
+  "market": "US",
+  "stratum": "A",
+  "sym": "IDXX",
+  "day": "2025-10-24",
+  "close": 640.85,
+  "bars": 60,
+  "up60": 20.1,
+  "dn60": -2.9,
+  "C": "لا",
+  "G": "دخول",
+  "GA": {
+   "fill": null
+  },
+  "GB": {
+   "fill": 693.0,
+   "stopped": false,
+   "day": null,
+   "maxR": 1.05,
+   "endR": -0.03,
+   "bars": 60
+  }
+ },
+ {
+  "cid": "R-21",
+  "market": "SA",
+  "stratum": "A",
+  "sym": "4021",
+  "day": "2025-08-28",
+  "close": 6.82,
+  "bars": 60,
+  "up60": 36.4,
+  "dn60": -8.2,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-22",
+  "market": "SA",
+  "stratum": "B",
+  "sym": "8280",
+  "day": "2026-08-31",
+  "close": 15.3,
+  "bars": 57,
+  "up60": 2.5,
+  "dn60": -34.8,
+  "C": "لا",
+  "G": "دخول",
+  "GA": {
+   "fill": null
+  },
+  "GB": {
+   "fill": null
+  }
+ },
+ {
+  "cid": "R-23",
+  "market": "SA",
+  "stratum": "A",
+  "sym": "4030",
+  "day": "2026-07-16",
+  "close": 33.14,
+  "bars": 60,
+  "up60": 13.1,
+  "dn60": -10.3,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-24",
+  "market": "SA",
+  "stratum": "B",
+  "sym": "4165",
+  "day": "2026-03-31",
+  "close": 166.7,
+  "bars": 60,
+  "up60": 0.5,
+  "dn60": -21.9,
+  "C": "غير واضح",
+  "G": "دخول",
+  "GA": {
+   "fill": null
+  },
+  "GB": {
+   "fill": null
+  }
+ },
+ {
+  "cid": "R-25",
+  "market": "SA",
+  "stratum": "A",
+  "sym": "4142",
+  "day": "2025-07-03",
+  "close": 142.8,
+  "bars": 60,
+  "up60": 3.4,
+  "dn60": -19.8,
+  "C": "لا",
+  "G": "غير واضح"
+ },
+ {
+  "cid": "R-26",
+  "market": "US",
+  "stratum": "A",
+  "sym": "TRV",
+  "day": "2025-10-07",
+  "close": 284.97,
+  "bars": 60,
+  "up60": 4.2,
+  "dn60": -11.5,
+  "C": "دخول",
+  "G": "دخول",
+  "CA": {
+   "fill": 287.95,
+   "stopped": true,
+   "day": 3,
+   "maxR": 0.0,
+   "endR": -1.0
+  },
+  "CB": {
+   "fill": 287.95,
+   "stopped": true,
+   "day": 3,
+   "maxR": 0.0,
+   "endR": -1.0
+  },
+  "GA": {
+   "fill": 287.95,
+   "stopped": true,
+   "day": 3,
+   "maxR": 0.0,
+   "endR": -1.0
+  },
+  "GB": {
+   "fill": 287.95,
+   "stopped": true,
+   "day": 3,
+   "maxR": 0.0,
+   "endR": -1.0
+  }
+ },
+ {
+  "cid": "R-27",
+  "market": "SA",
+  "stratum": "A",
+  "sym": "1120",
+  "day": "2025-10-29",
+  "close": 73.3333,
+  "bars": 60,
+  "up60": 0.0,
+  "dn60": -14.3,
+  "C": "غير واضح",
+  "G": "دخول",
+  "GA": {
+   "fill": null
+  },
+  "GB": {
+   "fill": null
+  }
+ },
+ {
+  "cid": "R-28",
+  "market": "SA",
+  "stratum": "A",
+  "sym": "7020",
+  "day": "2026-01-01",
+  "close": 66.25,
+  "bars": 60,
+  "up60": 8.1,
+  "dn60": -12.5,
+  "C": "غير واضح",
+  "G": "دخول",
+  "GA": {
+   "fill": null
+  },
+  "GB": {
+   "fill": 67.1,
+   "stopped": true,
+   "day": 40,
+   "maxR": 1.45,
+   "endR": -2.94
+  }
+ },
+ {
+  "cid": "R-29",
+  "market": "US",
+  "stratum": "B",
+  "sym": "LBTYA",
+  "day": "2026-04-06",
+  "close": 12.5,
+  "bars": 60,
+  "up60": 2.9,
+  "dn60": -12.3,
+  "C": "لا",
+  "G": "لا"
+ },
+ {
+  "cid": "R-30",
+  "market": "US",
+  "stratum": "B",
+  "sym": "AM",
+  "day": "2026-02-25",
+  "close": 22.28,
+  "bars": 60,
+  "up60": 7.0,
+  "dn60": -8.5,
+  "C": "لا",
+  "G": "لا"
+ }
+]
