@@ -1,0 +1,61 @@
+Case,Market,Follow_Worthy,Setup_Quality,Decision,Notes
+SA-01,SA,Yes,Moderate,Follow / conditional entry,Strong long-term trend; pullback recovery and rising averages; near highs but not very tight
+SA-02,SA,Yes,Moderate,Follow / conditional entry,Prior base breakout; subsequent consolidation near highs; trend remains positive
+SA-03,SA,Yes,Low-Moderate,Follow only / no chase,Strong prior run but broad sideways chop at highs; entry timing unclear
+SA-04,SA,Yes,Moderate,Follow / conditional entry,Long base followed by breakout; strong price action; recent volatility
+SA-05,SA,No,Low,No entry,Weakening trend and broad volatile range; averages flatten/roll
+SA-06,SA,Unclear,Low-Moderate,Wait,Large prior spike followed by long flat range; no clean current contraction/breakout
+SA-07,SA,Yes,Moderate,Follow / conditional entry,Trend rising; recent consolidation and continuation; structure somewhat loose
+SA-08,SA,No,Low,No entry,Large volatility and abrupt moves; structure not orderly
+SA-09,SA,Yes,Moderate,Follow / conditional entry,Long consolidation then higher highs; price above rising averages
+SA-10,SA,No,Low,No entry,Strongly extended after sharp move/gap; lacks fresh compact base
+SA-11,SA,Yes,Moderate-High,Follow / conditional entry,Clear rising trend and consolidation near highs; breakout/continuation
+SA-12,SA,Yes,Moderate,Follow / conditional entry,Strong trend and near-high breakout; base/entry quality not fully clear
+SA-13,SA,Yes,Moderate,Follow / conditional entry,Prior consolidation then rising price; trend supportive
+SA-14,SA,Unclear,Moderate,Wait/conditional,Range breakout but broad prior swings and weak index context
+SA-15,SA,No,Low,No entry,Wide choppy sideways range; averages tangled
+SA-16,SA,Unclear,Low-Moderate,Wait,Sideways basing and recovery but no clean breakout structure
+SA-17,SA,Unclear,Low-Moderate,Wait,Large deep correction and high volatility; recovery structure incomplete/unclear
+SA-18,SA,Yes,Moderate,Follow / conditional entry,Rounded recovery with improving trend and recent breakout near highs
+SA-19,SA,Yes,Moderate,Follow / conditional entry,Base followed by strong advance; current price relatively extended
+SA-20,SA,Yes,Moderate,Follow / conditional entry,Uptrend and recent tight consolidation near highs; index context mixed
+SA-21,SA,No,Low,No entry,Sharp volatile reversal after decline; trend/structure unstable
+SA-22,SA,Yes,Moderate,Follow only / no chase,Long steady uptrend and breakout; extended from base
+SA-23,SA,Yes,Moderate-High,Follow / conditional entry,Uptrend; consolidation and recovery; current near highs
+SA-24,SA,No,Low-Moderate,Wait,Recovery from decline; longer averages overhead/weak context
+SA-25,SA,Yes,Moderate,Follow only / no chase,Strong uptrend but recent steep move and pullback; entry extended
+SA-26,SA,Yes,Moderate-High,Follow / conditional entry,Clear base and breakout; averages turning upward
+SA-27,SA,Yes,Moderate-High,Follow / conditional entry,Strong advance followed by compact consolidation and breakout
+SA-28,SA,No,Low,No entry,Downtrend/recovery still below major averages; weak structure
+SA-29,SA,Yes,Moderate-High,Follow / conditional entry,Strong trend and recent breakout after pullback
+SA-30,SA,Unclear,Moderate,Wait/conditional,Recent advance from a volatile sideways structure; base quality uncertain
+US-01,US,Yes,Moderate,Follow / conditional entry,Strong uptrend; compact consolidation near highs
+US-02,US,Yes,Moderate,Follow / conditional entry,Recovery/base transition with breakout and higher lows
+US-03,US,Unclear,Moderate,Wait/conditional,Uptrend but uneven swings; sharp recent rebound
+US-04,US,Yes,Low-Moderate,Follow only / no chase,Strong trend but stretched and no compact fresh base
+US-05,US,Unclear,Low,No decision,Discontinuous/gapped chart; data integrity or event distortion needs clarification
+US-06,US,Yes,Moderate-High,Follow / conditional entry,Uptrend with consolidation and continuation; price near highs
+US-07,US,Yes,Moderate,Follow / conditional entry,Ascending structure but loose swings; near highs
+US-08,US,Yes,Moderate,Follow / conditional entry,Base-to-breakout transition; strong continuation, though gap/volatility present
+US-09,US,No,Low,No entry,Steep extended advance; no current base and poor chase location
+US-10,US,Unclear,Low-Moderate,Wait,Choppy and volatile range; recent consolidation lacks clear directional setup
+US-11,US,Yes,Moderate,Follow / conditional entry,Long-term uptrend and recent continuation; entry somewhat extended
+US-12,US,Unclear,Moderate,Wait/conditional,Recovery from pullback; constructive but no clearly defined breakout at decision
+US-13,US,Yes,Moderate,Follow / conditional entry,Base then sustained uptrend; near highs
+US-14,US,Yes,Moderate,Follow only / no chase,Strong breakout after long consolidation; currently extended
+US-15,US,Yes,Moderate-High,Follow / conditional entry,Strong orderly trend with several pauses; near highs
+US-16,US,Yes,Moderate,Follow / conditional entry,Strong trend; recent relatively tight pause at highs
+US-17,US,Unclear,Low,No decision,Chart contains a large discontinuity/flat segment; likely data issue makes assessment unreliable
+US-18,US,Yes,Moderate-High,Follow / conditional entry,Orderly uptrend and tight consolidation followed by breakout
+US-19,US,Yes,Moderate,Follow only / no chase,Uptrend and recent breakout but latest move steep/gapped
+US-20,US,Yes,Moderate,Follow / conditional entry,Uptrend after pullback; recent consolidation near highs
+US-21,US,No,Low,No decision,Extreme price discontinuity and unusable scale/data history
+US-22,US,Yes,Low-Moderate,Follow only / no chase,Strong breakout trend but very extended; no fresh base
+US-23,US,Yes,Moderate-High,Follow / conditional entry,Strong trend; pullback/consolidation then continuation
+US-24,US,No,Low,No entry,Very steep extended move; no compact current base
+US-25,US,Yes,Moderate,Follow only / no chase,Strong breakout and acceleration; extended entry
+US-26,US,Unclear,Low-Moderate,Wait,Recovery but long-term trend/averages not fully aligned; structure mixed
+US-27,US,Yes,Moderate,Follow / conditional entry,Strong uptrend; current consolidation near highs
+US-28,US,Yes,Moderate-High,Follow / conditional entry,Orderly stair-step uptrend with short pauses
+US-29,US,Yes,Moderate,Follow / conditional entry,Strong uptrend and breakout; gap/extension warrants caution
+US-30,US,Yes,Moderate,Follow / conditional entry,Base with higher lows and recent breakout; trend improving

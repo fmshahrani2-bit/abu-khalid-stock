@@ -1,0 +1,61 @@
+﻿الحالة,المتابعة: Claude,المتابعة: ChatGPT,تطابق المتابعة,قرار Claude,قرار ChatGPT (نص),قرار ChatGPT (تحويل واسع),قرار ChatGPT (تحويل صارم),قرار النظام,تطابق القرار Claude-ChatGPT (واسع),جودة الإعداد ChatGPT,سبب اختلاف Claude-النظام,النتيجة
+SA-01,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate,تطابق,R=2.691 exit=ma20
+SA-02,نعم,نعم,نعم,غير واضح,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate,المقاومة,R=-1.081 exit=stop
+SA-03,نعم,نعم,نعم,لا,Follow only / no chase,لا,غير واضح,لا,نعم,Low-Moderate,تطابق,next60d max +17% / min -24%
+SA-04,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,لا,لا,Moderate,تطابق,next60d max +12% / min -1%
+SA-05,غير واضح,لا,لا,لا,No entry,لا,لا,دخول,نعم,Low,شكل القاعدة,R=-0.663 exit=stop
+SA-06,غير واضح,غير واضح,نعم,غير واضح,Wait,لا,غير واضح,لا,لا,Low-Moderate,شكل القاعدة,next60d max +13% / min -5%
+SA-07,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,لا,لا,Moderate,تطابق,next60d max +2% / min -23%
+SA-08,نعم,لا,لا,دخول,No entry,لا,لا,دخول,لا,Low,تطابق,R=-0.544 exit=stop
+SA-09,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate,توقيت الدخول,R=6.867 exit=ma20
+SA-10,نعم,لا,لا,دخول,No entry,لا,لا,لا,لا,Low,شكل القاعدة,next60d max +31% / min -3%
+SA-11,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate-High,تطابق,R=-1.119 exit=stop
+SA-12,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate,توقيت الدخول,R=-1.071 exit=stop
+SA-13,نعم,نعم,نعم,غير واضح,Follow / conditional entry,دخول,دخول,لا,لا,Moderate,شكل القاعدة,next60d max +26% / min -5%
+SA-14,غير واضح,غير واضح,نعم,لا,Wait/conditional,لا,غير واضح,دخول,نعم,Moderate,أخرى: حالة السوق/السيولة,R=-0.275 exit=stop
+SA-15,لا,لا,نعم,لا,No entry,لا,لا,لا,نعم,Low,تطابق,next60d max +1% / min -22%
+SA-16,غير واضح,غير واضح,نعم,لا,Wait,لا,غير واضح,لا,نعم,Low-Moderate,تطابق,next60d max +16% / min -10%
+SA-17,نعم,غير واضح,لا,لا,Wait,لا,غير واضح,لا,نعم,Low-Moderate,تطابق,next60d max +40% / min -12%
+SA-18,نعم,نعم,نعم,غير واضح,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate,المقاومة,R=-1.081 exit=stop
+SA-19,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,لا,لا,Moderate,تطابق,next60d max +6% / min -23%
+SA-20,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate,تطابق,R=-0.522 exit=stop
+SA-21,غير واضح,لا,لا,لا,No entry,لا,لا,لا,نعم,Low,تطابق,next60d max +10% / min -2%
+SA-22,نعم,نعم,نعم,دخول,Follow only / no chase,لا,غير واضح,لا,لا,Moderate,شكل القاعدة,next60d max +17% / min -6%
+SA-23,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate-High,شكل القاعدة,R=-0.914 exit=w30
+SA-24,غير واضح,لا,لا,لا,Wait,لا,غير واضح,لا,نعم,Low-Moderate,تطابق,next60d max +23% / min -3%
+SA-25,نعم,نعم,نعم,لا,Follow only / no chase,لا,غير واضح,دخول,نعم,Moderate,الاختراق,R=-1.077 exit=stop
+SA-26,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate-High,توقيت الدخول,R=6.727 exit=ma20
+SA-27,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate-High,تطابق,R=-1.084 exit=stop
+SA-28,غير واضح,لا,لا,لا,No entry,لا,لا,لا,نعم,Low,تطابق,next60d max +10% / min -12%
+SA-29,نعم,نعم,نعم,غير واضح,Follow / conditional entry,دخول,دخول,لا,لا,Moderate-High,شكل القاعدة,next60d max +1% / min -20%
+SA-30,نعم,غير واضح,لا,لا,Wait/conditional,لا,غير واضح,دخول,نعم,Moderate,المقاومة,R=-1.091 exit=stop
+US-01,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate,تطابق,R=-1.179 exit=stop
+US-02,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate,تطابق,R=-1.164 exit=stop
+US-03,نعم,غير واضح,لا,لا,Wait/conditional,لا,غير واضح,لا,نعم,Moderate,تطابق,next60d max +-0% / min -29%
+US-04,نعم,نعم,نعم,غير واضح,Follow only / no chase,لا,غير واضح,لا,لا,Low-Moderate,شكل القاعدة,next60d max +18% / min -1%
+US-05,نعم,غير واضح,لا,غير واضح,No decision,غير واضح,غير واضح,لا,نعم,Low,الاختراق,next60d max +5% / min -15%
+US-06,نعم,نعم,نعم,غير واضح,Follow / conditional entry,دخول,دخول,لا,لا,Moderate-High,شكل القاعدة,next60d max +4% / min -6%
+US-07,نعم,نعم,نعم,غير واضح,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate,شكل القاعدة,R=4.256 exit=ma20
+US-08,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate,تطابق,R=-1.059 exit=stop
+US-09,نعم,لا,لا,لا,No entry,لا,لا,لا,نعم,Low,تطابق,next60d max +11% / min -5%
+US-10,لا,غير واضح,لا,لا,Wait,لا,غير واضح,لا,نعم,Low-Moderate,تطابق,next60d max +3% / min -21%
+US-11,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate,تطابق,R=-0.766 exit=w30
+US-12,غير واضح,غير واضح,نعم,لا,Wait/conditional,لا,غير واضح,لا,نعم,Moderate,تطابق,next60d max +55% / min -14%
+US-13,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate,تطابق,R=3.826 exit=ma20
+US-14,نعم,نعم,نعم,غير واضح,Follow only / no chase,لا,غير واضح,دخول,لا,Moderate,توقيت الدخول,R=-1.047 exit=stop
+US-15,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate-High,تطابق,R=-1.056 exit=stop
+US-16,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,لا,لا,Moderate,تطابق,next60d max +46% / min -12%
+US-17,لا,غير واضح,لا,لا,No decision,غير واضح,غير واضح,دخول,لا,Low,نقص البيانات (سياق: استحواذ),R=2.645 exit=open
+US-18,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,لا,لا,Moderate-High,تطابق,next60d max +17% / min -11%
+US-19,نعم,نعم,نعم,لا,Follow only / no chase,لا,غير واضح,لا,نعم,Moderate,تطابق,next60d max +10% / min -0%
+US-20,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate,تطابق,R=-1.042 exit=stop
+US-21,لا,لا,نعم,لا,No decision,غير واضح,غير واضح,لا,لا,Low,تطابق,next60d max +49% / min -27%
+US-22,نعم,نعم,نعم,دخول,Follow only / no chase,لا,غير واضح,دخول,لا,Low-Moderate,تطابق,R=-1.108 exit=stop
+US-23,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate-High,تطابق,R=-1.047 exit=stop
+US-24,نعم,لا,لا,دخول,No entry,لا,لا,لا,لا,Low,شكل القاعدة,next60d max +2% / min -10%
+US-25,نعم,نعم,نعم,لا,Follow only / no chase,لا,غير واضح,لا,نعم,Moderate,تطابق,next60d max +8% / min -12%
+US-26,غير واضح,غير واضح,نعم,لا,Wait,لا,غير واضح,لا,نعم,Low-Moderate,تطابق,next60d max +23% / min -3%
+US-27,نعم,نعم,نعم,لا,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate,أخرى: قراءة حالة السوق (خطأ مني),R=-1.201 exit=stop
+US-28,نعم,نعم,نعم,دخول,Follow / conditional entry,دخول,دخول,دخول,نعم,Moderate-High,تطابق,R=-1.053 exit=stop
+US-29,نعم,نعم,نعم,غير واضح,Follow / conditional entry,دخول,دخول,لا,لا,Moderate,شكل القاعدة,next60d max +30% / min -24%
+US-30,غير واضح,نعم,لا,لا,Follow / conditional entry,دخول,دخول,دخول,لا,Moderate,المقاومة,R=-1.048 exit=stop
