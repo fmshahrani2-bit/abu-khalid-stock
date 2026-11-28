@@ -5,6 +5,7 @@ v1.1 (2026-11-28): بعد مراجعة ChatGPT:
 (2) ما بعد الوقف بأفقين ثابتين 20 و40 جلسة، مع وسم الصفقات التي لم يكتمل أفقها.
 (3) أيام اجتمع فيها بلوغ +25% (هدف البيع الجزئي) والوقف في الشمعة نفسها، لأن ترتيبهما داخل الجلسة غير معروف.
 (4) الخاسرة التي بلغت +1R تُعرض صفقةً صفقة.
+v1.2: أفق 20/40 جلسة بعد الوقف لصفقات الاختيار يُقطع أيضاً عند 2026-02-27 (كان يتجاوزه إذا أُغلقت الصفقة قبله)، وما لم يكتمل يُوسم.
 """
 import os, sys, json
 import numpy as np, pandas as pd
@@ -27,6 +28,8 @@ def path(t, piv, cut=None):
     if cut is not None: first5 = first5[first5.index <= pd.Timestamp(cut)]
     stopped = status == "closed" and t["reason"] == "stop"
     a20, a40 = d.iloc[x + 1:x + 21], d.iloc[x + 1:x + 41]
+    if cut is not None:   # v1.2: أفق ما بعد الوقف لا يتجاوز نهاية فترة الاختيار
+        a20, a40 = a20[a20.index <= pd.Timestamp(cut)], a40[a40.index <= pd.Timestamp(cut)]
     both = int(((seg.high >= E * 1.25) & (seg.low <= S)).sum())
     return {"status": status, "MFE": round(float(mfe), 2), "MAE": round(float(mae), 2), "days": x - e, "stopped": stopped,
             "back_in_base5": bool((first5 < piv).any()), "entry_vs_pivot%": round((E / piv - 1) * 100, 2),
@@ -70,6 +73,6 @@ for pool in ("R0", "A"):
     out[pool] = {p: summ(g) for p, g in per.items()}
     out[pool]["validate_trades"] = [{k: t[k] for k in ("sym", "in", "out", "status", "reason", "R", "MFE", "MAE", "days", "back_in_base5", "entry_vs_pivot%", "rec25_20", "full20", "rec25_40", "full40", "same_bar_25_and_stop")}
                                     for t in per["validate"]]
-json.dump(out, open(os.path.join(OUT, "diag_path_us_v1.1.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str)
+json.dump(out, open(os.path.join(OUT, "diag_path_us_v1.2.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str)
 for pool in out:
     for p in ("select", "validate"): print(pool, p, json.dumps(out[pool][p], ensure_ascii=False))
