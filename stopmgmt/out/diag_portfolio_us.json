@@ -1,0 +1,389 @@
+{
+ "R0": {
+  "all": {
+   "trades": 30,
+   "net": -10012,
+   "mtm_maxDD": 21983,
+   "dd_peak": "2026-01-29",
+   "dd_trough": "2026-10-08",
+   "risk0_%_mean": 2.72,
+   "risk0_%_max": 5.07,
+   "risk_now_%_mean": 4.76,
+   "risk_now_%_max": 11.23,
+   "positions_mean": 2.89,
+   "days_full(6)": 0,
+   "days": 343,
+   "stops": 21,
+   "stop_loss_total": 23355,
+   "clustered_weeks": 3,
+   "stop_loss_in_clustered_weeks": 6935,
+   "clustered_share%": 29.7,
+   "clustered_detail": [
+    {
+     "week": "2026-02-28/2026-03-06",
+     "stops": 2,
+     "loss": 2168,
+     "index_week%": -2.02
+    },
+    {
+     "week": "2026-07-25/2026-07-31",
+     "stops": 2,
+     "loss": 2458,
+     "index_week%": 1.05
+    },
+    {
+     "week": "2026-08-01/2026-08-07",
+     "stops": 2,
+     "loss": 2309,
+     "index_week%": 3.58
+    }
+   ],
+   "top5_dd_contributors": [
+    {
+     "sym": "MLI",
+     "in": "2025-12-04",
+     "out": "2026-03-16",
+     "change": -3927
+    },
+    {
+     "sym": "DB",
+     "in": "2026-02-03",
+     "out": "2026-02-05",
+     "change": -1420
+    },
+    {
+     "sym": "RLAY",
+     "in": "2026-08-19",
+     "out": "2026-08-21",
+     "change": -1400
+    },
+    {
+     "sym": "AER",
+     "in": "2026-02-12",
+     "out": "2026-03-06",
+     "change": -1354
+    },
+    {
+     "sym": "FE",
+     "in": "2026-04-09",
+     "out": "2026-04-30",
+     "change": -1347
+    }
+   ]
+  },
+  "select": {
+   "trades": 13,
+   "net": 7434,
+   "mtm_maxDD": 5128,
+   "dd_peak": "2026-01-29",
+   "dd_trough": "2026-02-05",
+   "risk0_%_mean": 3.15,
+   "risk0_%_max": 4.25,
+   "risk_now_%_mean": 6.37,
+   "risk_now_%_max": 11.23,
+   "positions_mean": 3.31,
+   "days_full(6)": 0,
+   "days": 159,
+   "stops": 5,
+   "stop_loss_total": 4716,
+   "clustered_weeks": 0,
+   "stop_loss_in_clustered_weeks": 0,
+   "clustered_share%": 0.0,
+   "clustered_detail": [],
+   "top5_dd_contributors": [
+    {
+     "sym": "MLI",
+     "in": "2025-12-04",
+     "out": "open",
+     "change": -3252
+    },
+    {
+     "sym": "DB",
+     "in": "2026-02-03",
+     "out": "2026-02-05",
+     "change": -1420
+    },
+    {
+     "sym": "F",
+     "in": "2025-12-11",
+     "out": "open",
+     "change": -344
+    },
+    {
+     "sym": "CM",
+     "in": "2025-10-31",
+     "out": "open",
+     "change": -112
+    },
+    {
+     "sym": "PH",
+     "in": "2025-08-12",
+     "out": "2026-01-29",
+     "change": 0
+    }
+   ]
+  },
+  "validate": {
+   "trades": 17,
+   "net": -13317,
+   "mtm_maxDD": 14660,
+   "dd_peak": "2026-04-09",
+   "dd_trough": "2026-10-08",
+   "risk0_%_mean": 2.34,
+   "risk0_%_max": 5.07,
+   "risk_now_%_mean": 3.17,
+   "risk_now_%_max": 7.01,
+   "positions_mean": 2.82,
+   "days_full(6)": 0,
+   "days": 157,
+   "stops": 14,
+   "stop_loss_total": 16471,
+   "clustered_weeks": 2,
+   "stop_loss_in_clustered_weeks": 4767,
+   "clustered_share%": 28.9,
+   "clustered_detail": [
+    {
+     "week": "2026-07-25/2026-07-31",
+     "stops": 2,
+     "loss": 2458,
+     "index_week%": 1.05
+    },
+    {
+     "week": "2026-08-01/2026-08-07",
+     "stops": 2,
+     "loss": 2309,
+     "index_week%": 3.58
+    }
+   ],
+   "top5_dd_contributors": [
+    {
+     "sym": "AEP",
+     "in": "2026-04-09",
+     "out": "2026-05-15",
+     "change": -1511
+    },
+    {
+     "sym": "RLAY",
+     "in": "2026-08-19",
+     "out": "2026-08-21",
+     "change": -1400
+    },
+    {
+     "sym": "WT",
+     "in": "2026-07-16",
+     "out": "2026-07-29",
+     "change": -1346
+    },
+    {
+     "sym": "ASND",
+     "in": "2026-09-02",
+     "out": "2026-09-15",
+     "change": -1340
+    },
+    {
+     "sym": "EIX",
+     "in": "2026-04-09",
+     "out": "2026-04-21",
+     "change": -1324
+    }
+   ]
+  }
+ },
+ "A": {
+  "all": {
+   "trades": 38,
+   "net": 16361,
+   "mtm_maxDD": 7520,
+   "dd_peak": "2026-08-14",
+   "dd_trough": "2026-10-13",
+   "risk0_%_mean": 3.47,
+   "risk0_%_max": 4.47,
+   "risk_now_%_mean": 7.86,
+   "risk_now_%_max": 15.05,
+   "positions_mean": 3.74,
+   "days_full(6)": 0,
+   "days": 348,
+   "stops": 23,
+   "stop_loss_total": 24982,
+   "clustered_weeks": 3,
+   "stop_loss_in_clustered_weeks": 7023,
+   "clustered_share%": 28.1,
+   "clustered_detail": [
+    {
+     "week": "2025-07-26/2025-08-01",
+     "stops": 2,
+     "loss": 1998,
+     "index_week%": -2.36
+    },
+    {
+     "week": "2025-10-04/2025-10-10",
+     "stops": 2,
+     "loss": 1771,
+     "index_week%": -2.43
+    },
+    {
+     "week": "2026-05-30/2026-06-05",
+     "stops": 3,
+     "loss": 3255,
+     "index_week%": -2.59
+    }
+   ],
+   "top5_dd_contributors": [
+    {
+     "sym": "ARMK",
+     "in": "2026-06-12",
+     "out": "2026-10-22",
+     "change": -2306
+    },
+    {
+     "sym": "UBS",
+     "in": "2026-05-18",
+     "out": "2026-10-05",
+     "change": -2135
+    },
+    {
+     "sym": "EWBC",
+     "in": "2026-06-08",
+     "out": "open",
+     "change": -1513
+    },
+    {
+     "sym": "NET",
+     "in": "2026-10-06",
+     "out": "2026-10-08",
+     "change": -1347
+    },
+    {
+     "sym": "IEX",
+     "in": "2026-06-16",
+     "out": "open",
+     "change": -130
+    }
+   ]
+  },
+  "select": {
+   "trades": 24,
+   "net": 11231,
+   "mtm_maxDD": 6270,
+   "dd_peak": "2025-07-28",
+   "dd_trough": "2025-08-08",
+   "risk0_%_mean": 3.65,
+   "risk0_%_max": 4.47,
+   "risk_now_%_mean": 8.89,
+   "risk_now_%_max": 15.05,
+   "positions_mean": 3.74,
+   "days_full(6)": 0,
+   "days": 164,
+   "stops": 14,
+   "stop_loss_total": 13881,
+   "clustered_weeks": 2,
+   "stop_loss_in_clustered_weeks": 3769,
+   "clustered_share%": 27.1,
+   "clustered_detail": [
+    {
+     "week": "2025-07-26/2025-08-01",
+     "stops": 2,
+     "loss": 1998,
+     "index_week%": -2.36
+    },
+    {
+     "week": "2025-10-04/2025-10-10",
+     "stops": 2,
+     "loss": 1771,
+     "index_week%": -2.43
+    }
+   ],
+   "top5_dd_contributors": [
+    {
+     "sym": "ATI",
+     "in": "2025-07-07",
+     "out": "2025-07-31",
+     "change": -2396
+    },
+    {
+     "sym": "TOST",
+     "in": "2025-07-08",
+     "out": "2025-08-19",
+     "change": -2147
+    },
+    {
+     "sym": "DRS",
+     "in": "2025-07-07",
+     "out": "2025-07-30",
+     "change": -1381
+    },
+    {
+     "sym": "APG",
+     "in": "2025-08-04",
+     "out": "2025-08-06",
+     "change": -734
+    },
+    {
+     "sym": "GH",
+     "in": "2025-07-09",
+     "out": "2025-07-15",
+     "change": 0
+    }
+   ]
+  },
+  "validate": {
+   "trades": 19,
+   "net": -14664,
+   "mtm_maxDD": 17067,
+   "dd_peak": "2026-05-05",
+   "dd_trough": "2026-10-19",
+   "risk0_%_mean": 3.69,
+   "risk0_%_max": 5.07,
+   "risk_now_%_mean": 6.04,
+   "risk_now_%_max": 10.6,
+   "positions_mean": 3.76,
+   "days_full(6)": 0,
+   "days": 157,
+   "stops": 12,
+   "stop_loss_total": 16639,
+   "clustered_weeks": 1,
+   "stop_loss_in_clustered_weeks": 3603,
+   "clustered_share%": 21.7,
+   "clustered_detail": [
+    {
+     "week": "2026-05-30/2026-06-05",
+     "stops": 3,
+     "loss": 3603,
+     "index_week%": -2.59
+    }
+   ],
+   "top5_dd_contributors": [
+    {
+     "sym": "UNFI",
+     "in": "2026-04-23",
+     "out": "2026-06-09",
+     "change": -3252
+    },
+    {
+     "sym": "ECO",
+     "in": "2026-04-09",
+     "out": "2026-05-28",
+     "change": -2870
+    },
+    {
+     "sym": "FOXA",
+     "in": "2026-06-05",
+     "out": "2026-06-15",
+     "change": -2525
+    },
+    {
+     "sym": "AEP",
+     "in": "2026-04-09",
+     "out": "2026-05-15",
+     "change": -1497
+    },
+    {
+     "sym": "RRX",
+     "in": "2026-05-05",
+     "out": "2026-05-07",
+     "change": -1431
+    }
+   ]
+  }
+ }
+}
