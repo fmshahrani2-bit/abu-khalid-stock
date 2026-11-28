@@ -1,0 +1,668 @@
+{
+ "window": [
+  "2025-07-01",
+  "2026-11-19"
+ ],
+ "split": [
+  "2026-02-27",
+  "2026-03-02"
+ ],
+ "pools": {
+  "R0": {
+   "signals": 127,
+   "days_with_2plus": 24,
+   "checkout_signals": 13,
+   "periods": {
+    "all": {
+     "ORDER": {
+      "trades": 30,
+      "win%": 20.0,
+      "expR": -0.168,
+      "net": -10091,
+      "pf": 0.6,
+      "maxDD": 16890,
+      "mtm_maxDD": 21983,
+      "dd_days": 204,
+      "ret_to_dd": -0.46,
+      "end_equity": 89988,
+      "avg_risk": 991
+     },
+     "RS21": {
+      "trades": 30,
+      "win%": 20.0,
+      "expR": -0.169,
+      "net": -9915,
+      "pf": 0.6,
+      "maxDD": 16713,
+      "mtm_maxDD": 21806,
+      "dd_days": 204,
+      "ret_to_dd": -0.45,
+      "end_equity": 90165,
+      "avg_risk": 986
+     },
+     "RS63": {
+      "trades": 30,
+      "win%": 20.0,
+      "expR": -0.168,
+      "net": -10091,
+      "pf": 0.6,
+      "maxDD": 16890,
+      "mtm_maxDD": 21983,
+      "dd_days": 204,
+      "ret_to_dd": -0.46,
+      "end_equity": 89988,
+      "avg_risk": 991
+     },
+     "PROX": {
+      "trades": 30,
+      "win%": 20.0,
+      "expR": -0.169,
+      "net": -9917,
+      "pf": 0.6,
+      "maxDD": 16715,
+      "mtm_maxDD": 21808,
+      "dd_days": 204,
+      "ret_to_dd": -0.45,
+      "end_equity": 90163,
+      "avg_risk": 986
+     },
+     "VOL": {
+      "trades": 30,
+      "win%": 20.0,
+      "expR": -0.168,
+      "net": -10091,
+      "pf": 0.6,
+      "maxDD": 16890,
+      "mtm_maxDD": 21983,
+      "dd_days": 204,
+      "ret_to_dd": -0.46,
+      "end_equity": 89988,
+      "avg_risk": 991
+     },
+     "TIGHT": {
+      "trades": 30,
+      "win%": 20.0,
+      "expR": -0.168,
+      "net": -10091,
+      "pf": 0.6,
+      "maxDD": 16890,
+      "mtm_maxDD": 21983,
+      "dd_days": 204,
+      "ret_to_dd": -0.46,
+      "end_equity": 89988,
+      "avg_risk": 991
+     },
+     "RANDOM": {
+      "net": {
+       "p5": -10091.0,
+       "median": -9922.0,
+       "p95": -9915.0
+      },
+      "pf": {
+       "p5": 0.6,
+       "median": 0.6,
+       "p95": 0.6
+      },
+      "trades": {
+       "p5": 30.0,
+       "median": 30.0,
+       "p95": 30.0
+      },
+      "mtm_maxDD": {
+       "p5": 21806.0,
+       "median": 21814.0,
+       "p95": 21983.0
+      },
+      "ret_to_dd": {
+       "p5": -0.46,
+       "median": -0.45,
+       "p95": -0.45
+      }
+     }
+    },
+    "select": {
+     "ORDER": {
+      "trades": 13,
+      "win%": 23.1,
+      "expR": 0.184,
+      "net": 3305,
+      "pf": 1.39,
+      "maxDD": 3588,
+      "mtm_maxDD": 7001,
+      "dd_days": 204,
+      "ret_to_dd": 0.47,
+      "end_equity": 103305,
+      "avg_risk": 961
+     },
+     "RS21": {
+      "trades": 13,
+      "win%": 23.1,
+      "expR": 0.184,
+      "net": 3305,
+      "pf": 1.39,
+      "maxDD": 3588,
+      "mtm_maxDD": 7001,
+      "dd_days": 204,
+      "ret_to_dd": 0.47,
+      "end_equity": 103305,
+      "avg_risk": 961
+     },
+     "RS63": {
+      "trades": 13,
+      "win%": 23.1,
+      "expR": 0.184,
+      "net": 3305,
+      "pf": 1.39,
+      "maxDD": 3588,
+      "mtm_maxDD": 7001,
+      "dd_days": 204,
+      "ret_to_dd": 0.47,
+      "end_equity": 103305,
+      "avg_risk": 961
+     },
+     "PROX": {
+      "trades": 13,
+      "win%": 23.1,
+      "expR": 0.184,
+      "net": 3305,
+      "pf": 1.39,
+      "maxDD": 3588,
+      "mtm_maxDD": 7001,
+      "dd_days": 204,
+      "ret_to_dd": 0.47,
+      "end_equity": 103305,
+      "avg_risk": 961
+     },
+     "VOL": {
+      "trades": 13,
+      "win%": 23.1,
+      "expR": 0.184,
+      "net": 3305,
+      "pf": 1.39,
+      "maxDD": 3588,
+      "mtm_maxDD": 7001,
+      "dd_days": 204,
+      "ret_to_dd": 0.47,
+      "end_equity": 103305,
+      "avg_risk": 961
+     },
+     "TIGHT": {
+      "trades": 13,
+      "win%": 23.1,
+      "expR": 0.184,
+      "net": 3305,
+      "pf": 1.39,
+      "maxDD": 3588,
+      "mtm_maxDD": 7001,
+      "dd_days": 204,
+      "ret_to_dd": 0.47,
+      "end_equity": 103305,
+      "avg_risk": 961
+     },
+     "RANDOM": {
+      "net": {
+       "p5": 3305.0,
+       "median": 3305.0,
+       "p95": 3305.0
+      },
+      "pf": {
+       "p5": 1.39,
+       "median": 1.39,
+       "p95": 1.39
+      },
+      "trades": {
+       "p5": 13.0,
+       "median": 13.0,
+       "p95": 13.0
+      },
+      "mtm_maxDD": {
+       "p5": 7001.0,
+       "median": 7001.0,
+       "p95": 7001.0
+      },
+      "ret_to_dd": {
+       "p5": 0.47,
+       "median": 0.47,
+       "p95": 0.47
+      }
+     }
+    },
+    "validate": {
+     "ORDER": {
+      "trades": 17,
+      "win%": 17.6,
+      "expR": -0.438,
+      "net": -13396,
+      "pf": 0.19,
+      "maxDD": 16471,
+      "mtm_maxDD": 14660,
+      "dd_days": 156,
+      "ret_to_dd": -0.91,
+      "end_equity": 86683,
+      "avg_risk": 1015
+     },
+     "RS21": {
+      "trades": 17,
+      "win%": 17.6,
+      "expR": -0.438,
+      "net": -13219,
+      "pf": 0.19,
+      "maxDD": 16295,
+      "mtm_maxDD": 14679,
+      "dd_days": 156,
+      "ret_to_dd": -0.9,
+      "end_equity": 86860,
+      "avg_risk": 1004
+     },
+     "RS63": {
+      "trades": 17,
+      "win%": 17.6,
+      "expR": -0.438,
+      "net": -13396,
+      "pf": 0.19,
+      "maxDD": 16471,
+      "mtm_maxDD": 14660,
+      "dd_days": 156,
+      "ret_to_dd": -0.91,
+      "end_equity": 86683,
+      "avg_risk": 1015
+     },
+     "PROX": {
+      "trades": 17,
+      "win%": 17.6,
+      "expR": -0.438,
+      "net": -13221,
+      "pf": 0.19,
+      "maxDD": 16297,
+      "mtm_maxDD": 14577,
+      "dd_days": 156,
+      "ret_to_dd": -0.9,
+      "end_equity": 86858,
+      "avg_risk": 1004
+     },
+     "VOL": {
+      "trades": 17,
+      "win%": 17.6,
+      "expR": -0.438,
+      "net": -13396,
+      "pf": 0.19,
+      "maxDD": 16471,
+      "mtm_maxDD": 14660,
+      "dd_days": 156,
+      "ret_to_dd": -0.91,
+      "end_equity": 86683,
+      "avg_risk": 1015
+     },
+     "TIGHT": {
+      "trades": 17,
+      "win%": 17.6,
+      "expR": -0.438,
+      "net": -13396,
+      "pf": 0.19,
+      "maxDD": 16471,
+      "mtm_maxDD": 14660,
+      "dd_days": 156,
+      "ret_to_dd": -0.91,
+      "end_equity": 86683,
+      "avg_risk": 1015
+     },
+     "RANDOM": {
+      "net": {
+       "p5": -13396.0,
+       "median": -13227.0,
+       "p95": -13219.0
+      },
+      "pf": {
+       "p5": 0.19,
+       "median": 0.19,
+       "p95": 0.19
+      },
+      "trades": {
+       "p5": 17.0,
+       "median": 17.0,
+       "p95": 17.0
+      },
+      "mtm_maxDD": {
+       "p5": 14391.0,
+       "median": 14660.0,
+       "p95": 15166.0
+      },
+      "ret_to_dd": {
+       "p5": -0.91,
+       "median": -0.9,
+       "p95": -0.87
+      }
+     }
+    }
+   }
+  },
+  "A": {
+   "signals": 604,
+   "days_with_2plus": 138,
+   "checkout_signals": 12,
+   "periods": {
+    "all": {
+     "ORDER": {
+      "trades": 38,
+      "win%": 31.6,
+      "expR": 0.52,
+      "net": 16285,
+      "pf": 1.6,
+      "maxDD": 6197,
+      "mtm_maxDD": 7520,
+      "dd_days": 68,
+      "ret_to_dd": 2.18,
+      "end_equity": 116361,
+      "avg_risk": 975
+     },
+     "RS21": {
+      "trades": 41,
+      "win%": 31.7,
+      "expR": 0.492,
+      "net": 13439,
+      "pf": 1.44,
+      "maxDD": 15385,
+      "mtm_maxDD": 14901,
+      "dd_days": 197,
+      "ret_to_dd": 0.91,
+      "end_equity": 113540,
+      "avg_risk": 961
+     },
+     "RS63": {
+      "trades": 36,
+      "win%": 36.1,
+      "expR": 0.736,
+      "net": 18444,
+      "pf": 1.7,
+      "maxDD": 9362,
+      "mtm_maxDD": 14737,
+      "dd_days": 138,
+      "ret_to_dd": 1.26,
+      "end_equity": 118520,
+      "avg_risk": 968
+     },
+     "PROX": {
+      "trades": 43,
+      "win%": 23.3,
+      "expR": 0.039,
+      "net": -3172,
+      "pf": 0.9,
+      "maxDD": 13015,
+      "mtm_maxDD": 15234,
+      "dd_days": 197,
+      "ret_to_dd": -0.2,
+      "end_equity": 96930,
+      "avg_risk": 926
+     },
+     "VOL": {
+      "trades": 40,
+      "win%": 32.5,
+      "expR": 0.561,
+      "net": 21374,
+      "pf": 1.84,
+      "maxDD": 10965,
+      "mtm_maxDD": 8903,
+      "dd_days": 151,
+      "ret_to_dd": 2.41,
+      "end_equity": 121479,
+      "avg_risk": 921
+     },
+     "TIGHT": {
+      "trades": 39,
+      "win%": 25.6,
+      "expR": 0.212,
+      "net": 4739,
+      "pf": 1.16,
+      "maxDD": 10074,
+      "mtm_maxDD": 13869,
+      "dd_days": 197,
+      "ret_to_dd": 0.35,
+      "end_equity": 104791,
+      "avg_risk": 936
+     },
+     "RANDOM": {
+      "net": {
+       "p5": -11510.35,
+       "median": 4077.5,
+       "p95": 18848.5
+      },
+      "pf": {
+       "p5": 0.68,
+       "median": 1.12,
+       "p95": 1.74
+      },
+      "trades": {
+       "p5": 34.0,
+       "median": 41.0,
+       "p95": 49.0
+      },
+      "mtm_maxDD": {
+       "p5": 7801.0,
+       "median": 14300.0,
+       "p95": 23162.2
+      },
+      "ret_to_dd": {
+       "p5": -0.58,
+       "median": 0.32,
+       "p95": 2.1
+      }
+     }
+    },
+    "select": {
+     "ORDER": {
+      "trades": 24,
+      "win%": 33.3,
+      "expR": 1.104,
+      "net": 23753,
+      "pf": 2.52,
+      "maxDD": 6197,
+      "mtm_maxDD": 6270,
+      "dd_days": 124,
+      "ret_to_dd": 3.79,
+      "end_equity": 123753,
+      "avg_risk": 958
+     },
+     "RS21": {
+      "trades": 20,
+      "win%": 40.0,
+      "expR": 1.512,
+      "net": 22579,
+      "pf": 2.82,
+      "maxDD": 4659,
+      "mtm_maxDD": 5675,
+      "dd_days": 197,
+      "ret_to_dd": 3.98,
+      "end_equity": 122579,
+      "avg_risk": 878
+     },
+     "RS63": {
+      "trades": 20,
+      "win%": 45.0,
+      "expR": 1.853,
+      "net": 29894,
+      "pf": 3.69,
+      "maxDD": 4659,
+      "mtm_maxDD": 6714,
+      "dd_days": 195,
+      "ret_to_dd": 4.45,
+      "end_equity": 129894,
+      "avg_risk": 905
+     },
+     "PROX": {
+      "trades": 27,
+      "win%": 22.2,
+      "expR": 0.452,
+      "net": 7150,
+      "pf": 1.36,
+      "maxDD": 7810,
+      "mtm_maxDD": 7520,
+      "dd_days": 197,
+      "ret_to_dd": 0.95,
+      "end_equity": 107150,
+      "avg_risk": 908
+     },
+     "VOL": {
+      "trades": 22,
+      "win%": 36.4,
+      "expR": 1.148,
+      "net": 22475,
+      "pf": 2.77,
+      "maxDD": 6275,
+      "mtm_maxDD": 5067,
+      "dd_days": 163,
+      "ret_to_dd": 4.44,
+      "end_equity": 122475,
+      "avg_risk": 880
+     },
+     "TIGHT": {
+      "trades": 21,
+      "win%": 28.6,
+      "expR": 0.723,
+      "net": 11180,
+      "pf": 1.84,
+      "maxDD": 5989,
+      "mtm_maxDD": 6957,
+      "dd_days": 197,
+      "ret_to_dd": 1.61,
+      "end_equity": 111180,
+      "avg_risk": 841
+     },
+     "RANDOM": {
+      "net": {
+       "p5": 1038.65,
+       "median": 14341.5,
+       "p95": 27798.35
+      },
+      "pf": {
+       "p5": 1.05,
+       "median": 1.87,
+       "p95": 3.48
+      },
+      "trades": {
+       "p5": 18.95,
+       "median": 24.0,
+       "p95": 30.0
+      },
+      "mtm_maxDD": {
+       "p5": 4981.95,
+       "median": 7274.0,
+       "p95": 11626.25
+      },
+      "ret_to_dd": {
+       "p5": 0.13,
+       "median": 1.94,
+       "p95": 4.57
+      }
+     }
+    },
+    "validate": {
+     "ORDER": {
+      "trades": 19,
+      "win%": 15.8,
+      "expR": -0.743,
+      "net": -14739,
+      "pf": 0.19,
+      "maxDD": 17234,
+      "mtm_maxDD": 17067,
+      "dd_days": 138,
+      "ret_to_dd": -0.86,
+      "end_equity": 85336,
+      "avg_risk": 1027
+     },
+     "RS21": {
+      "trades": 21,
+      "win%": 23.8,
+      "expR": -0.479,
+      "net": -9139,
+      "pf": 0.5,
+      "maxDD": 14634,
+      "mtm_maxDD": 10914,
+      "dd_days": 156,
+      "ret_to_dd": -0.83,
+      "end_equity": 90962,
+      "avg_risk": 1041
+     },
+     "RS63": {
+      "trades": 20,
+      "win%": 20.0,
+      "expR": -0.711,
+      "net": -16035,
+      "pf": 0.19,
+      "maxDD": 18998,
+      "mtm_maxDD": 18196,
+      "dd_days": 138,
+      "ret_to_dd": -0.88,
+      "end_equity": 84040,
+      "avg_risk": 1085
+     },
+     "PROX": {
+      "trades": 16,
+      "win%": 25.0,
+      "expR": -0.69,
+      "net": -10804,
+      "pf": 0.14,
+      "maxDD": 11941,
+      "mtm_maxDD": 11940,
+      "dd_days": 138,
+      "ret_to_dd": -0.9,
+      "end_equity": 89298,
+      "avg_risk": 951
+     },
+     "VOL": {
+      "trades": 17,
+      "win%": 17.6,
+      "expR": -0.892,
+      "net": -14659,
+      "pf": 0.06,
+      "maxDD": 15565,
+      "mtm_maxDD": 14874,
+      "dd_days": 137,
+      "ret_to_dd": -0.98,
+      "end_equity": 85443,
+      "avg_risk": 953
+     },
+     "TIGHT": {
+      "trades": 19,
+      "win%": 21.1,
+      "expR": -0.419,
+      "net": -7401,
+      "pf": 0.56,
+      "maxDD": 10768,
+      "mtm_maxDD": 8787,
+      "dd_days": 84,
+      "ret_to_dd": -0.84,
+      "end_equity": 92650,
+      "avg_risk": 1039
+     },
+     "RANDOM": {
+      "net": {
+       "p5": -18827.0,
+       "median": -13357.0,
+       "p95": -4898.3
+      },
+      "pf": {
+       "p5": 0.05,
+       "median": 0.12,
+       "p95": 0.69
+      },
+      "trades": {
+       "p5": 16.0,
+       "median": 18.0,
+       "p95": 22.0
+      },
+      "mtm_maxDD": {
+       "p5": 8456.0,
+       "median": 13867.0,
+       "p95": 19303.0
+      },
+      "ret_to_dd": {
+       "p5": -1.02,
+       "median": -0.97,
+       "p95": -0.5
+      }
+     }
+    }
+   }
+  }
+ }
+}
